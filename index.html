@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="terminal.glass • Sovereign &amp; Hybrid AI for Enterprise • NoCloudGPT (Ubuntu 24.04) • YourCloudGPT (AWS). Re-branded post-ChatGPT intelligence.">
+    <title>terminal.glass • Enterprise AI Adoption 2026 • NoCloudGPT + YourCloudGPT</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --navy: #0a1428;
+            --deep-navy: #08101f;
+            --glow-blue: #00f0ff;
+            --accent-white: #f0f4ff;
+        }
+        
+        * { margin:0; padding:0; box-sizing:border-box; }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+            background: var(--deep-navy);
+            color: var(--accent-white);
+            line-height: 1.65;
+        }
+        
+        header {
+            background: rgba(10,20,40,0.97);
+            backdrop-filter: blur(16px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(0,240,255,0.18);
+        }
+        
+        nav {
+            max-width: 1380px;
+            margin: 0 auto;
+            padding: 1.25rem 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .logo-svg {
+            width: 54px;
+            height: 54px;
+            filter: drop-shadow(0 0 20px var(--glow-blue));
+        }
+        
+        .logo-text {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            letter-spacing: -1.8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2.4rem;
+            list-style: none;
+            font-weight: 500;
+        }
+        
+        .nav-links a {
+            color: var(--accent-white);
+            text-decoration: none;
+            transition: color .3s;
+        }
+        
+        .nav-links a:hover { color: var(--glow-blue); }
+        
+        .cta-button {
+            background: linear-gradient(90deg, #00f0ff, #0099cc);
+            color: #08101f;
+            padding: 14px 34px;
+            border-radius: 9999px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 0 0 25px rgba(0,240,255,0.5);
+            transition: all .3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 45px rgba(0,240,255,0.7);
+        }
+        
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(180deg, #08101f 0%, #0a1428 100%);
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 1380px;
+            margin: 0 auto;
+            padding: 0 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(3.4rem, 7vw, 6.2rem);
+            line-height: 1.05;
+            letter-spacing: -4.5px;
+            margin-bottom: 1.8rem;
+        }
+        
+        .hero-text .glow { color: var(--glow-blue); text-shadow: 0 0 45px var(--glow-blue); }
+        
+        .hero-text p {
+            font-size: 1.45rem;
+            max-width: 580px;
+            opacity: 0.92;
+            margin-bottom: 2.5rem;
+        }
+        
+        .product-badges {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            background: rgba(0,240,255,0.12);
+            color: var(--glow-blue);
+            padding: 10px 24px;
+            border-radius: 9999px;
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .lantern-hero {
+            width: 460px;
+            animation: float 7s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-35px); }
+        }
+        
+        .section {
+            max-width: 1380px;
+            margin: 0 auto;
+            padding: 7rem 3rem;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 3.1rem;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+            gap: 2.8rem;
+        }
+        
+        .card {
+            background: #0f1c38;
+            border-radius: 28px;
+            padding: 2.8rem;
+            border: 1px solid rgba(0,240,255,0.2);
+            transition: all 0.4s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 50px rgba(0,240,255,0.3);
+        }
+        
+        .product-card {
+            background: linear-gradient(145deg, #0a1428, #13223f);
+            border: 2px solid transparent;
+        }
+        
+        .product-card:hover {
+            border-color: var(--glow-blue);
+        }
+        
+        .no-cloud {
+            border-color: #00f0ff;
+        }
+        
+        .your-cloud {
+            border-color: #ffcc00;
+        }
+        
+        .enterprise-cta {
+            background: linear-gradient(90deg, #00f0ff, #0099cc);
+            color: #08101f;
+            text-align: center;
+            padding: 7rem 3rem;
+        }
+        
+        footer {
+            background: #050a14;
+            padding: 5rem 3rem 2.5rem;
+        }
+        
+        .glow-text { animation: glowPulse 3s ease-in-out infinite; }
+        
+        @keyframes glowPulse {
+            0%,100% { text-shadow: 0 0 15px var(--glow-blue); }
+            50% { text-shadow: 0 0 45px var(--glow-blue); }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav>
+            <a href="https://terminal.glass" class="logo">
+                <svg class="logo-svg" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="80" y="110" width="260" height="200" rx="12" ry="12" stroke="#f0f4ff" stroke-width="28" stroke-linejoin="round"/>
+                    <rect x="110" y="130" width="200" height="160" rx="8" ry="8" fill="#08101f"/>
+                    <g filter="url(#glow)">
+                        <path d="M210 170 L220 210 L260 210 L225 235 L240 275 L210 255 L180 275 L195 235 L160 210 L200 210 Z" fill="#00f0ff"/>
+                    </g>
+                    <rect x="110" y="130" width="28" height="160" fill="#f0f4ff"/>
+                    <rect x="282" y="130" width="28" height="160" fill="#f0f4ff"/>
+                    <rect x="80" y="95" width="260" height="28" rx="8" fill="#f0f4ff"/>
+                    <rect x="80" y="297" width="260" height="28" rx="8" fill="#f0f4ff"/>
+                    <circle cx="210" cy="85" r="18" fill="#f0f4ff"/>
+                    <circle cx="210" cy="335" r="18" fill="#f0f4ff"/>
+                    <defs>
+                        <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                            <feGaussianBlur stdDeviation="18" result="coloredBlur"/>
+                            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                    </defs>
+                </svg>
+                <div><span class="logo-text">terminal<span class="glow-text">.</span>glass</span></div>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#adoption">Enterprise Adoption</a></li>
+                <li><a href="#products">Our Products</a></li>
+                <li><a href="https://nocloudgpt.com">NoCloudGPT.com</a></li>
+                <li><a href="#">YourCloudGPT</a></li>
+                <li><a href="#">Contact Sales</a></li>
+            </ul>
+            
+            <a href="#" class="cta-button">Request Enterprise Demo</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div style="background:rgba(0,240,255,0.15); color:#00f0ff; padding:10px 26px; border-radius:9999px; display:inline-flex; align-items:center; gap:10px; margin-bottom:1.5rem; font-weight:600;">
+                    ENTERPRISE AI ADOPTION EXPLORER • 2026
+                </div>
+                
+                <h1>Sovereign &amp; Hybrid AI<br>for the Enterprise Era</h1>
+                <p style="font-size:1.5rem;">terminal.glass is the parent brand powering the post-ChatGPT world.</p>
+                <p>We deliver two sister products under one intelligent roof:</p>
+                
+                <div class="product-badges" style="margin:2.5rem 0 3rem;">
+                    <div class="badge">🌐 <strong>NoCloudGPT</strong><br><small>Ubuntu 24.04 • Fully Air-Gapped</small></div>
+                    <div class="badge" style="background:rgba(255,204,0,0.15); color:#ffcc00;">☁️ <strong>YourCloudGPT</strong><br><small>AWS Cloud • Managed &amp; Scalable</small></div>
+                </div>
+                
+                <p style="max-width:520px;">Choose total sovereignty with NoCloudGPT or enterprise-scale hybrid power with YourCloudGPT. Both shaped by Philosopher + Alchemist intelligence.</p>
+                
+                <div style="margin-top:3rem;">
+                    <a href="#products" class="cta-button" style="padding:18px 42px; font-size:1.25rem;">Explore NoCloudGPT + YourCloudGPT</a>
+                </div>
+            </div>
+            
+            <div style="text-align:center;">
+                <svg class="lantern-hero" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="80" y="110" width="260" height="200" rx="12" ry="12" stroke="#f0f4ff" stroke-width="28" stroke-linejoin="round"/>
+                    <rect x="110" y="130" width="200" height="160" rx="8" ry="8" fill="#08101f"/>
+                    <g filter="url(#glowHero)">
+                        <path d="M210 170 L220 210 L260 210 L225 235 L240 275 L210 255 L180 275 L195 235 L160 210 L200 210 Z" fill="#00f0ff"/>
+                    </g>
+                    <rect x="110" y="130" width="28" height="160" fill="#f0f4ff"/>
+                    <rect x="282" y="130" width="28" height="160" fill="#f0f4ff"/>
+                    <rect x="80" y="95" width="260" height="28" rx="8" fill="#f0f4ff"/>
+                    <rect x="80" y="297" width="260" height="28" rx="8" fill="#f0f4ff"/>
+                    <circle cx="210" cy="85" r="18" fill="#f0f4ff"/>
+                    <circle cx="210" cy="335" r="18" fill="#f0f4ff"/>
+                    <defs>
+                        <filter id="glowHero" x="-60%" y="-60%" width="220%" height="220%">
+                            <feGaussianBlur stdDeviation="28" result="coloredBlur"/>
+                            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                        </filter>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- ADOPTION SECTION -->
+    <section id="adoption" class="section" style="background:#08101f;">
+        <div class="section-header">
+            <h2>Enterprise AI Adoption in 2026</h2>
+            <p style="max-width:720px; margin:0 auto; font-size:1.35rem;">Rapid growth. Rising risk. The shift to sovereign &amp; hybrid AI is accelerating.</p>
+        </div>
+        
+        <div class="grid">
+            <div class="card">
+                <h3 style="font-size:2.8rem; color:#00f0ff;">72%</h3>
+                <p>of enterprises have AI in production — up dramatically from 2024.</p>
+            </div>
+            <div class="card">
+                <h3 style="font-size:2.8rem; color:#00f0ff;">83%</h3>
+                <p>of large organizations now prioritize compute sovereignty or hybrid control.</p>
+            </div>
+            <div class="card">
+                <h3 style="font-size:2.8rem; color:#ff3366;">79%</h3>
+                <p>face serious scaling &amp; privacy challenges with pure cloud AI (ChatGPT-style).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION – THE TWO SISTERS -->
+    <section id="products" class="section">
+        <div class="section-header">
+            <h2>Two Sister Products. One terminal.glass Standard.</h2>
+            <p style="max-width:680px; margin:0 auto;">NoCloudGPT for maximum sovereignty. YourCloudGPT for scalable cloud convenience. Both built with the same disciplined intelligence.</p>
+        </div>
+        
+        <div class="grid">
+            <!-- NoCloudGPT -->
+            <div class="card product-card no-cloud">
+                <div style="height:220px; background:#0a1428; display:flex; align-items:center; justify-content:center; border-radius:20px 20px 0 0; position:relative; overflow:hidden;">
+                    <span style="font-size:6rem; filter:drop-shadow(0 0 30px #00f0ff);">🌐</span>
+                    <div style="position:absolute; bottom:20px; left:30px; background:#00f0ff; color:#08101f; padding:6px 18px; border-radius:9999px; font-weight:700; font-size:0.95rem;">AIR-GAPPED</div>
+                </div>
+                <div style="padding:2rem 2.5rem 2.8rem;">
+                    <h3 style="font-size:2.2rem; margin-bottom:0.5rem;">NoCloudGPT</h3>
+                    <p style="color:#00f0ff; font-weight:600; margin-bottom:1.5rem;">Ubuntu 24.04 • Fully Air-Gapped • Local-First</p>
+                    <p>Complete data sovereignty. Run powerful AI entirely on your infrastructure with zero internet connection and zero telemetry. The flagship for regulated industries and privacy-first teams.</p>
+                    <ul style="margin:2rem 0; list-style:none;">
+                        <li style="margin:12px 0;">✅ Zero data leaves your network</li>
+                        <li style="margin:12px 0;">✅ Runs on standard Ubuntu 24.04 servers</li>
+                        <li style="margin:12px 0;">✅ Powered by Philosopher + Alchemist engines</li>
+                    </ul>
+                    <a href="https://nocloudgpt.com" target="_blank" style="color:#00f0ff; font-weight:600; text-decoration:underline;">Visit NoCloudGPT.com →</a>
+                </div>
+            </div>
+            
+            <!-- YourCloudGPT -->
+            <div class="card product-card your-cloud">
+                <div style="height:220px; background:#0a1428; display:flex; align-items:center; justify-content:center; border-radius:20px 20px 0 0; position:relative; overflow:hidden;">
+                    <span style="font-size:6rem; filter:drop-shadow(0 0 30px #ffcc00);">☁️</span>
+                    <div style="position:absolute; bottom:20px; left:30px; background:#ffcc00; color:#08101f; padding:6px 18px; border-radius:9999px; font-weight:700; font-size:0.95rem;">MANAGED CLOUD</div>
+                </div>
+                <div style="padding:2rem 2.5rem 2.8rem;">
+                    <h3 style="font-size:2.2rem; margin-bottom:0.5rem;">YourCloudGPT</h3>
+                    <p style="color:#ffcc00; font-weight:600; margin-bottom:1.5rem;">AWS Cloud • Scalable • Enterprise-Ready</p>
+                    <p>Full ChatGPT-like experience with enterprise governance. Hosted on your AWS account, managed scaling, and seamless integration. Perfect for teams that need speed + control.</p>
+                    <ul style="margin:2rem 0; list-style:none;">
+                        <li style="margin:12px 0;">✅ Runs in your AWS VPC</li>
+                        <li style="margin:12px 0;">✅ Auto-scaling &amp; high availability</li>
+                        <li style="margin:12px 0;">✅ Same terminal.glass intelligence layer</li>
+                    </ul>
+                    <a href="#" style="color:#ffcc00; font-weight:600; text-decoration:underline;">Learn more about YourCloudGPT →</a>
+                </div>
+            </div>
+        </div>
+        
+        <div style="text-align:center; margin-top:4rem; font-size:1.3rem; opacity:0.85;">
+            Both products are sister sites to <strong>nocloudgpt.com</strong> and live under the <strong>terminal.glass</strong> umbrella.<br>
+            Same high standards. Same thoughtful design. Different deployment models for different enterprise needs.
+        </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section" style="background:#08101f;">
+        <div class="section-header">
+            <h2>Why Enterprises Choose terminal.glass</h2>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <h3>🔒 Total Flexibility</h3>
+                <p>Deploy NoCloudGPT for maximum security or YourCloudGPT for speed-to-value. Mix and match as your needs evolve.</p>
+            </div>
+            <div class="card">
+                <h3>🧠 Dual Intelligence</h3>
+                <p>Every deployment includes Philosopher (deep reasoning) and Alchemist (transformation &amp; prompt craft).</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Post-ChatGPT Maturity</h3>
+                <p>Moving beyond generic cloud AI to sovereign, governed, and production-ready systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <div class="enterprise-cta">
+        <h2 style="font-size:3.6rem; max-width:860px; margin:0 auto 1.5rem;">Ready for sovereign or hybrid enterprise AI?</h2>
+        <p style="font-size:1.55rem; max-width:620px; margin:0 auto 3rem;">Choose NoCloudGPT (Ubuntu 24.04) for air-gapped power or YourCloudGPT (AWS) for managed scale.</p>
+        <div style="display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap;">
+            <a href="https://nocloudgpt.com" target="_blank" class="cta-button" style="background:#08101f; color:#00f0ff; border:3px solid #00f0ff; padding:20px 48px; font-size:1.3rem;">Deploy NoCloudGPT (Air-Gapped)</a>
+            <a href="#" class="cta-button" style="padding:20px 48px; font-size:1.3rem;">Launch YourCloudGPT on AWS</a>
+        </div>
+        <div style="margin-top:3rem; font-size:1.1rem; opacity:0.9;">Sister sites under terminal.glass • Built for the enterprise shift of 2026</div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div style="max-width:1380px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:4rem; padding-bottom:3rem;">
+            <div>
+                <div class="logo" style="margin-bottom:1.5rem;">
+                    <svg width="48" height="48" viewBox="0 0 420 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="80" y="110" width="260" height="200" rx="12" ry="12" stroke="#f0f4ff" stroke-width="28" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="logo-text" style="font-size:1.85rem;">terminal.glass</span>
+                </div>
+                <p style="max-width:340px; opacity:0.8;">The parent brand for thoughtful, sovereign, and hybrid AI. Home to NoCloudGPT and YourCloudGPT.</p>
+            </div>
+            <div>
+                <strong>Products</strong>
+                <ul style="list-style:none; margin-top:1.2rem; line-height:2.1;">
+                    <li><a href="https://nocloudgpt.com" style="color:inherit; text-decoration:none;">NoCloudGPT (Ubuntu 24.04)</a></li>
+                    <li><a href="#" style="color:inherit; text-decoration:none;">YourCloudGPT (AWS)</a></li>
+                </ul>
+            </div>
+            <div>
+                <strong>Enterprise</strong>
+                <ul style="list-style:none; margin-top:1.2rem; line-height:2.1;">
+                    <li>Air-Gapped Deployment</li>
+                    <li>AWS Managed</li>
+                    <li>Philosopher + Alchemist</li>
+                    <li>Request Demo</li>
+                </ul>
+            </div>
+            <div>
+                <strong>Connect</strong>
+                <ul style="list-style:none; margin-top:1.2rem; line-height:2.1;">
+                    <li><a href="https://huggingface.co/nocloudgpt" target="_blank" style="color:inherit;">Hugging Face</a></li>
+                    <li>nocloudgpt.com</li>
+                    <li>Sales Inquiry</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="text-align:center; padding-top:2rem; border-top:1px solid rgba(255,255,255,0.1); opacity:0.5; font-size:0.9rem;">
+            © 2026 terminal.glass • Sister sites: nocloudgpt.com • YourCloudGPT • All built with disciplined intelligence.
+        </div>
+    </footer>
+
+    <script>
+        console.log('%c✅ terminal.glass Enterprise AI Adoption Explorer updated with NoCloudGPT (Ubuntu 24.04) + YourCloudGPT (AWS). Sister sites under one umbrella.', 'color:#00f0ff; font-size:13px;');
+    </script>
+</body>
+</html>
