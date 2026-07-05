@@ -1,10 +1,330 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qwen3-Coder-Next Cloud -- A Powerful Coding AI, No Fancy Hardware Required | Terminal Glass</title>
+  <meta name="description" content="Thinking about using Qwen3-Coder-Next, Alibaba's newest coding AI, without buying expensive hardware? Here's a plain-English guide to using it through Terminal Glass -- what it does, what it costs, and what you're trading away.">
+  <link rel="canonical" href="https://nocloudgpt.com/models/qwen3-coder-next-cloud/">
+  <meta property="og:title" content="Qwen3-Coder-Next Cloud -- Terminal Glass | NoCloudGPT">
+  <meta property="og:description" content="A no-jargon look at running Qwen3-Coder-Next through Terminal Glass: what you get, what it costs, and where your code actually goes.">
+  <meta property="og:image" content="/models/qwen3-coder-next-cloud/hero.webp">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100">
+
+  <header class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-6xl px-6 py-4">
+      <nav class="flex items-center justify-between text-sm">
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>
+        <div class="flex gap-6 text-slate-400">
+          <a href="/models/" class="hover:text-white">Models</a>
+          <a href="/deploy/lightsail-guide.html" class="hover:text-white">Deploy</a>
+          <a href="/quote.html" class="hover:text-white">Get a Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. Hero -->
+  <section class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <a href="/models/" class="text-sm font-semibold text-cyan-300 hover:text-cyan-200">← Back to model catalog</a>
+      <a href="https://ollama.com/library/qwen3-coder-next" target="_blank" rel="noopener noreferrer" class="inline-block">
+        <img
+          src="/models/qwen3-coder-next-cloud/hero.webp"
+          alt="A simple illustration of the Qwen3-Coder-Next Cloud setup -- your computer talks to OpenWebUI, which talks to Alibaba's newest coding AI in the cloud"
+          width="1200" height="600"
+          class="mt-8 mb-2 w-full max-w-xs rounded-2xl object-cover"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        />
+      </a>
+      <p class="mb-6 text-xs text-slate-500">Image source: <a href="https://ollama.com/library/qwen3-coder-next" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-400">Ollama</a></p>
+      <div class="mt-8 mb-6 flex h-28 w-full max-w-xs items-center justify-center rounded-2xl border border-dashed border-slate-600 bg-slate-900 text-sm text-slate-500" style="display:none;"></div>
+      <p class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300">Qwen3-Coder-Next · Terminal Glass</p>
+      <h1 class="mt-4 max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+        A Newer, Smarter Coding AI -- Without Buying Top-of-the-Line Hardware
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg text-slate-300">
+        Qwen3-Coder-Next runs through a simple chat window on a modest computer, while the actual AI
+        work happens on Ollama's cloud servers. That means you get strong, self-directed coding help --
+        the kind that can plan out a task, edit code across many files, and work through problems in
+        multiple steps -- without needing to own serious computing hardware yourself. In exchange, your
+        prompts and code travel out to those cloud servers, and you're billed based on how much you use it.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="/quote.html" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
+        <a href="#how-it-works" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See how it works</a>
+        <a href="/models/qwen3-coder/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See the fully private version instead</a>
+      </div>
+      <p class="mt-6 text-sm text-emerald-400">
+        In short: your computer runs the chat window. Alibaba's newest coding model, running on Ollama's cloud, does the heavy lifting.
+      </p>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-6xl px-6 py-12 space-y-12">
+
+    <!-- 2. Overview -->
+    <section>
+      <h2 class="text-3xl font-black">So, what exactly is Qwen3-Coder-Next?</h2>
+      <p class="mt-5 max-w-3xl text-lg text-slate-300">
+        It's Alibaba's newest AI model built specifically for coding tasks. What makes it stand out is
+        how well it handles "agentic" work -- meaning it can take a coding task, break it into steps, use
+        other tools along the way, and keep working through a problem largely on its own, rather than
+        needing you to guide every single step. It's especially good at understanding large, existing
+        codebases and making changes across many files at once.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-400">
+        Terminal Glass gives you access to this model through the cloud, so you can use its strongest,
+        most capable version without downloading it or owning the hardware to run it yourself. If your
+        team's main focus is this kind of self-directed, multi-step coding work, this is currently the
+        top recommendation in Alibaba's coding-model lineup.
+      </p>
+    </section>
+
+    <!-- 3. The Terminal Glass Trade-off -->
+    <section class="rounded-3xl border border-amber-500/30 bg-amber-950/20 p-8">
+      <h2 class="text-2xl font-black text-amber-200">Here's the honest trade-off</h2>
+      <p class="mt-4 text-slate-300">
+        <strong class="text-white">Terminal Glass</strong> gives you the same friendly chat app (OpenWebUI)
+        and the same locally stored document search tool you'd get with a fully private setup -- but instead
+        of your own computer doing the "thinking," each question gets sent out to Ollama's cloud to be
+        answered by Alibaba's model. Your own machine just needs to run the chat window and your document
+        search -- a small, inexpensive computer is usually enough.
+      </p>
+      <p class="mt-4 text-sm text-amber-300">
+        <strong>Here's what that really means:</strong> every prompt and every piece of code you send gets
+        sent out over the internet to be processed. This is <em>not</em> a private, locked-down setup --
+        it's a different thing entirely from
+        <a href="/models/qwen3-coder/" class="underline hover:text-amber-200">NoCloudGPT Private Instances</a>,
+        where everything, including your code, stays on machines you own and control. You'll also pay an
+        ongoing, usage-based fee. If your code or data can never leave your network, run Qwen3-Coder locally
+        through NoCloudGPT instead.
+      </p>
+    </section>
+
+    <!-- 4. What about the video card? -->
+    <section>
+      <h2>"Do I need to buy a fancy graphics card?"</h2>
+      <p>
+        This is really the question most people are trying to figure out, even if they don't phrase it that way.
+      </p>
+      <p>
+        If you try to run these AI models without a proper graphics card (the same kind used for video games,
+        but scaled up), your computer will fall back to using its regular processor. That technically works for
+        the occasional light question, but it becomes painfully slow for regular use. A lot of people learn
+        this the hard way after renting a cloud computer that turns out to be either too slow or surprisingly
+        expensive.
+      </p>
+      <p>
+        If you'd rather not deal with picking out graphics cards, comparing specs, or troubleshooting driver
+        issues at all, Terminal Glass Cloud is the easier path -- you get a capable AI through a simple, familiar
+        chat window, and someone else worries about the hardware.
+      </p>
+      <p>
+        On the other hand, if you want everything running on equipment you personally control, you can rent a
+        graphics-card-equipped server (through AWS, Digital Ocean, or your own machines) and install
+        NoCloudGPT on it yourself. In that setup, you're the one responsible for picking the right graphics
+        card and keeping it running smoothly.
+      </p>
+      <p>
+        And if your organization needs everything to stay completely inside your own walls from the very first
+        day -- no exceptions, especially for source code -- then a <a href="/models/">NoCloudGPT Air Gapped</a>
+        setup on your own hardware is the way to go.
+      </p>
+      <p class="text-sm text-slate-400">
+        There's no single "correct" choice here. It really comes down to your budget, how sensitive your code
+        is, how fast you need answers, and whether you want to own your equipment long-term.
+      </p>
+    </section>
+
+    <!-- 5. Who This Model Family is For -->
+    <section>
+      <h2 class="text-3xl font-black">Is this actually for you?</h2>
+      <div class="mt-6 grid gap-5 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>👤</span> If you're a solo developer or hobbyist
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            A great fit if you work on side projects, want to learn new programming tools, or build things
+            for fun, and you'd like strong, self-directed coding help without owning powerful hardware.
+            Keep any proprietary or sensitive code on a fully private setup instead.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>🏢</span> If you're using this for your business or team
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Useful for teams that want an internal coding assistant that can understand an entire codebase,
+            clean up and reorganize code, and handle multi-step development tasks. One shared setup can
+            serve your whole team without each person needing their own expensive computer.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>⚙️</span> If you're technical or building software
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            A strong choice for testing out AI "agents" that work through coding tasks on their own,
+            projects spanning an entire codebase, experiments with connecting the AI to other tools, and
+            tricky debugging. It's particularly good when the AI needs to plan out a task, make changes
+            across multiple files, and keep working through problems with minimal hand-holding.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>🔬</span> If you're doing research or working with data
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Handy for research related to coding, exploring how well different AI models perform, and
+            building your own research tools. Keep in mind a cloud model can change or update behind the
+            scenes, so it won't give you the same consistency as a version installed on your own hardware.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. How Terminal Glass Works with This Model -->
+    <section id="how-it-works">
+      <h2 class="text-3xl font-black">How this actually works, step by step</h2>
+      <p class="mt-5 max-w-3xl text-slate-300">
+        You'll interact with everything through <strong class="text-white">OpenWebUI</strong> -- a clean,
+        simple chat window running on your own computer. Your chat history and any documents you've indexed
+        for search stay on hardware you control. But the moment you send a question or piece of code, it
+        travels out to Ollama's cloud servers to be processed by Qwen3-Coder-Next, and the answer streams
+        back to your screen.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        To use the cloud version, you'll need to sign in with an Ollama account on your computer first.
+        You're billed based on how much you use it.
+      </p>
+      <pre class="mt-5 overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900 p-5 text-sm text-cyan-200"><code>ollama signin
+ollama run qwen3-coder-next:cloud</code></pre>
+      <p class="mt-5 text-sm text-amber-300">
+        <strong>What leaves your computer:</strong> your typed questions and any code you send along with
+        them. <strong>Speed:</strong> depends on your internet connection, since every request has to
+        travel out and back. <strong>Cost:</strong> based on how much you use it.
+      </p>
+    </section>
+
+    <!-- 7. Honest Guidance -->
+    <section>
+      <h2 class="text-3xl font-black">When you should probably choose something else</h2>
+      <ul class="mt-5 max-w-3xl space-y-3 text-slate-300">
+        <li>
+          <strong class="text-white">Your code is proprietary or under strict data rules</strong> --
+          Choose <a href="/models/qwen3-coder/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
+          and run Qwen3-Coder entirely on your own hardware instead.
+        </li>
+        <li>
+          <strong class="text-white">You use this constantly, every single day</strong> --
+          Owning the hardware to run this yourself often ends up cheaper than paying for cloud usage
+          continuously over time.
+        </li>
+        <li>
+          <strong class="text-white">You want the absolute best performance for AI coding agents</strong> --
+          It's worth checking whether an even newer specialized coding model has since been released, since
+          this is a fast-moving area.
+        </li>
+      </ul>
+    </section>
+
+    <!-- 8. Recommended Terminal Glass Deployment -->
+    <section>
+      <h2 class="text-3xl font-black">What we recommend</h2>
+      <div class="mt-6 overflow-hidden rounded-2xl border border-slate-800">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-slate-950 text-cyan-200">
+            <tr>
+              <th class="px-4 py-3">Version</th>
+              <th class="px-4 py-3">Best for</th>
+              <th class="px-4 py-3">Notes</th>
+              <th class="px-4 py-3"></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 bg-slate-900 text-slate-300">
+            <tr>
+              <td class="px-4 py-3 font-mono text-cyan-200">qwen3-coder-next:cloud</td>
+              <td class="px-4 py-3">Self-directed coding tasks, whole-codebase work, connecting the AI to other tools</td>
+              <td class="px-4 py-3">Performs especially well on AI coding agents and multi-step development work, delivered through the cloud.</td>
+              <td class="px-4 py-3 whitespace-nowrap"><a href="/quote.html" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-sm text-slate-400">
+        Double-check what's currently available at
+        <a href="https://ollama.com/library/qwen3-coder-next" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">ollama.com/library/qwen3-coder-next</a>
+        before committing.
+      </p>
+    </section>
+
+    <!-- 9. Licensing & Access -->
+    <section>
+      <h2 class="text-3xl font-black">The legal fine print, in plain terms</h2>
+      <p class="mt-5 max-w-3xl text-slate-300">
+        Using the cloud version of Qwen3-Coder-Next requires an Ollama Cloud account, and you'll be billed
+        based on how much you use it. Review the current terms from both Alibaba (Qwen) and Ollama before
+        relying on this for anything business-critical or in a regulated industry.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        Official listing:
+        <a href="https://ollama.com/library/qwen3-coder-next" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">ollama.com/library/qwen3-coder-next</a>
+      </p>
+      <div class="mt-6 rounded-2xl border border-slate-800 bg-slate-900 p-5 text-sm text-slate-400">
+        <strong class="text-slate-300">A quick disclaimer:</strong> Terminal Glass is our own way of packaging
+        this setup -- we don't own or run Qwen3-Coder-Next or Ollama Cloud ourselves. Availability, pricing,
+        and behavior are controlled by Alibaba and Ollama, and can change without notice. This page is
+        meant to help you understand your options -- it isn't legal advice.
+      </div>
+    </section>
+
+    <div class="text-center">
+      <a href="/quote.html" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
+        Get a quote for Qwen3-Coder-Next Cloud →
+      </a>
+      <p class="mt-3 text-sm text-slate-500">We'll help you figure out the right small computer to run locally and the right cloud option for your needs.</p>
+    </div>
+
+  </main>
+
+  <!-- Footer references -->
+  <section class="border-t border-slate-800 bg-slate-900 px-6 py-8">
+    <div class="mx-auto max-w-6xl">
+      <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Image and source credits</p>
+      <div class="mt-4 grid gap-4 text-xs text-slate-500 md:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <p class="font-semibold text-slate-400">Hero image</p>
+          <p class="mt-1">See the <a href="https://ollama.com/library/qwen3-coder-next" target="_blank" rel="noopener" class="text-cyan-600 hover:text-cyan-500">Ollama Qwen3-Coder-Next listing</a>.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-400">Who makes this model</p>
+          <p class="mt-1">Qwen3-Coder-Next is made by <a href="https://qwen.ai/" target="_blank" rel="noopener" class="text-cyan-600 hover:text-cyan-500">Alibaba's Qwen team</a>. Terminal Glass and NoCloudGPT are separate services and aren't affiliated with Alibaba or Ollama.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-400">Want it fully private instead?</p>
+          <p class="mt-1">See <a href="/models/qwen3-coder/" class="text-cyan-600 hover:text-cyan-500">Qwen3-Coder -- NoCloudGPT Private Instances</a> for a version that runs entirely on hardware you control.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-800 bg-slate-950 px-6 py-10 text-center text-sm text-slate-500">
+    <p>NoCloudGPT is an independent service. We are not affiliated with Alibaba, Qwen, Ollama, or any AI developer mentioned on this page.</p>
+    <div class="mx-auto max-w-6xl px-6 py-4">
+      <p class="text-xs text-slate-500 border border-slate-800 rounded-xl px-4 py-3 bg-slate-900">
+        <strong class="text-slate-400">A note on licenses:</strong>
+        Licensing details for open-weight AI models come from official model documentation and developer
+        pages. Always double-check the current license at
+        <a href="https://huggingface.co/models" target="_blank" rel="noopener" class="text-cyan-600 hover:text-cyan-500">Hugging Face</a>
+        or the model developer's official page before using it commercially.
+        We're not lawyers -- talk to a qualified professional if compliance is a concern for your business.
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

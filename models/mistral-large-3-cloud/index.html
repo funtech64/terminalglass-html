@@ -1,10 +1,381 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mistral Large 3 Cloud -- Powerful AI for Your Team, Explained Simply | Terminal Glass</title>
+  <meta name="description" content="Thinking about using a big, powerful AI model for your business but don't want to buy expensive computers? Here's a plain-English guide to Mistral Large 3 through Terminal Glass -- what it does, what it costs, and what you're trading away.">
+  <link rel="canonical" href="https://nocloudgpt.com/models/mistral-large-3-cloud/">
+  <meta property="og:title" content="Mistral Large 3 Cloud -- Terminal Glass | NoCloudGPT">
+  <meta property="og:description" content="A no-jargon look at running Mistral Large 3 through Terminal Glass: what you get, what it costs, and where your data actually goes.">
+  <meta property="og:image" content="/models/mistral-large-3-cloud/hero.webp">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100">
+
+  <header class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-6xl px-6 py-4">
+      <nav class="flex items-center justify-between text-sm">
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>
+        <div class="flex gap-6 text-slate-400">
+          <a href="/models/" class="hover:text-white">Models</a>
+          <a href="/deploy/lightsail-guide.html" class="hover:text-white">Deploy</a>
+          <a href="/quote.html" class="hover:text-white">Get a Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. Hero -->
+  <section class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <a href="/models/" class="text-sm font-semibold text-cyan-300 hover:text-cyan-200">← Back to model catalog</a>
+      <a href="https://ollama.com/library/mistral-large-3" target="_blank" rel="noopener noreferrer" class="inline-block">
+        <img
+          src="/models/mistral-large-3-cloud/hero.webp"
+          alt="A simple illustration of the Mistral Large 3 Cloud setup -- your computer talks to OpenWebUI, which talks to Mistral's AI in the cloud"
+          width="1200" height="600"
+          class="mt-8 mb-2 w-full max-w-xs rounded-2xl object-cover"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        />
+      </a>
+      <p class="mb-6 text-xs text-slate-500">Image source: <a href="https://ollama.com/library/mistral-large-3" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-400">Ollama</a></p>
+      <div class="mt-8 mb-6 flex h-28 w-full max-w-xs items-center justify-center rounded-2xl border border-dashed border-slate-600 bg-slate-900 text-sm text-slate-500" style="display:none;">
+        Mistral Large 3 artwork placeholder
+      </div>
+      <p class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300">Mistral Large 3 · Terminal Glass</p>
+      <h1 class="mt-4 max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+        A Really Big, Really Smart AI -- Without Buying a Server Farm
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg text-slate-300">
+        Mistral Large 3 is one of the most capable AI models available right now -- it can read documents,
+        look at pictures, write in multiple languages, and even use other software tools to get things done.
+        Normally, running an AI this large would require a small warehouse of specialized computers. With
+        Terminal Glass, you skip all of that: you get a simple chat-style app on a modest computer, and the
+        "thinking" happens on Mistral's own cloud servers instead. The catch? Whatever you type, upload, or
+        ask about travels out to those servers -- and at this size, using it a lot can get pricey.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="/quote.html" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
+        <a href="#how-it-works" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See how it works</a>
+        <a href="/models/mistral/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See the fully private version instead</a>
+      </div>
+      <p class="mt-6 text-sm text-emerald-400">
+        In short: your computer runs the chat window. Mistral's cloud does the heavy lifting.
+      </p>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-6xl px-6 py-12 space-y-12">
+
+    <!-- 2. Overview -->
+    <section>
+      <h2 class="text-3xl font-black">So, what exactly is Mistral Large 3?</h2>
+      <p class="mt-5 max-w-3xl text-lg text-slate-300">
+        Think of it as one of the "flagship" AI models -- built to handle serious, real-world work rather
+        than just casual chatting. It can read and understand images (like screenshots, charts, or scanned
+        documents), work in many languages, follow detailed instructions, produce neatly organized output
+        (like spreadsheets or structured data), and even trigger other tools or software on your behalf.
+        It can also hold an enormous amount of information in one conversation -- enough to digest very long
+        reports or lengthy back-and-forth discussions without losing track.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-400">
+        Right now, this particular model is only available through the cloud -- there's no version small
+        enough to download and run on your own laptop or office server. Its cloud "nickname" on the Ollama
+        platform is
+        <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">mistral-large-3:675b-cloud</code>,
+        and it's marked as a "heavy usage" model, meaning it's on the pricier end to run frequently.
+        If you'd rather have a smaller Mistral model living entirely on your own hardware -- with nothing
+        going out to the internet -- check out
+        <a href="/models/mistral/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>.
+      </p>
+    </section>
+
+    <!-- 3. The Terminal Glass Trade-off -->
+    <section class="rounded-3xl border border-amber-500/30 bg-amber-950/20 p-8">
+      <h2 class="text-2xl font-black text-amber-200">Here's the honest trade-off</h2>
+      <p class="mt-4 text-slate-300">
+        <strong class="text-white">Terminal Glass</strong> gives you a friendly chat app (called OpenWebUI)
+        that looks and feels the same whether the AI is running next door or across the internet. Your files,
+        your saved documents, and your search index all stay stored on your own small computer. But the
+        actual "thinking" -- the part that reads your question and writes an answer -- happens on Mistral's
+        cloud servers. This means you don't need to buy or manage any fancy, expensive computer hardware
+        just to try this out.
+      </p>
+      <p class="mt-4 text-sm text-amber-300">
+        <strong>Here's what that really means:</strong> anything you type, any picture you upload, any
+        document you reference, and any snippet of code you paste gets sent over the internet to Mistral's
+        cloud to be processed. This is <em>not</em> a private, locked-down setup -- it's a different thing
+        entirely from
+        <a href="/models/mistral/" class="underline hover:text-amber-200">NoCloudGPT Private Instances</a>,
+        where everything stays on machines you own and control. Because this model is so large, it's also
+        priced at a higher usage tier -- expect it to cost more per question than smaller AI models, especially
+        if you're uploading images or having very long conversations. There will also be a small delay each
+        time, since your question has to travel to the cloud and back. If you handle sensitive information --
+        medical records, legal documents, financial data, private client details -- this is not the right
+        setup. Use a fully offline <a href="/models/">NoCloudGPT Air Gapped</a> deployment instead.
+      </p>
+    </section>
+
+    <section>
+      <h2>"Do I need to buy a fancy graphics card?"</h2>
+      <p>
+        This is really the question most people are trying to figure out, even if they don't phrase it that way.
+      </p>
+      <p>
+        If you try to run big AI models without a proper graphics card (the same kind used for video games,
+        but scaled up), your computer will fall back to using its regular processor. That technically works,
+        but it's painfully slow -- fine for the occasional quick question, unusable for daily heavy work.
+        A lot of people learn this the hard way after renting a cloud computer that turns out to be either
+        too slow or surprisingly expensive.
+      </p>
+      <p>
+        If you'd rather not deal with picking out graphics cards, comparing specs, or troubleshooting driver
+        issues at all, Terminal Glass Cloud is the easier path -- you get a capable AI through a simple,
+        familiar chat window, and someone else worries about the hardware.
+      </p>
+      <p>
+        On the other hand, if you want everything running on equipment you personally control, you can rent
+        a graphics-card-equipped server (through AWS, Digital Ocean, or your own machines) and install
+        NoCloudGPT on it yourself. In that setup, you're the one responsible for picking the right graphics
+        card and keeping it running smoothly.
+      </p>
+      <p>
+        And if your organization needs everything to stay completely inside your own walls from the very
+        first day -- no exceptions -- then a <a href="/models/">NoCloudGPT Air Gapped</a> setup on your own
+        hardware is the way to go.
+      </p>
+      <p class="text-sm text-slate-400">
+        There's no single "correct" choice here. It really comes down to your budget, how sensitive your
+        data is, how fast you need answers, and whether you want to own your equipment long-term.
+      </p>
+    </section>
+
+    <!-- 4. Who This Model Family is For -->
+    <section>
+      <h2 class="text-3xl font-black">Is this actually for you?</h2>
+      <div class="mt-6 grid gap-5 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>👤</span> If you're using this on your own
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Great if you want serious help with long reading assignments, understanding photos or diagrams,
+            writing in a foreign language, planning technical projects, reviewing code, or digging into a
+            research question -- and you don't want to run your own AI server to do it. Just remember: everything
+            you send goes to the cloud, so keep personal photos, passwords, bank info, and private paperwork
+            out of it. If keeping everything fully private matters more to you, go with the Private Instances
+            option instead.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>🏢</span> If you're using this for your business or team
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            A solid fit for testing out AI assistants, doing internal research, answering policy questions,
+            reviewing images or scanned documents, drafting customer support replies, pulling structured data
+            out of messy text, and automating simple tasks -- as long as your company is comfortable with data
+            leaving your building. For confidential client work, regulated industries, sensitive screenshots,
+            or proprietary code, use the Private Instances option so nothing leaves your network.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>⚙️</span> If you're technical or building software
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Handy for testing tool-calling features, pulling structured data out of text, reviewing technical
+            diagrams or architecture, and debugging long conversations. If your main use case is writing and
+            fixing large amounts of code across a whole project, it's worth also looking at
+            <a href="/models/devstral-2-cloud/" class="text-cyan-300 hover:text-cyan-200">Devstral 2 Cloud</a>,
+            which is built specifically for that kind of work.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>🔬</span> If you're doing research or working with data
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Good for exploring public datasets, testing how well AI understands images alongside text,
+            reviewing academic papers, sorting text into categories across languages, and reasoning through
+            large amounts of information at once. Just know that a cloud model can change or update behind
+            the scenes without warning -- if you need consistent, unchanging results (or you're working with
+            unpublished or confidential data), stick with a fully local Private Instance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. How Terminal Glass Works with This Model -->
+    <section id="how-it-works">
+      <h2 class="text-3xl font-black">How this actually works, step by step</h2>
+      <p class="mt-5 max-w-3xl text-slate-300">
+        You'll interact with everything through <strong class="text-white">OpenWebUI</strong> -- a clean,
+        simple chat window running on your own small computer (or, if you prefer, through basic typed
+        commands). Your chat history, your login accounts, and any documents you've indexed for search all
+        live on your own hardware. But the moment you send a message to
+        <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">mistral-large-3:675b-cloud</code>,
+        that message -- including any images, code, or reference material -- travels out to Mistral's cloud
+        servers to get processed, and the answer streams back to your screen.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        To use the cloud version, you'll need to sign in with an Ollama account on your computer first.
+        Since this model is on the pricier "high usage" tier, keep an eye on costs if you're uploading a
+        lot of images, having very long conversations, or letting the AI use tools repeatedly in a row.
+      </p>
+      <pre class="mt-5 overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900 p-5 text-sm text-cyan-200"><code>ollama signin
+ollama run mistral-large-3:675b-cloud</code></pre>
+      <p class="mt-5 text-sm text-amber-300">
+        <strong>What leaves your computer:</strong> your typed questions, any pictures you upload, documents,
+        code snippets, and any related material pulled from your search index. Your document search itself
+        happens locally, but whatever it finds gets sent along with your question to the cloud. <strong>Speed</strong>
+        depends on your internet connection. <strong>Cost</strong> is based on how much you actually use it.
+      </p>
+    </section>
+
+    <!-- 6. Honest Guidance -->
+    <section>
+      <h2 class="text-3xl font-black">When you should probably choose something else</h2>
+      <ul class="mt-5 max-w-3xl space-y-3 text-slate-300">
+        <li>
+          <strong class="text-white">You handle sensitive or regulated information</strong> --
+          Choose <a href="/models/mistral/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
+          with a version of Mistral that runs entirely on your own hardware. This cloud setup sends data
+          out to the internet.
+        </li>
+        <li>
+          <strong class="text-white">You just need something smaller and cheaper</strong> --
+          <a href="/models/ministral-3-cloud/" class="text-cyan-300 hover:text-cyan-200">Ministral 3 Cloud</a>
+          offers smaller versions that still understand images and text, at a lower price, if the full-size
+          model is more than you actually need.
+        </li>
+        <li>
+          <strong class="text-white">Your main need is writing and fixing lots of code</strong> --
+          A model built specifically for that, like
+          <a href="/models/devstral-2-cloud/" class="text-cyan-300 hover:text-cyan-200">Devstral 2 Cloud</a>,
+          will likely serve you better.
+        </li>
+        <li>
+          <strong class="text-white">Your whole team uses this every single day, heavily</strong> --
+          If usage is constant and high-volume, cloud costs can eventually add up to more than the price
+          of owning your own hardware over time.
+        </li>
+        <li>
+          <strong class="text-white">You need guaranteed, unchanging results for audits or compliance</strong> --
+          A model installed locally on Private Instances gives you more certainty than a cloud version that
+          Mistral or Ollama could update at any time.
+        </li>
+      </ul>
+    </section>
+
+    <!-- 7. Recommended Terminal Glass Deployment -->
+    <section>
+      <h2 class="text-3xl font-black">What we recommend</h2>
+      <div class="mt-6 overflow-hidden rounded-2xl border border-slate-800">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-slate-950 text-cyan-200">
+            <tr>
+              <th class="px-4 py-3">Version</th>
+              <th class="px-4 py-3">Best for</th>
+              <th class="px-4 py-3">Notes</th>
+              <th class="px-4 py-3"></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 bg-slate-900 text-slate-300">
+            <tr>
+              <td class="px-4 py-3 font-mono text-cyan-200">mistral-large-3:675b-cloud</td>
+              <td class="px-4 py-3">Teams who want to test a top-tier AI assistant that understands both text and images</td>
+              <td class="px-4 py-3">Very large model, huge memory for long conversations, understands pictures, can use tools, higher cost tier. This is currently the only way to access Mistral Large 3 -- great for serious pilot projects and real business use, as long as you're okay with data leaving your network.</td>
+              <td class="px-4 py-3 whitespace-nowrap"><a href="/quote.html" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-sm text-slate-400">
+        As of now, there's no smaller, downloadable version of this model -- the cloud is the only way in.
+        Double-check current availability at
+        <a href="https://ollama.com/library/mistral-large-3" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">ollama.com/library/mistral-large-3</a>
+        before you commit.
+      </p>
+    </section>
+
+    <!-- 8. Licensing & Access -->
+    <section>
+      <h2 class="text-3xl font-black">The legal fine print, in plain terms</h2>
+      <p class="mt-5 max-w-3xl text-slate-300">
+        Mistral Large 3 is released under the
+        <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">Apache 2.0 license</a>,
+        which generally allows commercial use as long as you follow its standard rules. Using the cloud
+        version also requires an Ollama Cloud account, and you'll be billed based on how much you use it --
+        pricing and limits can change over time, so it's worth checking Ollama's own terms before relying
+        on this for production work.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        Official listing:
+        <a href="https://ollama.com/library/mistral-large-3" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">ollama.com/library/mistral-large-3</a>
+      </p>
+      <div class="mt-6 rounded-2xl border border-slate-800 bg-slate-900 p-5 text-sm text-slate-400">
+        <strong class="text-slate-300">A quick disclaimer:</strong> Terminal Glass is our own way of
+        packaging this setup -- we don't own or run Mistral Large 3 or Ollama Cloud ourselves. Pricing,
+        availability, and how the model behaves are all controlled by Mistral and Ollama, and things can
+        change without notice. Remember: any data or images you send through this setup do leave your own
+        network. This page is meant to help you understand your options -- it isn't legal advice.
+      </div>
+    </section>
+
+    <!-- 9. Final note -->
+    <section class="rounded-3xl border border-slate-800 bg-slate-900 p-8">
+      <h2 class="text-2xl font-black text-white">What we handle for you</h2>
+      <p class="mt-4 text-slate-300">
+        Terminal Glass sets you up with one simple chat interface, keeps your private documents and search
+        tools stored locally, lets you manage multiple team members with different access levels, and helps
+        you keep an eye on cloud usage so your bill never comes as a surprise.
+      </p>
+    </section>
+
+    <div class="text-center">
+      <a href="/quote.html" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
+        Get a quote for Mistral Large 3 Cloud →
+      </a>
+      <p class="mt-3 text-sm text-slate-500">We'll help you figure out the right small computer to run locally and the right cloud option for your needs.</p>
+    </div>
+
+  </main>
+
+  <section class="border-t border-slate-800 bg-slate-900 px-6 py-8">
+    <div class="mx-auto max-w-6xl">
+      <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Image and source credits</p>
+      <div class="mt-4 grid gap-4 text-xs text-slate-500 md:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <p class="font-semibold text-slate-400">Hero image</p>
+          <p class="mt-1">Same artwork used on the <a href="/models/mistral/" class="text-cyan-600 hover:text-cyan-500">Mistral family page</a>, originally from the Ollama library listing.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-400">Who makes this model</p>
+          <p class="mt-1">Mistral Large 3 is made by <a href="https://mistral.ai/" target="_blank" rel="noopener" class="text-cyan-600 hover:text-cyan-500">Mistral AI</a>. Terminal Glass and NoCloudGPT are separate services and aren't affiliated with Mistral or Ollama.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-400">Want it fully private instead?</p>
+          <p class="mt-1">See <a href="/models/mistral/" class="text-cyan-600 hover:text-cyan-500">Mistral -- NoCloudGPT Private Instances</a>, or check out <a href="/models/ministral-3-cloud/" class="text-cyan-600 hover:text-cyan-500">Ministral 3 Cloud</a> for a smaller, lighter option.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-800 bg-slate-950 px-6 py-10 text-center text-sm text-slate-500">
+    <p>NoCloudGPT is an independent service. We are not affiliated with Mistral AI, Ollama, or any AI developer mentioned on this page.</p>
+    <div class="mx-auto max-w-6xl px-6 py-4">
+      <p class="text-xs text-slate-500 border border-slate-800 rounded-xl px-4 py-3 bg-slate-900">
+        <strong class="text-slate-400">A note on licenses:</strong>
+        Licensing details for open-weight AI models come from official model documentation and developer
+        pages. Always double-check the current license at
+        <a href="https://huggingface.co/models" target="_blank" rel="noopener" class="text-cyan-600 hover:text-cyan-500">Hugging Face</a>
+        or the model developer's official page before using it commercially.
+        We're not lawyers -- talk to a qualified professional if compliance is a concern for your business.
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

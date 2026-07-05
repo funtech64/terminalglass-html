@@ -1,10 +1,371 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nemotron-3 Super Cloud -- Cloud-Accelerated Private AI | Terminal Glass</title>
+  <meta name="description" content="Run Nemotron-3 Super through Terminal Glass and Ollama Cloud. 120B MoE reasoning and agentic workflows without an 87 GB local download -- honest trade-offs on data movement and usage cost.">
+  <link rel="canonical" href="https://nocloudgpt.com/models/nemotron-3-super-cloud/">
+  <meta property="og:title" content="Nemotron-3 Super Cloud -- Terminal Glass | NoCloudGPT">
+  <meta property="og:description" content="Nemotron-3 Super on Ollama Cloud via Terminal Glass. OpenWebUI locally, inference in the cloud. Honest trade-offs on data residency, cost, and hardware.">
+  <meta property="og:image" content="/models/nemotron-3-super-cloud/hero.jpg">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100">
+
+  <header class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-6xl px-6 py-4">
+      <nav class="flex items-center justify-between text-sm">
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>
+        <div class="flex gap-6 text-slate-400">
+          <a href="/models/" class="hover:text-white">Models</a>
+          <a href="/deploy/lightsail-guide.html" class="hover:text-white">Deploy</a>
+          <a href="/quote.html" class="hover:text-white">Get a Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. Hero -->
+  <section class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <a href="/models/" class="text-sm font-semibold text-cyan-300 hover:text-cyan-200">← Back to model catalog</a>
+      <a href="https://ollama.com/library/nemotron-3-super" target="_blank" rel="noopener noreferrer" class="inline-block">
+        <img
+          src="/models/nemotron-3-super-cloud/hero.jpg"
+          alt="Nemotron-3 Super Cloud -- Terminal Glass workflow with Ollama Cloud inference"
+          width="1200" height="600"
+          class="mt-8 mb-2 w-full max-w-xs rounded-2xl object-cover"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        />
+      </a>
+      <p class="mb-6 text-xs text-slate-500">Source: <a href="https://ollama.com/library/nemotron-3-super" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-400">Ollama</a></p>
+      <div class="mt-8 mb-6 flex h-28 w-full max-w-xs items-center justify-center rounded-2xl border border-dashed border-slate-600 bg-slate-900 text-sm text-slate-500" style="display:none;"></div>
+      <p class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300">Nemotron-3 Super · Terminal Glass</p>
+      <h1 class="mt-4 max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+        Nemotron-3 Super Cloud -- Agentic Reasoning Without an 87 GB Local Download
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg text-slate-300">
+        Run NVIDIA's 120B MoE Nemotron-3 Super through OpenWebUI on a modest Linux host while Ollama Cloud
+        handles inference -- including 256K context, configurable reasoning traces, and native tool use for
+        multi-agent workflows. You avoid provisioning large GPU servers for an 87 GB local build; in exchange,
+        prompts and retrieved context leave your infrastructure and usage is billed per token.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="/quote.html" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
+        <a href="#how-it-works" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See how it works</a>
+        <a href="/models/nemotron/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">Compare NoCloudGPT Private Instances</a>
+      </div>
+      <p class="mt-6 text-sm text-emerald-400">
+        Terminal Glass runs OpenWebUI on your server while Nemotron-3 Super inference happens on Ollama Cloud.
+      </p>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-6xl px-6 py-12 space-y-12">
+
+    <!-- 2. Overview -->
+    <section>
+      <h2 class="text-3xl font-black">What Nemotron-3 Super is</h2>
+      <p class="mt-5 max-w-3xl text-lg text-slate-300">
+        Nemotron-3 Super is NVIDIA's open 120B mixture-of-experts model with 12B active parameters per token,
+        designed for agentic workflows, step-by-step reasoning, and high-volume tasks such as IT ticket
+        automation. It produces a visible reasoning trace before the final answer; reasoning mode can be
+        toggled through the chat template. Ollama lists 256K native context, tool support, and text-only
+        input across English, French, German, Italian, Japanese, Spanish, and Chinese.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-400">
+        The local <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">nemotron-3-super:120b</code>
+        build is roughly 87 GB on disk and typically requires substantial GPU memory for comfortable local
+        inference. Terminal Glass uses
+        <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">nemotron-3-super:cloud</code> so you
+        can evaluate the model's agentic and reasoning quality without that hardware commitment. It is not a
+        general multilingual substitute for families with broader language coverage -- seven languages are
+        supported, not open-ended global coverage.
+      </p>
+    </section>
+
+    <!-- 3. The Terminal Glass Trade-off -->
+    <section class="rounded-3xl border border-amber-500/30 bg-amber-950/20 p-8">
+      <h2 class="text-2xl font-black text-amber-200">The Terminal Glass trade-off</h2>
+      <p class="mt-4 text-slate-300">
+        <strong class="text-white">Terminal Glass</strong> gives you the same OpenWebUI chat experience
+        and locally stored RAG index you would use on a private deployment -- but routes each inference
+        request to Ollama Cloud. Your server runs the Ollama client, OpenWebUI, and your document index;
+        a small cloud VM, NUC, or mini-PC is usually enough. You do not need to host an 87 GB model download
+        or size GPU clusters for 120B-class responses on day one.
+      </p>
+      <p class="mt-4 text-sm text-amber-300">
+        <strong>Honest reality:</strong> Every prompt and retrieved RAG chunk leaves your infrastructure
+        and is processed on Ollama Cloud. This is not air-gapped and is not equivalent to
+        <a href="/models/nemotron/" class="underline hover:text-amber-200">NoCloudGPT Private Instances</a>,
+        where inference stays on hardware you control. You also pay recurring, usage-based Ollama Cloud fees
+        that grow with reasoning depth, context length, and agent loop volume. When confidential or regulated
+        work must stay on your network, choose a <a href="/models/">NoCloudGPT Air Gapped</a> deployment instead.
+      </p>
+    
+<!-- Secondary artwork -->
+<div class="secondary-artwork my-8 md:float-right md:ml-6 md:mb-4 md:max-w-[42%]">
+  <a href="https://commons.wikimedia.org/wiki/File%3ATop_supercomputers_at_universities_in_the_United_States.webp" target="_blank" rel="noopener">
+    <img src="/models/nemotron-3-super-cloud/secondary.webp" alt="Nemotron 3 Super Cloud secondary visual" class="rounded-xl border border-slate-700">
+  </a>
+  <p class="mt-1 text-center text-xs text-slate-400">
+    Source: <a href="https://commons.wikimedia.org/wiki/File%3ATop_supercomputers_at_universities_in_the_United_States.webp" class="underline">Wikimedia Commons</a>
+  </p>
+</div>
+</section>
+    <section>
+      <h2>What about the video card?</h2>
+      <p>
+        This is the question most buyers are actually trying to answer.
+      </p>
+      <p>
+        Running these models without a proper GPU usually means falling back to CPU only. 
+        This works for very light use, but it becomes extremely slow for normal workloads. 
+        Many people discover this the hard way after spinning up a cloud server that ends up being too expensive or too slow.
+      </p>
+      <p>
+        Some teams want to avoid dealing with GPUs altogether. 
+        For them, Terminal Glass Cloud is usually the simpler option -- you get capable models through a familiar OpenWebUI interface without having to select, size, or manage video cards.
+      </p>
+      <p>
+        Other teams prefer to run on infrastructure they control. In that case, they typically choose a GPU-based instance (on AWS Lightsail, Digital Ocean, or their own servers) and install NoCloudGPT on it. 
+        Because these models are designed to run with local Ollama, you become responsible for selecting and managing the GPU.
+      </p>
+      <p>
+        Some organizations need everything to stay fully inside their own environment from day one. 
+        For those teams, a <a href="/models/">NoCloudGPT Air Gapped</a> deployment on their own hardware is the right approach.
+      </p>
+      <p class="text-sm text-slate-400">
+        There isn’t a single right answer. The right answer depends on your constraints around cost, privacy, compliance, latency, and long-term ownership.
+      </p>
+    </section>
+
+    <!-- 4. Who This Model Family is For -->
+    <section>
+      <h2 class="text-3xl font-black">Who This Model Family is For</h2>
+      <div class="mt-6 grid gap-5 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>👤</span> Personal Use
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            A practical fit if you want strong long-form writing, structured summarization, or step-by-step
+            reasoning on a laptop or mini-PC that cannot host the 120B build locally. Occasional use can
+            be more economical than buying inference hardware upfront. Anything you type -- personal notes,
+            legal drafts, financial details -- is sent to Ollama Cloud; keep that material on NoCloudGPT
+            Private Instances instead. Sustained daily use may accumulate cloud costs that eventually favor
+            owned hardware.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>🏢</span> Business / Team Use
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Small teams use Nemotron-3 Super Cloud for drafting proposals, cleaning internal documentation,
+            first-pass customer replies, and reasoning over moderately complex briefs through shared OpenWebUI.
+            It suits internal productivity work where several people need a capable assistant without anyone
+            managing GPU infrastructure. It is not appropriate for patient records, financial PII under strict
+            controls, attorney-client material, export-controlled content, or strict data-residency rules --
+            those require NoCloudGPT Private Instances.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>⚙️</span> Developer &amp; Technical Use
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Useful for prototyping agentic features, reasoning chains, and structured-output pipelines before
+            you commit to NVIDIA-class GPU infrastructure. Standard Ollama tags port to a self-hosted
+            <code class="rounded bg-slate-800 px-1 py-0.5 text-cyan-200">nemotron-3-super:120b</code> on
+            NoCloudGPT Private Instances when volume justifies it. Round-trip latency to Ollama Cloud makes
+            this a poor fit for tight, high-frequency tool-calling loops compared with local inference.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>🔬</span> Data Science &amp; Research Use
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Helpful for literature summarization, hypothesis drafting, analysis-script generation, and
+            reasoning over public datasets in short bursts without GPU procurement. Cloud inference is not
+            strictly reproducible when provider behavior or tags change. Embargoed, proprietary, or
+            publication-bound data should stay on fully local NoCloudGPT Private Instances with a pinned
+            model version.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. How Terminal Glass Works with This Model -->
+    <section id="how-it-works">
+      <h2 class="text-3xl font-black">How Terminal Glass Works with This Model</h2>
+      <p class="mt-5 max-w-3xl text-slate-300">
+        You interact through <strong class="text-white">OpenWebUI</strong> on your Terminal Glass host
+        (or via the command line). Chat history, user accounts, and your locally built RAG document index
+        stay on hardware you control. When you submit a prompt, the request -- including any retrieved
+        passages -- is forwarded to Ollama Cloud where Nemotron-3 Super runs; the response streams back
+        to your browser or API client.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        Cloud access requires an Ollama account (<code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">ollama signin</code>)
+        on the Terminal Glass machine. Reasoning-enabled prompts and long 256K contexts increase per-request
+        token volume relative to short chats.
+      </p>
+      <pre class="mt-5 overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900 p-5 text-sm text-cyan-200"><code>ollama signin
+ollama run nemotron-3-super:cloud</code></pre>
+      <p class="mt-5 text-sm text-amber-300">
+        <strong>What leaves your infrastructure:</strong> prompt text and RAG-retrieved passages. Nemotron-3
+        Super is text-only on Ollama -- there is no image input path. <strong>Latency</strong> is typically
+        higher than a warm local model and increases with reasoning traces and multi-step agent loops.
+        <strong>Cost</strong> scales with token volume, including reasoning tokens in the visible trace.
+       
+      </p>
+    </section>
+
+    <!-- 6. Honest Guidance -->
+    <section>
+      <h2 class="text-3xl font-black">Honest Guidance: When to Choose a Different Path</h2>
+      <ul class="mt-5 max-w-3xl space-y-3 text-slate-300">
+        <li>
+          <strong class="text-white">Regulated, confidential, or data-residency-sensitive work</strong> --
+          Choose <a href="/models/nemotron/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
+          running Nemotron locally. Terminal Glass routes prompts to Ollama Cloud.
+        </li>
+        <li>
+          <strong class="text-white">High-frequency tool calling or low-latency agent loops</strong> --
+          Local inference on owned NVIDIA or compatible GPU hardware performs better than cloud round-trips.
+        </li>
+        <li>
+          <strong class="text-white">Sustained or high-volume workloads</strong> --
+          Recurring cloud token spend can exceed the cost of owned inference hardware over many months.
+        </li>
+        <li>
+          <strong class="text-white">Guaranteed reproducibility or fixed model versions</strong> --
+          A pinned local deployment on NoCloudGPT Private Instances is more reliable for compliance review
+          or regression testing than a cloud tag that may change behavior.
+        </li>
+        <li>
+          <strong class="text-white">Broad multilingual coverage beyond seven languages</strong> --
+          Consider <a href="/models/qwen3.5-cloud/" class="text-cyan-300 hover:text-cyan-200">Qwen 3.5 Cloud</a>
+          or another family if your primary languages fall outside NVIDIA's supported set.
+        </li>
+        <li>
+          <strong class="text-white">Clinical or diagnostic use</strong> --
+          Nemotron-3 Super is a general-purpose model, not a validated medical device. Do not use it for
+          patient care decisions without clinical governance your compliance team approves.
+        </li>
+      </ul>
+    </section>
+
+    <!-- 7. Recommended Terminal Glass Deployment -->
+    <section>
+      <h2 class="text-3xl font-black">Recommended Terminal Glass Deployment</h2>
+      <div class="mt-6 overflow-hidden rounded-2xl border border-slate-800">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-slate-950 text-cyan-200">
+            <tr>
+              <th class="px-4 py-3">Variant / Tag</th>
+              <th class="px-4 py-3">Recommended For</th>
+              <th class="px-4 py-3">Notes</th>
+              <th class="px-4 py-3"></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 bg-slate-900 text-slate-300">
+            <tr>
+              <td class="px-4 py-3 font-mono text-cyan-200">nemotron-3-super:cloud</td>
+              <td class="px-4 py-3">Teams evaluating agentic and reasoning workflows</td>
+              <td class="px-4 py-3">256K context, text only, medium usage tier on Ollama. Only verified Nemotron-3 Super cloud tag. Pair with local RAG for internal knowledge assistants when document indexes can stay local but inference may leave your network.</td>
+              <td class="px-4 py-3 whitespace-nowrap"><a href="/quote.html" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-sm text-slate-400">
+        Terminal Glass keeps RAG indexes and OpenWebUI on your host while offloading Nemotron inference to
+        Ollama Cloud. Confirm current tags at
+        <a href="https://ollama.com/library/nemotron-3-super" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">ollama.com/library/nemotron-3-super</a>
+        before deployment.
+      </p>
+    </section>
+
+    <!-- 8. Licensing & Access -->
+    <section>
+      <h2 class="text-3xl font-black">Licensing &amp; Access</h2>
+      <p class="mt-5 max-w-3xl text-slate-300">
+        Nemotron-3 Super cloud access requires an Ollama Cloud account with usage-based pricing; rate limits
+        and tiers apply and may change. The open model is governed by the
+        <a href="https://www.nvidia.com/en-us/agreements/enterprise-software/nvidia-open-model-license/" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">NVIDIA Nemotron Open Model License</a>,
+        which permits commercial use subject to NVIDIA's terms, including export and compliance requirements.
+        Ollama Cloud usage is separately governed by Ollama's terms -- review both before production deployment.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        Official catalog:
+        <a href="https://ollama.com/library/nemotron-3-super" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">ollama.com/library/nemotron-3-super</a>
+        · Model card:
+        <a href="https://huggingface.co/nvidia/NVIDIA-Nemotron-3-Super-120B-A12B-BF16" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">NVIDIA-Nemotron-3-Super-120B-A12B-BF16 on Hugging Face</a>
+      </p>
+      <div class="mt-6 rounded-2xl border border-slate-800 bg-slate-900 p-5 text-sm text-slate-400">
+        <strong class="text-slate-300">Disclaimer:</strong> Terminal Glass is an independent deployment
+        workflow operated by NoCloudGPT. Model availability, exact tags, cloud pricing, and inference
+        behavior are controlled by Ollama and NVIDIA and may change without notice. This page is not legal
+        advice; customers are responsible for compliance with applicable license terms and data-protection
+        regulations.
+      </div>
+    </section>
+
+    <!-- 9. Final note -->
+    <section class="rounded-3xl border border-slate-800 bg-slate-900 p-8">
+      <h2 class="text-2xl font-black text-white">What Terminal Glass adds</h2>
+      <p class="mt-4 text-slate-300">
+        Terminal Glass packages a shared OpenWebUI interface, locally stored private RAG over your documentation,
+        per-user access controls, and guidance on monitoring cloud usage so spend stays predictable.
+      </p>
+    </section>
+
+    <div class="text-center">
+      <a href="/quote.html" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
+        Get a quote for Nemotron-3 Super Cloud →
+      </a>
+      <p class="mt-3 text-sm text-slate-500">We help you size the local host and choose the right cloud variant for your team.</p>
+    </div>
+
+  </main>
+
+  <section class="border-t border-slate-800 bg-slate-900 px-6 py-8">
+    <div class="mx-auto max-w-6xl">
+      <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Artwork and source references</p>
+      <div class="mt-4 grid gap-4 text-xs text-slate-500 md:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <p class="font-semibold text-slate-400">Hero image</p>
+          <p class="mt-1">Artwork shared with the <a href="/models/nemotron/" class="text-cyan-600 hover:text-cyan-500">Nemotron family page</a>. Sourced from the Ollama library listing.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-400">Model developer</p>
+          <p class="mt-1">Nemotron-3 Super is developed by <a href="https://www.nvidia.com/en-us/ai-data-science/foundation-models/nemotron/" target="_blank" rel="noopener" class="text-cyan-600 hover:text-cyan-500">NVIDIA</a>. Terminal Glass and NoCloudGPT are independent services not affiliated with NVIDIA or Ollama.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-400">Private deployment</p>
+          <p class="mt-1">For fully local Nemotron on hardware you control, see <a href="/models/nemotron/" class="text-cyan-600 hover:text-cyan-500">Nemotron -- NoCloudGPT Private Instances</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-800 bg-slate-950 px-6 py-10 text-center text-sm text-slate-500">
+    <p>NoCloudGPT is an independent deployment service. Not affiliated with NVIDIA, Ollama, or any model developer referenced on this page.</p>
+    <div class="mx-auto max-w-6xl px-6 py-4">
+      <p class="text-xs text-slate-500 border border-slate-800 rounded-xl px-4 py-3 bg-slate-900">
+        <strong class="text-slate-400">License information:</strong>
+        License terms for open-weight models are sourced from official model cards and developer repositories.
+        Always verify the current license at
+        <a href="https://huggingface.co/models" target="_blank" rel="noopener" class="text-cyan-600 hover:text-cyan-500">Hugging Face</a>
+        or the official developer repository before commercial deployment.
+        NoCloudGPT is not a legal advisor; consult qualified counsel for compliance-critical deployments.
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

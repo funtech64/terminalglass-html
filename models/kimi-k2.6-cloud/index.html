@@ -1,10 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kimi K2.6 Cloud -- Model Brief | Terminal.Glass</title>
+  <meta name="description" content="Deployment brief: Kimi K2.6's cloud tag on Terminal.Glass. Long-horizon coding, design-to-code, and multimodal agents -- what it is, hardware requirements, and when to choose a different model instead.">
+  <link rel="canonical" href="https://terminal.glass/models/kimi-k2.6-cloud/">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100">
+
+  <header class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-4xl px-6 py-4">
+      <nav class="flex items-center justify-between text-sm">
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">Terminal.Glass</a>
+        <div class="flex gap-6 text-slate-400">
+          <a href="/models/" class="hover:text-white">Model Briefs</a>
+          <a href="/pricing/" class="hover:text-white">Pricing</a>
+          <a href="/contact/" class="hover:text-white">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-4xl px-6 py-12">
+      <p class="text-xs font-bold uppercase tracking-[0.3em] text-cyan-300">Model Brief</p>
+      <h1 class="mt-3 text-3xl font-black tracking-tight md:text-4xl">
+        Kimi K2.6 Cloud
+      </h1>
+      <p class="mt-4 max-w-2xl text-slate-300">
+        Moonshot AI's native multimodal agentic model for long-horizon coding, coding-driven design,
+        proactive autonomous execution, and swarm-based task orchestration. Deployed through Terminal.Glass
+        via a cloud-only tag routed to Ollama Cloud -- 1.04T parameters, 256K context, text and image input,
+        and configurable thinking mode without provisioning trillion-parameter local hardware.
+      </p>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-4xl px-6 py-10 space-y-10">
+
+    <!-- Quick Facts -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Quick Facts</h2>
+      <div class="mt-4 overflow-hidden rounded-xl border border-slate-800">
+        <table class="w-full text-left text-sm">
+          <tbody class="divide-y divide-slate-800 bg-slate-900 text-slate-300">
+            <tr><td class="px-4 py-3 font-semibold text-slate-400 w-1/3">Developer</td><td class="px-4 py-3">Moonshot AI</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">License</td><td class="px-4 py-3">Described as open-source; Kimi-family releases have used modified MIT-style terms -- verify current terms at the official model card before commercial use</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Size</td><td class="px-4 py-3">1.04T parameters</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Context Window</td><td class="px-4 py-3">256K tokens</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Cloud Variant</td><td class="px-4 py-3"><code class="text-cyan-200">kimi-k2.6:cloud</code> (high usage tier -- only tag currently on Ollama)</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Modality</td><td class="px-4 py-3">Text and image input; configurable thinking mode; native tool support</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Local Hardware</td><td class="px-4 py-3">No local weight variant currently listed on Ollama -- cloud is the practical access path</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Best For</td><td class="px-4 py-3">Long-horizon coding, design-to-code workflows, multi-step agent orchestration, tool-driven automation</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Why Choose This Model -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Why Choose This Model</h2>
+      <p class="mt-3 text-slate-300">
+        Kimi K2.6 targets tasks where a model must reason across code, documents, images, UI requirements,
+        and tool output over extended, multi-step workflows rather than answer a single isolated prompt.
+        Its long-horizon focus makes it suited to sustained coding sessions, coding-driven design work, and
+        swarm-based task orchestration where an agent plans, executes, and adjusts across many steps. Its
+        256K context and configurable thinking mode support sustained reasoning across large codebases and
+        documents. Because it is currently only available as a cloud tag, Terminal.Glass is a practical way
+        to evaluate a trillion-parameter long-horizon agent without provisioning matching local hardware.
+      </p>
+    </section>
+
+    <!-- Terminal.Glass Deployment -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Terminal.Glass Deployment</h2>
+      <p class="mt-3 text-slate-300">
+        Your interface, chat history, user accounts, and RAG index stay on your Terminal.Glass host. When
+        you submit a prompt -- including uploaded images, code excerpts, and any retrieved RAG passages --
+        to <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">kimi-k2.6:cloud</code>, the
+        request is forwarded to Ollama Cloud, where Kimi K2.6 runs, and the response streams back. Cloud
+        access requires an Ollama account signed in on the Terminal.Glass machine
+        (<code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">ollama signin</code>). Kimi K2.6 is
+        rated high usage on Ollama -- budget accordingly for image inputs, long 256K contexts,
+        thinking-mode prompts, and autonomous agent loops. No local GPU is required to use the cloud tag.
+      </p>
+    </section>
+
+    <!-- Recommended Uses -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Recommended Uses</h2>
+      <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-300">
+        <li>Long-horizon coding across large codebases</li>
+        <li>Coding-driven design and design-to-code workflows</li>
+        <li>Multi-step, tool-calling agent orchestration</li>
+        <li>DevOps planning and performance optimization</li>
+        <li>Visual UI interpretation paired with code generation</li>
+        <li>Long-context literature review and research agent testing</li>
+      </ul>
+      <p class="mt-3 text-sm text-slate-400">
+        Not appropriate for regulated, confidential, or strict data-residency workloads -- prompts,
+        uploaded images, code snippets, RAG-retrieved passages, and tool context are sent to Ollama Cloud
+        during inference. Avoid sensitive screenshots, client visuals, or proprietary UI designs unless
+        your organization has explicitly approved cloud processing for that data class. Generated code,
+        shell commands, browser actions, and multi-agent tool workflows still require tests, permissions,
+        logs, and rollback discipline regardless of model capability. Cloud inference does not pin model
+        versions the way a local checkpoint does, so confidential or citable research data should stay on
+        a fully local deployment.
+      </p>
+    </section>
+
+    <!-- Hardware Guidance -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Hardware Guidance</h2>
+      <p class="mt-3 text-slate-300">
+        The <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">kimi-k2.6:cloud</code> tag runs
+        entirely on Ollama Cloud, so the Terminal.Glass host only needs to run Open WebUI, the Ollama
+        client, and your document index -- a small VM or mini-PC is sufficient. Ollama currently lists no
+        local weight variant for Kimi K2.6, so self-hosting a 1.04T-parameter model is not a practical
+        option for most teams today. Confirm current tag availability at
+        <a href="https://ollama.com/library/kimi-k2.6" class="text-cyan-300 hover:text-cyan-200" target="_blank" rel="noopener">the official Ollama listing</a>.
+      </p>
+    </section>
+
+    <!-- Honest Guidance -->
+    <section class="rounded-2xl border border-amber-500/30 bg-amber-950/20 p-6">
+      <h2 class="text-xl font-bold text-amber-200">Honest Guidance</h2>
+      <ul class="mt-3 space-y-2 text-sm text-amber-100">
+        <li><strong class="text-white">Regulated, confidential, or strict data-residency requirements:</strong> route this to a self-hosted deployment instead -- Terminal Glass's cloud routing sends prompts, images, and code to Ollama Cloud.</li>
+        <li><strong class="text-white">Sensitive screenshots, client visuals, or proprietary UI designs:</strong> do not use cloud inference unless your organization has explicitly approved it for that data class.</li>
+        <li><strong class="text-white">Routine drafting or tighter budgets:</strong> a smaller model such as Kimi K2.5 Cloud or a text-only assistant may be enough when K2.6's long-horizon agentic capacity is more than the task requires.</li>
+        <li><strong class="text-white">Unreviewed agent automation:</strong> visual tool use, code execution, browser workflows, scheduled tasks, and multi-agent orchestration need permissions, logs, validation, and rollback practices regardless of which model you use.</li>
+        <li><strong class="text-white">Model-version pinning or audit-grade reproducibility:</strong> a pinned local deployment provides more control than a cloud-only tag that may change behavior without notice.</li>
+      </ul>
+    </section>
+
+    <!-- Learn More -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Learn More</h2>
+      <p class="mt-3 text-slate-300">
+        Full technical reference, licensing detail, and local deployment options for this model family are
+        documented on <a href="https://nocloudgpt.com/models/kimi/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>.
+        Confirm current tags and availability at
+        <a href="https://ollama.com/library/kimi-k2.6" class="text-cyan-300 hover:text-cyan-200" target="_blank" rel="noopener">ollama.com/library/kimi-k2.6</a>.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="flex flex-wrap gap-3 border-t border-slate-800 pt-8">
+      <a href="/deploy/kimi-k2.6-cloud/" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Deploy with Terminal.Glass →</a>
+      <a href="/pricing/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">View Pricing</a>
+      <a href="/contact/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">Contact</a>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800 bg-slate-950 px-6 py-8 text-center text-sm text-slate-500">
+    <p>Terminal.Glass is an independent deployment platform. Not affiliated with Moonshot AI or Ollama. Model availability, tags, and pricing may change.</p>
+  </footer>
 </body>
 </html>

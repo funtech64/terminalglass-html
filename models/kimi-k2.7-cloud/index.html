@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MiniMax M2.5 Cloud -- Model Brief | Terminal.Glass</title>
-  <meta name="description" content="Deployment brief: MiniMax M2.5's cloud tag on Terminal.Glass. Long-context reasoning and agentic coding workflows -- what it is, hardware requirements, and when to choose a different model instead.">
-  <link rel="canonical" href="https://terminal.glass/models/minimax-m2.5-cloud/">
+  <title>Kimi K2.7 Code Cloud -- Model Brief | Terminal.Glass</title>
+  <meta name="description" content="Deployment brief: Kimi K2.7 Code's cloud tag on Terminal.Glass. Long-horizon coding and multimodal agent workflows -- what it is, hardware requirements, and when to choose a different model instead.">
+  <link rel="canonical" href="https://terminal.glass/models/kimi-k2.7-code-cloud/">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-slate-100">
@@ -28,12 +28,13 @@
     <div class="mx-auto max-w-4xl px-6 py-12">
       <p class="text-xs font-bold uppercase tracking-[0.3em] text-cyan-300">Model Brief</p>
       <h1 class="mt-3 text-3xl font-black tracking-tight md:text-4xl">
-        MiniMax M2.5 Cloud
+        Kimi K2.7 Code Cloud
       </h1>
       <p class="mt-4 max-w-2xl text-slate-300">
-        A large model from MiniMax focused on long-context understanding, coding, and agentic workflows.
-        Deployed through Terminal.Glass via a cloud tag routed to Ollama Cloud -- strong long-context
-        reasoning and agentic coding performance without provisioning local frontier-scale GPUs.
+        Moonshot AI's coding-focused model in the Kimi family, built for long-horizon coding tasks,
+        repository understanding, and multimodal agent workflows. Deployed through Terminal.Glass via
+        a cloud-only tag routed to Ollama Cloud -- strong long-context, agentic coding performance without
+        provisioning local frontier hardware.
       </p>
     </div>
   </section>
@@ -46,14 +47,14 @@
       <div class="mt-4 overflow-hidden rounded-xl border border-slate-800">
         <table class="w-full text-left text-sm">
           <tbody class="divide-y divide-slate-800 bg-slate-900 text-slate-300">
-            <tr><td class="px-4 py-3 font-semibold text-slate-400 w-1/3">Developer</td><td class="px-4 py-3">MiniMax</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400 w-1/3">Developer</td><td class="px-4 py-3">Moonshot AI</td></tr>
             <tr><td class="px-4 py-3 font-semibold text-slate-400">License</td><td class="px-4 py-3">Not specified on the Ollama listing -- verify current terms at the official model card before commercial use</td></tr>
             <tr><td class="px-4 py-3 font-semibold text-slate-400">Size</td><td class="px-4 py-3">Not specified -- confirm parameter count at the official Ollama listing</td></tr>
             <tr><td class="px-4 py-3 font-semibold text-slate-400">Context Window</td><td class="px-4 py-3">Not specified -- confirm current context length at the official Ollama listing</td></tr>
-            <tr><td class="px-4 py-3 font-semibold text-slate-400">Cloud Variant</td><td class="px-4 py-3"><code class="text-cyan-200">minimax-m2.5:cloud</code></td></tr>
-            <tr><td class="px-4 py-3 font-semibold text-slate-400">Modality</td><td class="px-4 py-3">Text and code input</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Cloud Variant</td><td class="px-4 py-3"><code class="text-cyan-200">kimi-k2.7-code:cloud</code></td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Modality</td><td class="px-4 py-3">Code and text input; image input supported for multimodal agent workflows</td></tr>
             <tr><td class="px-4 py-3 font-semibold text-slate-400">Local Hardware</td><td class="px-4 py-3">Accessible via cloud tag on Ollama -- confirm whether local weights are available at the official listing</td></tr>
-            <tr><td class="px-4 py-3 font-semibold text-slate-400">Best For</td><td class="px-4 py-3">Long-context analysis, repository-scale coding, and agent-style workflows</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Best For</td><td class="px-4 py-3">Long-horizon coding, repository understanding, multimodal agent and design-to-code workflows</td></tr>
           </tbody>
         </table>
       </div>
@@ -63,11 +64,11 @@
     <section>
       <h2 class="text-xl font-bold text-white">Why Choose This Model</h2>
       <p class="mt-3 text-slate-300">
-        MiniMax M2.5 is built for tasks that benefit from extended context -- reasoning across large
-        codebases, long documents, or multi-turn agent interactions rather than isolated single-turn
-        prompts. It performs well on complex, multi-step tasks where earlier context needs to remain
-        available throughout a long session. Because it is accessed as a cloud tag on Ollama,
-        Terminal.Glass makes it possible to evaluate its long-context and agentic coding capabilities
+        Kimi K2.7 Code is built for coding tasks that extend across large amounts of code, documents, and
+        visual context over long, multi-step interactions rather than isolated single-turn prompts. It
+        performs well on repository-scale understanding and multimodal agent workflows where reasoning
+        needs to persist across an extended session. Because it is accessed as a cloud tag on Ollama,
+        Terminal.Glass makes it possible to evaluate its long-horizon coding and agentic capabilities
         without provisioning frontier-scale local hardware to match.
       </p>
     </section>
@@ -77,9 +78,10 @@
       <h2 class="text-xl font-bold text-white">Terminal.Glass Deployment</h2>
       <p class="mt-3 text-slate-300">
         Your interface, chat history, and RAG index stay on your Terminal.Glass host. When you submit a
-        prompt to <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">minimax-m2.5:cloud</code>,
-        the request is forwarded to Ollama Cloud, where the model runs, and the response streams back.
-        Cloud access requires an Ollama account signed in on the Terminal.Glass machine
+        prompt -- including code context and any images -- to
+        <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">kimi-k2.7-code:cloud</code>, the
+        request is forwarded to Ollama Cloud, where the model runs, and the response streams back. Cloud
+        access requires an Ollama account signed in on the Terminal.Glass machine
         (<code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">ollama signin</code>). Usage is
         metered by Ollama Cloud and scales with token volume. No local GPU is required to use the cloud tag.
       </p>
@@ -89,17 +91,17 @@
     <section>
       <h2 class="text-xl font-bold text-white">Recommended Uses</h2>
       <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-300">
-        <li>Long-context analysis of documents and large codebases</li>
-        <li>Repository-scale coding assistance</li>
-        <li>Agent-style, multi-step technical workflows</li>
-        <li>Synthesizing information across long conversation threads</li>
-        <li>General long-horizon research tooling</li>
+        <li>Long-horizon coding across large codebases</li>
+        <li>Repository understanding and multi-file reasoning</li>
+        <li>Design-to-code and multimodal agent workflows</li>
+        <li>Tool-calling agents for complex, multi-step development tasks</li>
+        <li>Code-related research and agentic workflow tooling</li>
       </ul>
       <p class="mt-3 text-sm text-slate-400">
-        Not appropriate for strictly private or regulated data -- every prompt, code snippet, and
-        RAG-retrieved passage leaves your infrastructure and is processed on Ollama Cloud. Cloud inference
-        also does not provide the same version pinning and reproducibility as a local deployment, which
-        matters for audit-grade or citable research work.
+        Not appropriate for proprietary code, images, or data under strict data-residency requirements --
+        every prompt, code snippet, image, and retrieved context leaves your infrastructure and is
+        processed on Ollama Cloud. Cloud inference does not provide the same version pinning and
+        reproducibility as a local deployment, which matters for audit-grade or citable research work.
       </p>
     </section>
 
@@ -107,11 +109,11 @@
     <section>
       <h2 class="text-xl font-bold text-white">Hardware Guidance</h2>
       <p class="mt-3 text-slate-300">
-        The <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">minimax-m2.5:cloud</code> tag
+        The <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">kimi-k2.7-code:cloud</code> tag
         runs entirely on Ollama Cloud, so the Terminal.Glass host only needs to run Open WebUI, the Ollama
         client, and your document index -- a small VM, NUC, or office mini-PC is usually sufficient. Confirm
         whether a local weight variant exists, along with current parameter count and context window, at
-        <a href="https://ollama.com/library/minimax-m2.5" class="text-cyan-300 hover:text-cyan-200" target="_blank" rel="noopener">the official Ollama listing</a>
+        <a href="https://ollama.com/library/kimi-k2.7-code" class="text-cyan-300 hover:text-cyan-200" target="_blank" rel="noopener">the official Ollama listing</a>
         before sizing any local deployment.
       </p>
     </section>
@@ -120,9 +122,9 @@
     <section class="rounded-2xl border border-amber-500/30 bg-amber-950/20 p-6">
       <h2 class="text-xl font-bold text-amber-200">Honest Guidance</h2>
       <ul class="mt-3 space-y-2 text-sm text-amber-100">
-        <li><strong class="text-white">Strict privacy or regulated data:</strong> route this to a self-hosted deployment instead -- Terminal Glass's cloud routing sends prompts, code, and retrieved context to Ollama Cloud.</li>
+        <li><strong class="text-white">Proprietary code, images, or strict data policies:</strong> route this to a self-hosted deployment instead -- Terminal Glass's cloud routing sends prompts, code, and images to Ollama Cloud.</li>
         <li><strong class="text-white">High, predictable volume:</strong> owned inference hardware often becomes more economical than sustained cloud usage over time.</li>
-        <li><strong class="text-white">Maximum coding or agent performance:</strong> consider specialized families such as Qwen Coder or DeepSeek when those workloads dominate your use case, since capability rankings shift quickly.</li>
+        <li><strong class="text-white">Maximum long-horizon coding or multimodal agent performance:</strong> evaluate the latest specialized models when these workloads dominate your use case, since capability rankings shift quickly.</li>
         <li><strong class="text-white">Model-version pinning or audit-grade reproducibility:</strong> a pinned local deployment provides more control than a cloud-only tag that may change behavior without notice.</li>
       </ul>
     </section>
@@ -132,15 +134,15 @@
       <h2 class="text-xl font-bold text-white">Learn More</h2>
       <p class="mt-3 text-slate-300">
         Full technical reference, licensing detail, and local deployment options for this model family are
-        documented on <a href="https://nocloudgpt.com/models/minimax/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>.
+        documented on <a href="https://nocloudgpt.com/models/kimi/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>.
         Confirm current tags, parameter count, context window, and availability at
-        <a href="https://ollama.com/library/minimax-m2.5" class="text-cyan-300 hover:text-cyan-200" target="_blank" rel="noopener">ollama.com/library/minimax-m2.5</a>.
+        <a href="https://ollama.com/library/kimi-k2.7-code" class="text-cyan-300 hover:text-cyan-200" target="_blank" rel="noopener">ollama.com/library/kimi-k2.7-code</a>.
       </p>
     </section>
 
     <!-- CTA -->
     <section class="flex flex-wrap gap-3 border-t border-slate-800 pt-8">
-      <a href="/deploy/minimax-m2.5-cloud/" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Deploy with Terminal.Glass →</a>
+      <a href="/deploy/kimi-k2.7-code-cloud/" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Deploy with Terminal.Glass →</a>
       <a href="/pricing/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">View Pricing</a>
       <a href="/contact/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">Contact</a>
     </section>
@@ -148,7 +150,7 @@
   </main>
 
   <footer class="border-t border-slate-800 bg-slate-950 px-6 py-8 text-center text-sm text-slate-500">
-    <p>Terminal.Glass is an independent deployment platform. Not affiliated with MiniMax or Ollama. Model availability, tags, and pricing may change.</p>
+    <p>Terminal.Glass is an independent deployment platform. Not affiliated with Moonshot AI or Ollama. Model availability, tags, and pricing may change.</p>
   </footer>
 </body>
 </html>

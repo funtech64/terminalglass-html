@@ -1,10 +1,162 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ministral 3 -- Model Brief | Terminal.Glass</title>
+  <meta name="description" content="Ministral 3 model brief: compact multimodal 3B–14B models, Ollama Cloud and local deployment options, hardware guidance, and honest recommendations for Terminal.Glass deployment.">
+  <link rel="canonical" href="https://terminal.glass/models/ministral-3/">
+  <meta property="og:title" content="Ministral 3 -- Terminal.Glass Model Brief">
+  <meta property="og:description" content="Should you deploy Ministral 3? Developer, license, sizing, hardware guidance, and deployment options for Terminal.Glass.">
+  <meta property="og:image" content="/models/ministral-3/hero.webp">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100">
+
+  <header class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-5xl px-6 py-4">
+      <nav class="flex items-center justify-between text-sm">
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">Terminal.Glass</a>
+        <div class="flex gap-6 text-slate-400">
+          <a href="/models/" class="hover:text-white">Models</a>
+          <a href="/pricing.html" class="hover:text-white">Pricing</a>
+          <a href="/contact.html" class="hover:text-white">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-5xl px-6 py-14">
+      <a href="/models/" class="text-sm font-semibold text-cyan-300 hover:text-cyan-200">← Back to model catalog</a>
+      <p class="mt-6 text-xs font-bold uppercase tracking-[0.3em] text-cyan-300">Model Brief</p>
+      <h1 class="mt-3 max-w-3xl text-4xl font-black tracking-tight md:text-5xl">
+        Ministral 3
+      </h1>
+      <p class="mt-5 max-w-2xl text-lg text-slate-300">
+        A compact multimodal model family from Mistral AI in 3B, 8B, and 14B sizes, with 256K context,
+        text and image input, and tool calling. Available as Ollama Cloud tags for fast deployment or
+        as local weights for teams that need data to stay on their own infrastructure.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="/deploy.html?model=ministral-3" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Deploy with Terminal.Glass →</a>
+        <a href="/pricing.html" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">View Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-5xl px-6 py-12 space-y-12">
+
+    <!-- Quick Facts -->
+    <section>
+      <h2 class="text-2xl font-black">Quick Facts</h2>
+      <div class="mt-5 grid gap-px overflow-hidden rounded-2xl border border-slate-800 bg-slate-800 sm:grid-cols-2">
+        <div class="bg-slate-900 p-5"><p class="text-xs uppercase text-slate-500">Developer</p><p class="mt-1 font-semibold">Mistral AI</p></div>
+        <div class="bg-slate-900 p-5"><p class="text-xs uppercase text-slate-500">License</p><p class="mt-1 font-semibold">Apache 2.0</p></div>
+        <div class="bg-slate-900 p-5"><p class="text-xs uppercase text-slate-500">Typical Sizes</p><p class="mt-1 font-semibold">3B, 8B, 14B (cloud and local tags)</p></div>
+        <div class="bg-slate-900 p-5"><p class="text-xs uppercase text-slate-500">Best For</p><p class="mt-1 font-semibold">Lightweight assistants, RAG, image understanding, structured extraction</p></div>
+        <div class="bg-slate-900 p-5 sm:col-span-2"><p class="text-xs uppercase text-slate-500">Recommended Deployment</p><p class="mt-1 font-semibold">8B cloud tag for most teams; local tags for regulated or air-gapped environments</p></div>
+      </div>
+    </section>
+
+    <!-- Why Choose This Model -->
+    <section>
+      <h2 class="text-2xl font-black">Why Choose This Model</h2>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        Ministral 3 is a reasonable default when you need multilingual text and image handling without
+        the memory footprint of a larger model. It supports tool calling and a 256K context window, which
+        covers most document Q&amp;A, summarization, and lightweight agent use cases. It is not built for
+        repository-scale coding or heavy multi-step agentic reasoning -- evaluate a larger model if that is
+        your primary workload.
+      </p>
+    </section>
+
+    <!-- Terminal.Glass Deployment -->
+    <section>
+      <h2 class="text-2xl font-black">Terminal.Glass Deployment</h2>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        Two deployment paths are supported. The cloud tags
+        (<code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">ministral-3:3b-cloud</code>,
+        <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">ministral-3:8b-cloud</code>,
+        <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">ministral-3:14b-cloud</code>)
+        run inference on Ollama Cloud while Terminal.Glass hosts the interface, accounts, and your
+        document index locally. This requires a signed-in Ollama account and sends prompts, images, and
+        retrieved context off your infrastructure. The local tags
+        (<code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">ministral-3:3b</code>,
+        <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">ministral-3:8b</code>,
+        <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">ministral-3:14b</code>) run entirely
+        on hardware you provision, with no data leaving your network. Both paths are compatible with
+        Terminal.Glass's standard Open WebUI, Ollama, and OpenClaw setup.
+      </p>
+    </section>
+
+    <!-- Recommended Uses -->
+    <section>
+      <h2 class="text-2xl font-black">Recommended Uses</h2>
+      <ul class="mt-4 max-w-3xl list-disc space-y-2 pl-5 text-slate-300">
+        <li>Document Q&amp;A and RAG over internal knowledge bases</li>
+        <li>Multilingual support and translation workflows</li>
+        <li>Image understanding paired with text prompts</li>
+        <li>Structured JSON extraction and lightweight tool-calling agents</li>
+        <li>Internal drafting, summarization, and support bots</li>
+      </ul>
+      <p class="mt-4 max-w-3xl text-slate-400">
+        Not recommended as a primary engine for large-scale code refactoring or multi-agent orchestration
+        at scale -- pair with a larger model for those cases.
+      </p>
+    </section>
+
+    <!-- Hardware Guidance -->
+    <section>
+      <h2 class="text-2xl font-black">Hardware Guidance</h2>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        Cloud tags need no local GPU -- a small VM, NUC, or mini-PC running Terminal.Glass and Ollama is
+        sufficient since inference happens on Ollama Cloud. Local tags require a GPU sized to the model:
+        the 3B and 8B variants run comfortably on a single mid-range GPU, while the 14B variant needs more
+        VRAM headroom, particularly with long-context or image inputs. Running any of these without a GPU
+        falls back to CPU inference, which is workable for light testing but too slow for regular team use.
+        If you want to avoid GPU selection and sizing entirely, use the cloud tags. If you need full control
+        over hardware and data, provision a GPU instance and run the local tags.
+      </p>
+    </section>
+
+    <!-- Honest Guidance -->
+    <section class="rounded-2xl border border-amber-500/30 bg-amber-950/20 p-6">
+      <h2 class="text-xl font-black text-amber-200">Honest Guidance</h2>
+      <ul class="mt-4 max-w-3xl space-y-2 text-sm text-slate-300">
+        <li><strong class="text-white">Regulated or confidential data:</strong> use local tags on hardware you control, not the cloud tags.</li>
+        <li><strong class="text-white">Steady daily use:</strong> local deployment on owned hardware is often cheaper over time than recurring per-token cloud cost.</li>
+        <li><strong class="text-white">Air-gapped requirements:</strong> cloud tags require network access to Ollama Cloud; only local tags run fully offline.</li>
+        <li><strong class="text-white">Version pinning:</strong> local deployment gives you a fixed checkpoint; cloud tags can change without notice.</li>
+        <li><strong class="text-white">Fast pilots and evaluation:</strong> cloud tags are the quicker path with no upfront hardware decision.</li>
+      </ul>
+    </section>
+
+    <!-- Learn More -->
+    <section>
+      <h2 class="text-2xl font-black">Learn More</h2>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        For detailed licensing terms, model card specifics, and full deployment documentation, see the
+        <a href="https://nocloudgpt.com/models/ministral/" class="text-cyan-300 hover:text-cyan-200">Ministral 3 reference page on NoCloudGPT</a>.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <div class="rounded-2xl border border-slate-800 bg-slate-900 p-8 text-center">
+      <h2 class="text-2xl font-black text-white">Ready to deploy Ministral 3?</h2>
+      <div class="mt-6 flex flex-wrap justify-center gap-3">
+        <a href="/deploy.html?model=ministral-3" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Deploy with Terminal.Glass →</a>
+        <a href="/pricing.html" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">View Pricing</a>
+        <a href="/contact.html" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">Contact</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="border-t border-slate-800 bg-slate-950 px-6 py-8 text-center text-sm text-slate-500">
+    <p>Terminal.Glass is an independent deployment service. Not affiliated with Mistral AI or Ollama. Verify current license terms at the official model repository before commercial use.</p>
+  </footer>
 </body>
 </html>

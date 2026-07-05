@@ -1,10 +1,367 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Qwen 3.5 Cloud -- A Do-It-All AI, No Fancy Hardware Required | Terminal Glass</title>
+  <meta name="description" content="Qwen 3.5 can read images, work in 201 languages, and handle huge documents in one go. Here's a plain-English guide to using it through Terminal Glass -- what it does, what it costs, and what you're trading away.">
+  <link rel="canonical" href="https://nocloudgpt.com/models/qwen3.5-cloud/">
+  <meta property="og:title" content="Qwen 3.5 Cloud -- Terminal Glass | NoCloudGPT">
+  <meta property="og:description" content="A no-jargon look at running Qwen 3.5 through Terminal Glass: what you get, what it costs, and where your data actually goes.">
+  <meta property="og:image" content="/models/qwen3.5-cloud/hero.webp">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100">
+
+  <header class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-6xl px-6 py-4">
+      <nav class="flex items-center justify-between text-sm">
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>
+        <div class="flex gap-6 text-slate-400">
+          <a href="/models/" class="hover:text-white">Models</a>
+          <a href="/deploy/lightsail-guide.html" class="hover:text-white">Deploy</a>
+          <a href="/quote.html" class="hover:text-white">Get a Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. Hero -->
+  <section class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <a href="/models/" class="text-sm font-semibold text-cyan-300 hover:text-cyan-200">← Back to model catalog</a>
+      <a href="https://ollama.com/library/qwen3.5" target="_blank" rel="noopener noreferrer" class="inline-block">
+        <img
+          src="/models/qwen3.5-cloud/hero.webp"
+          alt="A simple illustration of the Qwen 3.5 Cloud setup -- your computer talks to OpenWebUI, which talks to Qwen 3.5 running in the cloud"
+          width="1200" height="600"
+          class="mt-8 mb-2 w-full max-w-xs rounded-2xl object-cover"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        />
+      </a>
+      <p class="mb-6 text-xs text-slate-500">Image source: <a href="https://ollama.com/library/qwen3.5" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-400">Ollama</a></p>
+      <div class="mt-8 mb-6 flex h-28 w-full max-w-xs items-center justify-center rounded-2xl border border-dashed border-slate-600 bg-slate-900 text-sm text-slate-500" style="display:none;"></div>
+      <p class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300">Qwen 3.5 · Terminal Glass</p>
+      <h1 class="mt-4 max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+        A Do-It-All AI That Reads Text and Images -- Without Buying Powerful Hardware
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg text-slate-300">
+        Qwen 3.5 runs through a simple chat window on a modest computer, while the actual AI work happens
+        on Ollama's cloud servers. It can read both text and images, work in 201 languages, and take in
+        entire lengthy documents in a single conversation. You avoid buying expensive computing hardware
+        for a model this large -- in exchange, your questions, any documents you search, and any images
+        you upload travel out to those cloud servers, and you're billed based on how much you use it.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="/quote.html" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
+        <a href="#how-it-works" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See how it works</a>
+        <a href="/models/qwen3.5/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See the fully private version instead</a>
+      </div>
+      <p class="mt-6 text-sm text-emerald-400">
+        In short: your computer runs the chat window. Qwen 3.5, running on Ollama's cloud, does the heavy lifting.
+      </p>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-6xl px-6 py-12 space-y-12">
+
+    <!-- 2. Overview -->
+    <section>
+      <h2 class="text-3xl font-black">So, what exactly is Qwen 3.5?</h2>
+      <p class="mt-5 max-w-3xl text-lg text-slate-300">
+        Qwen 3.5 is Alibaba Cloud's AI model family that can understand both text and images at the same
+        time, follow instructions closely, help with coding, use outside tools when needed, and communicate
+        in 201 languages and dialects. Some versions are small enough to run on your own laptop; the cloud
+        versions let you use the largest, most capable versions without downloading huge files or owning
+        a powerful graphics card yourself.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-400">
+        Through the cloud, you can access a standard version as well as an even larger, more capable
+        version -- both of which can handle entire long documents in one conversation and understand images
+        you upload. It's a strong, well-rounded, everyday choice. If your main focus is heavy-duty coding
+        across large codebases, you may still prefer a coding-specialized model instead.
+      </p>
+    </section>
+
+    <!-- 3. The Terminal Glass Trade-off -->
+    <section class="rounded-3xl border border-amber-500/30 bg-amber-950/20 p-8">
+      <h2 class="text-2xl font-black text-amber-200">Here's the honest trade-off</h2>
+      <p class="mt-4 text-slate-300">
+        <strong class="text-white">Terminal Glass</strong> gives you the same friendly chat app (OpenWebUI)
+        and the same locally stored document search tool you'd get with a fully private setup -- but instead
+        of your own computer doing the "thinking," each question gets sent out to Ollama's cloud to be
+        answered by Qwen 3.5. Your own machine just needs to run the chat window and your document search
+        -- a small, inexpensive computer is usually enough. You don't need to store or run a massive AI
+        model file on your own hardware.
+      </p>
+      <p class="mt-4 text-sm text-amber-300">
+        <strong>Here's what that really means:</strong> every prompt, every document snippet your search
+        tool pulls up, and any image you upload gets sent out over the internet to be processed. This is
+        <em>not</em> a locked-down, private setup -- it's a different thing entirely from
+        <a href="/models/qwen3.5/" class="underline hover:text-amber-200">NoCloudGPT Private Instances</a>,
+        where everything stays on machines you own and control. You'll also pay an ongoing, usage-based fee
+        that grows as your team, your documents, and your chat volume grow. If privacy matters more to you
+        than convenience, choose a <a href="/models/">NoCloudGPT Air Gapped</a> setup instead.
+      </p>
+    </section>
+    <section>
+      <h2>"Do I need to buy a fancy graphics card?"</h2>
+      <p>
+        This is really the question most people are trying to figure out, even if they don't phrase it that way.
+      </p>
+      <p>
+        If you try to run these AI models without a proper graphics card (the same kind used for video games,
+        but scaled up), your computer will fall back to using its regular processor. That technically works
+        for the occasional light question, but it becomes painfully slow for regular use. A lot of people
+        learn this the hard way after renting a cloud computer that turns out to be either too slow or
+        surprisingly expensive.
+      </p>
+      <p>
+        If you'd rather not deal with picking out graphics cards, comparing specs, or troubleshooting driver
+        issues at all, Terminal Glass Cloud is the easier path -- you get a capable AI through a simple,
+        familiar chat window, and someone else worries about the hardware.
+      </p>
+      <p>
+        On the other hand, if you want everything running on equipment you personally control, you can rent
+        a graphics-card-equipped server (through AWS, Digital Ocean, or your own machines) and install
+        NoCloudGPT on it yourself. In that setup, you're the one responsible for picking the right graphics
+        card and keeping it running smoothly.
+      </p>
+      <p>
+        And if your organization needs everything to stay completely inside your own walls from the very
+        first day, then a <a href="/models/">NoCloudGPT Air Gapped</a> setup on your own hardware is the
+        way to go.
+      </p>
+      <p class="text-sm text-slate-400">
+        There's no single "correct" choice here. It really comes down to your budget, how sensitive your
+        data is, how fast you need answers, and whether you want to own your equipment long-term.
+      </p>
+    </section>
+
+    <!-- 4. Who This Model Family is For -->
+    <section>
+      <h2 class="text-3xl font-black">Is this actually for you?</h2>
+      <div class="mt-6 grid gap-5 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>👤</span> If you're using this for yourself
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            A practical fit if you want help drafting writing, summarizing long documents, translating
+            between languages, or analyzing a screenshot -- but your own computer isn't powerful enough to
+            run a large AI model on its own. The cloud version can take in entire lengthy reports in one
+            go. Just remember that anything you type or upload travels out to the cloud, so keep personal
+            journals, financial details, and other private material on a fully private setup instead.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>🏢</span> If you're using this for your business or team
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Small teams use this for internal drafting, meeting summaries, multilingual customer
+            communication, and searching through company documents via a shared chat tool. It's especially
+            good at following instructions precisely and translating accurately -- useful for teams working
+            across countries. It is <em>not</em> appropriate for medical records, attorney-client material,
+            sensitive financial data, or anything that legally must never leave your network -- those need
+            a fully private setup instead.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>⚙️</span> If you're technical or building software
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Useful for testing out AI-powered features, generating starter code, getting code explained to
+            you, and experimenting with AI "tool use" before you commit to buying or renting serious
+            hardware. Because it uses the same standard tools underneath, a project built this way can
+            later be moved to a fully private, self-hosted setup with minimal rework. Just don't send
+            proprietary source code you can't risk exposing to outside servers.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>🔬</span> If you're doing research or working with data
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Handy for exploring research literature, sorting and labeling text, brainstorming hypotheses,
+            and cleaning up messy public datasets when you want strong performance without going through a
+            hardware-buying process. Keep in mind a cloud model can change or update behind the scenes,
+            so it won't give you the exact same, repeatable results every time. Confidential data or
+            anything tied to a publication should stay on a fully private setup with a fixed, unchanging
+            version of the model.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. How Terminal Glass Works with This Model -->
+    <section id="how-it-works">
+      <h2 class="text-3xl font-black">How this actually works, step by step</h2>
+      <p class="mt-5 max-w-3xl text-slate-300">
+        You'll interact with everything through <strong class="text-white">OpenWebUI</strong> -- a clean,
+        simple chat window running on your own computer (or you can use the command line, if you prefer).
+        Your chat history, user accounts, and any documents you've indexed for search stay on hardware you
+        control. But the moment you send a question or attach an image, it travels out to Ollama's cloud
+        servers to be processed by Qwen 3.5, and the answer streams back to your screen.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        To use the cloud version, you'll need to sign in with an Ollama account on your computer first.
+        You're billed based on how much you use it -- and the larger version, along with longer
+        conversations, costs more per request than shorter chats on the standard version.
+      </p>
+      <pre class="mt-5 overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900 p-5 text-sm text-cyan-200"><code>ollama signin
+ollama run qwen3.5:cloud</code></pre>
+      <p class="mt-5 text-sm text-amber-300">
+        <strong>What leaves your computer:</strong> your typed questions, any document text your search
+        tool pulls up, and any images you submit for analysis. <strong>Speed:</strong> usually a bit
+        slower than a model running on your own machine, and depends on your internet connection and how
+        busy the cloud servers are. <strong>Cost:</strong> based on how much you use it -- worth setting
+        expectations early if several people share one setup or you're running things automatically.
+      </p>
+    </section>
+
+    <!-- 6. Honest Guidance -->
+    <section>
+      <h2 class="text-3xl font-black">When you should probably choose something else</h2>
+      <ul class="mt-5 max-w-3xl space-y-3 text-slate-300">
+        <li>
+          <strong class="text-white">You handle strictly private, regulated, or confidential data</strong> --
+          Choose <a href="/models/qwen3.5/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
+          and run Qwen 3.5 entirely on your own hardware. Terminal Glass is not a substitute for a fully
+          locked-down, compliance-ready setup.
+        </li>
+        <li>
+          <strong class="text-white">You use this constantly, every single day, for months</strong> --
+          Owning the hardware to run this yourself often ends up cheaper than paying for cloud usage
+          continuously over a long period.
+        </li>
+        <li>
+          <strong class="text-white">You do heavy, large-scale coding work with sensitive source code</strong> --
+          Consider a coding-specialized model on a fully private setup, or keep all your coding work
+          entirely on hardware you control.
+        </li>
+        <li>
+          <strong class="text-white">A smaller model already meets your needs</strong> --
+          Smaller versions of this same model may run perfectly well on a modest computer you own,
+          without needing the cloud at all.
+        </li>
+        <li>
+          <strong class="text-white">Medical or clinical decision-making</strong> --
+          This is a general-purpose AI model, not an approved medical device. Don't use it to make
+          decisions about patient care without proper oversight and sign-off from your compliance team.
+        </li>
+      </ul>
+    </section>
+
+    <!-- 7. Recommended Terminal Glass Deployment -->
+    <section>
+      <h2 class="text-3xl font-black">What we recommend</h2>
+      <div class="mt-6 overflow-hidden rounded-2xl border border-slate-800">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-slate-950 text-cyan-200">
+            <tr>
+              <th class="px-4 py-3">Version</th>
+              <th class="px-4 py-3">Best for</th>
+              <th class="px-4 py-3">Notes</th>
+              <th class="px-4 py-3"></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 bg-slate-900 text-slate-300">
+            <tr>
+              <td class="px-4 py-3 font-mono text-cyan-200">qwen3.5:cloud</td>
+              <td class="px-4 py-3">Individuals and small teams</td>
+              <td class="px-4 py-3">Handles very long documents and understands images. The default, everyday choice for chatting, drafting, document search, and light experimentation, in any of 201 languages.</td>
+              <td class="px-4 py-3 whitespace-nowrap"><a href="/quote.html" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-mono text-cyan-200">qwen3.5:397b-cloud</td>
+              <td class="px-4 py-3">Demanding reasoning and multi-step tasks</td>
+              <td class="px-4 py-3">Same long-document and image capabilities, but the largest and most capable version available. Costs more per use -- worth it when the extra quality clearly pays off.</td>
+              <td class="px-4 py-3 whitespace-nowrap"><a href="/quote.html" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-sm text-slate-400">
+        Terminal Glass sets up your chat window, your document search tool, and helps you keep an eye on
+        your cloud usage. What's available can change over time -- double-check the current options at
+        <a href="https://ollama.com/library/qwen3.5" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">ollama.com/library/qwen3.5</a>
+        before committing.
+      </p>
+    </section>
+
+    <!-- 8. Licensing & Access -->
+    <section>
+      <h2 class="text-3xl font-black">The legal fine print, in plain terms</h2>
+      <p class="mt-5 max-w-3xl text-slate-300">
+        Using the cloud versions of Qwen 3.5 requires an Ollama Cloud account, and you're billed based on
+        how much you use it -- usage limits and pricing tiers apply and can change. The downloadable
+        versions of Qwen 3.5 are generally released under the
+        <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">Apache 2.0 license</a>,
+        which allows commercial use as long as you follow its standard terms. Always check the license
+        for the specific version you're using before relying on it for business purposes -- some
+        cloud-only versions from Alibaba are separate products with their own, different terms.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        Official listing:
+        <a href="https://ollama.com/library/qwen3.5" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">ollama.com/library/qwen3.5</a>
+        · Model files:
+        <a href="https://huggingface.co/Qwen" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">Qwen on Hugging Face</a>
+      </p>
+      <div class="mt-6 rounded-2xl border border-slate-800 bg-slate-900 p-5 text-sm text-slate-400">
+        <strong class="text-slate-300">A quick disclaimer:</strong> Terminal Glass is our own way of
+        packaging this setup -- we don't own or run Qwen 3.5 or Ollama Cloud ourselves. Availability,
+        pricing, and behavior are controlled by Alibaba Cloud and Ollama, and can change without notice.
+        This page is meant to help you understand your options -- it isn't legal advice, and you're
+        responsible for making sure your use complies with any relevant license terms or data-protection
+        rules.
+      </div>
+    </section>
+
+    <div class="text-center">
+      <a href="/quote.html" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
+        Get a quote for Qwen 3.5 Cloud →
+      </a>
+      <p class="mt-3 text-sm text-slate-500">We'll help you figure out the right small computer to run locally and the right cloud option for your team.</p>
+    </div>
+
+  </main>
+
+  <!-- 9. Footer references -->
+  <section class="border-t border-slate-800 bg-slate-900 px-6 py-8">
+    <div class="mx-auto max-w-6xl">
+      <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Image and source credits</p>
+      <div class="mt-4 grid gap-4 text-xs text-slate-500 md:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <p class="font-semibold text-slate-400">Hero image</p>
+          <p class="mt-1">Shared with the <a href="/models/qwen3.5/" class="text-cyan-600 hover:text-cyan-500">local Qwen 3.5 page</a>. Sourced from the Ollama library listing.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-400">Who makes this model</p>
+          <p class="mt-1">Qwen 3.5 is made by <a href="https://qwen.ai/" target="_blank" rel="noopener" class="text-cyan-600 hover:text-cyan-500">Alibaba Cloud's Qwen team</a>. Terminal Glass and NoCloudGPT are separate services and aren't affiliated with Alibaba or Ollama.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-400">Want it fully private instead?</p>
+          <p class="mt-1">See <a href="/models/qwen3.5/" class="text-cyan-600 hover:text-cyan-500">Qwen 3.5 -- NoCloudGPT Private Instances</a> for a version that runs entirely, air-gapped, on hardware you control.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-800 bg-slate-950 px-6 py-10 text-center text-sm text-slate-500">
+    <p>NoCloudGPT is an independent service. We are not affiliated with Alibaba Cloud, Ollama, or any AI developer mentioned on this page.</p>
+    <div class="mx-auto max-w-6xl px-6 py-4">
+      <p class="text-xs text-slate-500 border border-slate-800 rounded-xl px-4 py-3 bg-slate-900">
+        <strong class="text-slate-400">A note on licenses:</strong>
+        Licensing details for open-weight AI models come from official model documentation and developer
+        pages. Always double-check the current license at
+        <a href="https://huggingface.co/models" target="_blank" rel="noopener" class="text-cyan-600 hover:text-cyan-500">Hugging Face</a>
+        or the model developer's official page before using it commercially.
+        We're not lawyers -- talk to a qualified professional if compliance is a concern for your business.
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

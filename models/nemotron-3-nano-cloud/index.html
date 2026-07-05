@@ -1,10 +1,391 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nemotron 3 Nano Cloud -- A Smart, Efficient AI Helper, Explained Simply | Terminal Glass</title>
+  <meta name="description" content="Thinking about using NVIDIA's Nemotron 3 Nano AI model but don't want to buy a fancy computer? Here's a plain-English guide to using it through Terminal Glass -- what it does, what it costs, and what you're trading away.">
+  <link rel="canonical" href="https://nocloudgpt.com/models/nemotron-3-nano-cloud/">
+  <meta property="og:title" content="Nemotron 3 Nano Cloud -- Terminal Glass | NoCloudGPT">
+  <meta property="og:description" content="A no-jargon look at running Nemotron 3 Nano through Terminal Glass: what you get, what it costs, and where your data actually goes.">
+  <meta property="og:image" content="/models/nemotron-3-nano-cloud/hero.jpg">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100">
+
+  <header class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-6xl px-6 py-4">
+      <nav class="flex items-center justify-between text-sm">
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>
+        <div class="flex gap-6 text-slate-400">
+          <a href="/models/" class="hover:text-white">Models</a>
+          <a href="/deploy/lightsail-guide.html" class="hover:text-white">Deploy</a>
+          <a href="/quote.html" class="hover:text-white">Get a Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. Hero -->
+  <section class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <a href="/models/" class="text-sm font-semibold text-cyan-300 hover:text-cyan-200">← Back to model catalog</a>
+      <a href="https://ollama.com/library/nemotron-3-nano" target="_blank" rel="noopener noreferrer" class="inline-block">
+        <img
+          src="/models/nemotron-3-nano-cloud/hero.jpg"
+          alt="A simple illustration of the Nemotron 3 Nano Cloud setup -- your computer talks to OpenWebUI, which talks to NVIDIA's AI in the cloud"
+          width="1200" height="600"
+          class="mt-8 mb-2 w-full max-w-xs rounded-2xl object-cover"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        />
+      </a>
+      <p class="mb-6 text-xs text-slate-500">Image source: <a href="https://ollama.com/library/nemotron-3-nano" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-400">Ollama</a></p>
+      <div class="mt-8 mb-6 flex h-28 w-full max-w-xs items-center justify-center rounded-2xl border border-dashed border-slate-600 bg-slate-900 text-sm text-slate-500" style="display:none;">
+        Nemotron 3 Nano artwork placeholder
+      </div>
+      <p class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300">Nemotron 3 Nano · Terminal Glass</p>
+      <h1 class="mt-4 max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+        A Smart, Efficient AI Helper -- Without Buying a Server Farm
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg text-slate-300">
+        Nemotron 3 Nano is NVIDIA's AI model built to be efficient -- it's good at working through problems
+        step by step, using other software tools to get things done, and holding an enormous amount of
+        information in one conversation (enough to digest very long documents without losing track). Normally,
+        running a model like this would mean buying and managing a fairly beefy computer. With Terminal Glass,
+        you skip that: you get a simple chat-style app on a modest computer, and the actual "thinking" happens
+        on NVIDIA's cloud servers through Ollama instead. The catch? Whatever you type, any documents your
+        search tool pulls up, and any results from tools it uses all travel out to those servers, and using it
+        adds up in ongoing cost.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="/quote.html" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
+        <a href="#how-it-works" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See how it works</a>
+        <a href="/models/nemotron/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See the fully private version instead</a>
+      </div>
+      <p class="mt-6 text-sm text-emerald-400">
+        In short: your computer runs the chat window. NVIDIA's model, running on Ollama's cloud, does the heavy lifting.
+      </p>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-6xl px-6 py-12 space-y-12">
+
+    <!-- 2. Overview -->
+    <section>
+      <h2 class="text-3xl font-black">So, what exactly is Nemotron 3 Nano?</h2>
+      <p class="mt-5 max-w-3xl text-lg text-slate-300">
+        Think of it as NVIDIA's "efficient" AI model -- built to be helpful for reasoning through problems and
+        using other tools, without needing the massive amount of computer power that the biggest AI models
+        need. The version we're talking about here is a mid-sized one, designed to only "wake up" a small
+        portion of itself for each question, which is part of how it stays efficient. It can work in two
+        modes: a quicker mode for simple questions, and a slower "show your work" mode where it reasons
+        through things step by step before answering. It can also hold a genuinely enormous amount of text in
+        one conversation -- enough to digest extremely long documents in a single sitting.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-400">
+        On Ollama's cloud service, this model's nickname is
+        <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">nemotron-3-nano:30b-cloud</code>,
+        and it's marked as a "light usage" model, meaning it's relatively affordable to run compared to the
+        biggest AI models. There's also a smaller version you can download and run entirely on your own
+        hardware, and an even smaller one that fits on modest computers -- both live on
+        <a href="/models/nemotron/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
+        if you'd rather keep everything in-house. Whichever way you go, it's worth setting a clear house rule
+        about what kinds of documents and code are allowed to leave your network.
+      </p>
+    </section>
+
+    <!-- 3. The Terminal Glass Trade-off -->
+    <section class="rounded-3xl border border-amber-500/30 bg-amber-950/20 p-8">
+      <h2 class="text-2xl font-black text-amber-200">Here's the honest trade-off</h2>
+      <p class="mt-4 text-slate-300">
+        <strong class="text-white">Terminal Glass</strong> gives you the same friendly chat app (OpenWebUI)
+        and the same locally stored document search tool you'd get with a fully private setup -- but instead
+        of your own computer doing the "thinking," each question gets sent out to Ollama's cloud to be
+        answered by NVIDIA's model. A small, inexpensive computer is usually enough to run everything on your
+        end, since it's just handling the chat window and your document search, not the AI itself. You don't
+        need to download the model or worry about whether your computer has enough memory to run it, at least
+        not until you've decided this is worth doing on your own hardware.
+      </p>
+      <p class="mt-4 text-sm text-amber-300">
+        <strong>Here's what that really means:</strong> your typed questions, any passages your document
+        search tool digs up, snippets of code, and anything a connected tool sends back all get sent over the
+        internet to be processed. This is <em>not</em> a private, locked-down setup -- it's a different thing
+        entirely from
+        <a href="/models/nemotron/" class="underline hover:text-amber-200">NoCloudGPT Private Instances</a>,
+        where everything stays on machines you own and control. You'll also pay an ongoing, usage-based fee to
+        Ollama that grows the more you use it -- especially if you're having very long conversations or letting
+        the AI use its "show your work" reasoning mode a lot, or having it use tools over and over in a row.
+        If you handle sensitive information -- medical records, legal documents, financial data, private client
+        details -- this is not the right setup. Use a fully offline
+        <a href="/models/">NoCloudGPT Air Gapped</a> deployment instead.
+      </p>
+
+      <!-- Secondary artwork -->
+      <div class="secondary-artwork my-8 md:float-right md:ml-6 md:mb-4 md:max-w-[42%]">
+        <a href="https://commons.wikimedia.org/wiki/File%3ANVIDIA_GPU_reflow.jpg" target="_blank" rel="noopener">
+          <img src="/models/nemotron-3-nano-cloud/secondary.webp" alt="A close-up photo of a computer graphics card, the kind of hardware needed to run AI models locally" class="rounded-xl border border-slate-700">
+        </a>
+        <p class="mt-1 text-center text-xs text-slate-400">
+          Source: <a href="https://commons.wikimedia.org/wiki/File%3ANVIDIA_GPU_reflow.jpg" class="underline">Wikimedia Commons</a>
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>"Do I need to buy a fancy graphics card?"</h2>
+      <p>
+        This is really the question most people are trying to figure out, even if they don't phrase it that way.
+      </p>
+      <p>
+        If you try to run these AI models without a proper graphics card (the same kind used for video games,
+        but scaled up), your computer will fall back to using its regular processor. That technically works for
+        the occasional light question, but it becomes painfully slow for regular use. A lot of people learn
+        this the hard way after renting a cloud computer that turns out to be either too slow or surprisingly
+        expensive.
+      </p>
+      <p>
+        If you'd rather not deal with picking out graphics cards, comparing specs, or troubleshooting driver
+        issues at all, Terminal Glass Cloud is the easier path -- you get a capable AI through a simple, familiar
+        chat window, and someone else worries about the hardware.
+      </p>
+      <p>
+        On the other hand, if you want everything running on equipment you personally control, you can rent a
+        graphics-card-equipped server (through AWS, Digital Ocean, or your own machines) and install
+        NoCloudGPT on it yourself. In that setup, you're the one responsible for picking the right graphics
+        card and keeping it running smoothly.
+      </p>
+      <p>
+        And if your organization needs everything to stay completely inside your own walls from the very first
+        day -- no exceptions -- then a <a href="/models/">NoCloudGPT Air Gapped</a> setup on your own hardware is
+        the way to go.
+      </p>
+      <p class="text-sm text-slate-400">
+        There's no single "correct" choice here. It really comes down to your budget, how sensitive your data
+        is, how fast you need answers, and whether you want to own your equipment long-term.
+      </p>
+    </section>
+
+    <!-- 4. Who This Model Family is For -->
+    <section>
+      <h2 class="text-3xl font-black">Is this actually for you?</h2>
+      <div class="mt-6 grid gap-5 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>👤</span> If you're using this on your own
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Useful if you're comfortable with tech and want help with planning, summarizing, research notes,
+            lighter coding questions, and problems that benefit from step-by-step reasoning -- without setting up
+            your own AI server. Just remember: everything you send goes out to the cloud, so keep private
+            journals, financial records, passwords, and sensitive documents out of it. If keeping everything
+            fully private matters more to you, go with the Private Instances option instead.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>🏢</span> If you're using this for your business or team
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            A good fit for small teams testing out an internal AI assistant, sorting IT support tickets,
+            answering questions about company documents, looking up policies, and other structured support
+            work -- as long as your company is comfortable with data leaving your building. For regulated data,
+            customer records, confidential company secrets, or anything that must stay fully inside your own
+            walls, use the Private Instances option so nothing leaves your network.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>⚙️</span> If you're technical or building software
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Handy for early experiments with tool-using AI "agents," building technical support assistants,
+            pulling structured data out of messy text, and troubleshooting long conversations. If your main need
+            is writing and fixing a lot of code across a whole software project, it's worth trying this out
+            first through Terminal Glass, but also considering a model built specifically for heavy coding work.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>🔬</span> If you're doing research or working with data
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Good for exploring public datasets, testing benchmarks, reviewing academic papers, sorting text into
+            categories, and researching how AI "agents" that use tools behave. Just know that a cloud model can
+            change or update behind the scenes without warning -- if you need consistent, unpublished, or
+            confidential data handled the exact same way every time, stick with a fully local Private Instance.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. How Terminal Glass Works with This Model -->
+    <section id="how-it-works">
+      <h2 class="text-3xl font-black">How this actually works, step by step</h2>
+      <p class="mt-5 max-w-3xl text-slate-300">
+        You'll interact with everything through <strong class="text-white">OpenWebUI</strong> -- a clean,
+        simple chat window running on your own small computer (or, if you prefer, through basic typed
+        commands). Your chat history, your login accounts, and any documents you've indexed for search all
+        live on your own hardware. But the moment you send a message to
+        <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">nemotron-3-nano:30b-cloud</code>,
+        that message -- including anything your document search tool pulled up, and any related code -- travels
+        out to Ollama's cloud servers to get processed, and the answer streams back to your screen.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        To use the cloud version, you'll need to sign in with an Ollama account on your computer first. This
+        model is on Ollama's more affordable "light usage" tier -- generally cheaper per question than the
+        biggest AI models out there -- though very long conversations and heavy use of its step-by-step
+        reasoning mode or its tool-using features can still add up in cost.
+      </p>
+      <pre class="mt-5 overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900 p-5 text-sm text-cyan-200"><code>ollama signin
+ollama run nemotron-3-nano:30b-cloud</code></pre>
+      <p class="mt-5 text-sm text-amber-300">
+        <strong>What leaves your computer:</strong> your typed questions, anything your document search finds,
+        code snippets, and anything a connected tool sends back. This particular model only works with text,
+        not pictures. <strong>Speed</strong> depends on your internet connection. <strong>Cost</strong> is based
+        on how much you actually use it.
+      </p>
+    </section>
+
+    <!-- 6. Honest Guidance -->
+    <section>
+      <h2 class="text-3xl font-black">When you should probably choose something else</h2>
+      <ul class="mt-5 max-w-3xl space-y-3 text-slate-300">
+        <li>
+          <strong class="text-white">You handle sensitive or regulated information</strong> --
+          Choose <a href="/models/nemotron/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
+          with a version of this model that runs entirely on your own hardware. This cloud setup sends data out
+          to the internet.
+        </li>
+        <li>
+          <strong class="text-white">Your whole team uses this every single day, heavily</strong> --
+          Running a downloaded version of this model on your own capable computer may end up cheaper over time
+          than paying per-question cloud fees, and it removes the "your data leaves the building" concern
+          entirely.
+        </li>
+        <li>
+          <strong class="text-white">You need something more powerful for tougher or more complex work</strong> --
+          NVIDIA also offers a larger cloud version of this model family for teams that need more capability
+          and are less concerned about squeezing out efficiency.
+        </li>
+        <li>
+          <strong class="text-white">Your main need is writing and fixing lots of code</strong> --
+          A model built specifically for that kind of heavy coding work will likely serve you better.
+        </li>
+        <li>
+          <strong class="text-white">You need guaranteed, unchanging results for audits or compliance</strong> --
+          A model installed locally on Private Instances gives you more certainty than a cloud version that
+          NVIDIA or Ollama could update at any time.
+        </li>
+      </ul>
+    </section>
+
+    <!-- 7. Recommended Terminal Glass Deployment -->
+    <section>
+      <h2 class="text-3xl font-black">What we recommend</h2>
+      <div class="mt-6 overflow-hidden rounded-2xl border border-slate-800">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-slate-950 text-cyan-200">
+            <tr>
+              <th class="px-4 py-3">Version</th>
+              <th class="px-4 py-3">Best for</th>
+              <th class="px-4 py-3">Notes</th>
+              <th class="px-4 py-3"></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 bg-slate-900 text-slate-300">
+            <tr>
+              <td class="px-4 py-3 font-mono text-cyan-200">nemotron-3-nano:30b-cloud</td>
+              <td class="px-4 py-3">Individuals and small teams who want an efficient, budget-friendly AI that can reason and use tools</td>
+              <td class="px-4 py-3">Handles very long documents in one go, works with text only, can reason step by step, can use other software tools, on Ollama's more affordable usage tier. Good for step-by-step problem-solving, tool-using assistants, support workflows, and long-document research, as long as you're okay with data leaving your network.</td>
+              <td class="px-4 py-3 whitespace-nowrap"><a href="/quote.html" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-sm text-slate-400">
+        There are also downloadable versions of this model -- a mid-sized one and a much smaller one that
+        fits on more modest computers -- available for a fully local setup. Double-check current availability
+        at
+        <a href="https://ollama.com/library/nemotron-3-nano" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">ollama.com/library/nemotron-3-nano</a>
+        before you commit.
+      </p>
+    </section>
+
+    <!-- 8. Licensing & Access -->
+    <section>
+      <h2 class="text-3xl font-black">The legal fine print, in plain terms</h2>
+      <p class="mt-5 max-w-3xl text-slate-300">
+        Nemotron 3 Nano is released under NVIDIA's own open model license, which generally allows commercial
+        use as long as you follow NVIDIA's rules -- including some export and compliance requirements worth
+        being aware of. Using the cloud version also requires an Ollama Cloud account, and you'll be billed
+        based on how much you use it -- pricing and limits can change over time, so it's worth checking Ollama's
+        own terms before relying on this for production work.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        Official listing:
+        <a href="https://ollama.com/library/nemotron-3-nano" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">ollama.com/library/nemotron-3-nano</a>
+      </p>
+      <div class="mt-6 rounded-2xl border border-slate-800 bg-slate-900 p-5 text-sm text-slate-400">
+        <strong class="text-slate-300">A quick disclaimer:</strong> Terminal Glass is our own way of packaging
+        this setup -- we don't own or run Nemotron 3 Nano or Ollama Cloud ourselves. Pricing, availability, and
+        how the model behaves are all controlled by NVIDIA and Ollama, and things can change without notice.
+        Remember: any data you send through this setup does leave your own network. This page is meant to help
+        you understand your options -- it isn't legal advice.
+      </div>
+    </section>
+
+    <!-- 9. Final note -->
+    <section class="rounded-3xl border border-slate-800 bg-slate-900 p-8">
+      <h2 class="text-2xl font-black text-white">What we handle for you</h2>
+      <p class="mt-4 text-slate-300">
+        Terminal Glass sets you up with one simple chat interface, keeps your private documents and search
+        tools stored locally, lets you manage multiple team members with different access levels, and helps
+        you keep an eye on cloud usage so your bill never comes as a surprise.
+      </p>
+    </section>
+
+    <div class="text-center">
+      <a href="/quote.html" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
+        Get a quote for Nemotron 3 Nano Cloud →
+      </a>
+      <p class="mt-3 text-sm text-slate-500">We'll help you figure out the right small computer to run locally and the right cloud option for your needs.</p>
+    </div>
+
+  </main>
+
+  <section class="border-t border-slate-800 bg-slate-900 px-6 py-8">
+    <div class="mx-auto max-w-6xl">
+      <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Image and source credits</p>
+      <div class="mt-4 grid gap-4 text-xs text-slate-500 md:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <p class="font-semibold text-slate-400">Hero image</p>
+          <p class="mt-1">Same artwork used on the <a href="/models/nemotron/" class="text-cyan-600 hover:text-cyan-500">Nemotron family page</a>, originally from the Ollama library listing.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-400">Who makes this model</p>
+          <p class="mt-1">Nemotron 3 Nano is made by <a href="https://www.nvidia.com/en-us/ai-data-science/foundation-models/nemotron/" target="_blank" rel="noopener" class="text-cyan-600 hover:text-cyan-500">NVIDIA</a>. Terminal Glass and NoCloudGPT are separate services and aren't affiliated with NVIDIA or Ollama.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-400">Want it fully private instead?</p>
+          <p class="mt-1">See <a href="/models/nemotron/" class="text-cyan-600 hover:text-cyan-500">Nemotron -- NoCloudGPT Private Instances</a>, or check out <a href="/models/nemotron-3-super-cloud/" class="text-cyan-600 hover:text-cyan-500">Nemotron-3 Super Cloud</a> for a bigger, more capable option.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-800 bg-slate-950 px-6 py-10 text-center text-sm text-slate-500">
+    <p>NoCloudGPT is an independent service. We are not affiliated with NVIDIA, Ollama, or any AI developer mentioned on this page.</p>
+    <div class="mx-auto max-w-6xl px-6 py-4">
+      <p class="text-xs text-slate-500 border border-slate-800 rounded-xl px-4 py-3 bg-slate-900">
+        <strong class="text-slate-400">A note on licenses:</strong>
+        Licensing details for open-weight AI models come from official model documentation and developer
+        pages. Always double-check the current license at
+        <a href="https://huggingface.co/models" target="_blank" rel="noopener" class="text-cyan-600 hover:text-cyan-500">Hugging Face</a>
+        or the model developer's official page before using it commercially.
+        We're not lawyers -- talk to a qualified professional if compliance is a concern for your business.
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

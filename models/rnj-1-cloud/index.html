@@ -1,10 +1,381 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RNJ-1 Cloud -- A Lightweight Coding Helper, No Setup Required | Terminal Glass</title>
+  <meta name="description" content="RNJ-1 is a compact AI built for coding and technical problem-solving. Here's a plain-English guide to using it through Terminal Glass -- what it does, what it costs, and what you're trading away.">
+  <link rel="canonical" href="https://nocloudgpt.com/models/rnj-1-cloud/">
+  <meta property="og:title" content="RNJ-1 Cloud -- Terminal Glass | NoCloudGPT">
+  <meta property="og:description" content="A no-jargon look at running RNJ-1 through Terminal Glass: what you get, what it costs, and where your data actually goes.">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100">
+
+  <header class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-6xl px-6 py-4">
+      <nav class="flex items-center justify-between text-sm">
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>
+        <div class="flex gap-6 text-slate-400">
+          <a href="/models/" class="hover:text-white">Models</a>
+          <a href="/deploy/lightsail-guide.html" class="hover:text-white">Deploy</a>
+          <a href="/quote.html" class="hover:text-white">Get a Quote</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 1. Hero -->
+  <section class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-6xl px-6 py-16 md:py-24">
+      <a href="/models/" class="text-sm font-semibold text-cyan-300 hover:text-cyan-200">← Back to model catalog</a>
+      <a href="https://ollama.com/library/rnj-1" target="_blank" rel="noopener noreferrer" class="inline-block">
+        <img
+          src="/models/rnj-1-cloud/hero.webp"
+          alt="A simple illustration of the RNJ-1 Cloud setup -- your computer talks to OpenWebUI, which talks to RNJ-1 running in the cloud"
+          width="1200" height="600"
+          class="mt-8 mb-2 w-full max-w-xs rounded-2xl object-cover"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+        />
+      </a>
+      <p class="mb-6 text-xs text-slate-500">Image source: <a href="https://ollama.com/library/rnj-1" target="_blank" rel="noopener noreferrer" class="underline hover:text-slate-400">Ollama</a></p>
+      <div class="mt-8 mb-6 flex h-28 w-full max-w-xs items-center justify-center rounded-2xl border border-dashed border-slate-600 bg-slate-900 text-sm text-slate-500" style="display:none;">
+        RNJ-1 artwork placeholder
+      </div>
+      <p class="text-sm font-bold uppercase tracking-[0.3em] text-cyan-300">RNJ-1 · Terminal Glass</p>
+      <h1 class="mt-4 max-w-4xl text-4xl font-black tracking-tight md:text-6xl">
+        A Lightweight Coding and Science Helper, Without Any Local Setup
+      </h1>
+      <p class="mt-6 max-w-3xl text-lg text-slate-300">
+        RNJ-1, built by Essential AI, runs through a simple chat window on a modest computer while the
+        actual thinking happens on Ollama's cloud servers. It's a smaller, focused model -- good at coding,
+        math, science problems, and basic automated task-completion -- and it can understand fairly long
+        conversations at once. You skip the setup work of installing and tuning a model yourself; in
+        exchange, your questions, code snippets, and any documents it searches travel out to the cloud,
+        and you're billed based on how much you use it.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="/quote.html" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
+        <a href="#how-it-works" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See how it works</a>
+        <a href="/models/qwen2.5-coder/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See the fully private version instead</a>
+      </div>
+      <p class="mt-6 text-sm text-emerald-400">
+        In short: your computer runs the chat window. RNJ-1, running on Ollama's cloud, does the heavy lifting.
+      </p>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-6xl px-6 py-12 space-y-12">
+
+    <!-- 2. Overview -->
+    <section>
+      <h2 class="text-3xl font-black">So, what exactly is RNJ-1?</h2>
+      <p class="mt-5 max-w-3xl text-lg text-slate-300">
+        RNJ-1 is a compact AI model built by Essential AI specifically for coding, math, science, and
+        basic automated tool use. It was trained from the ground up rather than adapted from a larger
+        model, and it's designed to handle a good chunk of conversation or code at once. Think of it as a
+        focused specialist rather than a broad generalist -- it's aimed at programming help, solving
+        science and math problems, filling in missing pieces of code, and small experiments where the AI
+        completes a task on its own with some outside tools.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-400">
+        Through Terminal Glass's cloud connection, you get access to the standard version of RNJ-1. A
+        smaller, downloadable version also exists if you'd rather run everything on your own equipment
+        through a fully private setup. Whichever way you go, it's worth setting clear rules upfront about
+        what code and documents are okay to send out over the internet.
+      </p>
+    </section>
+
+    <!-- 3. The Terminal Glass Trade-off -->
+    <section class="rounded-3xl border border-amber-500/30 bg-amber-950/20 p-8">
+      <h2 class="text-2xl font-black text-amber-200">Here's the honest trade-off</h2>
+      <p class="mt-4 text-slate-300">
+        <strong class="text-white">Terminal Glass</strong> gives you the same friendly chat app (OpenWebUI)
+        and the same locally stored document search tool you'd get with a fully private setup -- but instead
+        of your own computer doing the "thinking," each question gets sent out to Ollama's cloud to be
+        answered by RNJ-1. Your own machine just needs to run the chat window and your document search
+        -- a small, inexpensive computer is usually enough. You skip the extra setup work of installing,
+        configuring, and fine-tuning a model yourself before you even get to try it out.
+      </p>
+      <p class="mt-4 text-sm text-amber-300">
+        <strong>Here's what that really means:</strong> your questions, code snippets, any documents your
+        search tool pulls up, and anything the AI does with outside tools all get sent out over the
+        internet to be processed. This is <em>not</em> a locked-down, private setup -- it's a different
+        thing entirely from a
+        <a href="/models/qwen2.5-coder/" class="underline hover:text-amber-200">fully private NoCloudGPT setup</a>,
+        where everything stays on machines you own and control. You'll also pay an ongoing, usage-based fee,
+        and responses will depend on your internet connection. If sensitive or regulated material can never
+        leave your network, choose a <a href="/models/">NoCloudGPT Air Gapped</a> setup instead.
+      </p>
+
+<!-- Secondary artwork -->
+<div class="secondary-artwork my-8 md:float-right md:ml-6 md:mb-4 md:max-w-[42%]">
+  <a href="https://commons.wikimedia.org/wiki/File%3ADeep_neural_networks_diagram.png" target="_blank" rel="noopener">
+    <img src="/models/rnj-1-cloud/secondary.webp" alt="A diagram illustrating how an AI model like RNJ-1 processes information" class="rounded-xl border border-slate-700">
+  </a>
+  <p class="mt-1 text-center text-xs text-slate-400">
+    Source: <a href="https://commons.wikimedia.org/wiki/File%3ADeep_neural_networks_diagram.png" class="underline">Wikimedia Commons</a>
+  </p>
+</div>
+</section>
+    <section>
+      <h2>"Do I need to buy a fancy graphics card?"</h2>
+      <p>
+        This is really the question most people are trying to figure out, even if they don't phrase it that way.
+      </p>
+      <p>
+        If you try to run these AI models without a proper graphics card (the same kind used for video games,
+        but scaled up), your computer will fall back to using its regular processor. That technically works
+        for the occasional light question, but it becomes painfully slow for regular use. A lot of people
+        learn this the hard way after renting a cloud computer that turns out to be either too slow or
+        surprisingly expensive.
+      </p>
+      <p>
+        If you'd rather not deal with picking out graphics cards, comparing specs, or troubleshooting driver
+        issues at all, Terminal Glass Cloud is the easier path -- you get a capable AI through a simple,
+        familiar chat window, and someone else worries about the hardware.
+      </p>
+      <p>
+        On the other hand, if you want everything running on equipment you personally control, you can rent
+        a graphics-card-equipped server (through AWS, Digital Ocean, or your own machines) and install
+        NoCloudGPT on it yourself. In that setup, you're the one responsible for picking the right graphics
+        card and keeping it running smoothly.
+      </p>
+      <p>
+        And if your organization needs everything to stay completely inside your own walls from the very
+        first day, then a <a href="/models/">NoCloudGPT Air Gapped</a> setup on your own hardware is the
+        way to go.
+      </p>
+      <p class="text-sm text-slate-400">
+        There's no single "correct" choice here. It really comes down to your budget, how sensitive your
+        data is, how fast you need answers, and whether you want to own your equipment long-term.
+      </p>
+    </section>
+
+    <!-- 4. Who This Model Family is For -->
+    <section>
+      <h2 class="text-3xl font-black">Is this actually for you?</h2>
+      <div class="mt-6 grid gap-5 md:grid-cols-2">
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>👤</span> If you're using this for yourself
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Great for students, hobbyist coders, and anyone learning technical skills who wants help with
+            programming, math, science, scripts, or debugging without needing to set anything up locally.
+            Every question and every piece of code you type gets sent to the cloud -- so avoid private
+            records, passwords, personal documents, and sensitive code. Choose a fully private setup if
+            keeping everything on your own device matters to you.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>🏢</span> If you're using this for your business or team
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            A good fit for a lightweight internal help-desk for engineers, cleaning up documentation, IT
+            support triage, technical Q&amp;A, and early experiments with automated task-completion -- as
+            long as your company's data rules allow information to be sent to an outside cloud service.
+            Use a fully private setup instead when source code, customer data, or company secrets must
+            stay inside your own walls.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>⚙️</span> If you're technical or building software
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Handles writing code, filling in missing pieces of existing code, debugging specific functions,
+            experimenting with tool-connected AI, and small automated coding tasks reasonably well. For
+            bigger jobs -- like reworking an entire codebase or letting the AI make changes on its own -- pair
+            it with proper testing, human review, and a way to undo mistakes, no matter how good the model is.
+          </p>
+        </div>
+        <div class="rounded-2xl border border-slate-800 bg-slate-900 p-6">
+          <h3 class="flex items-center gap-2 text-lg font-bold text-white">
+            <span>🔬</span> If you're doing research or working with data
+          </h3>
+          <p class="mt-3 text-sm text-slate-400">
+            Practical for reviewing publicly available code, explaining what a piece of analysis code is
+            doing, working through science and math reasoning, and light help with data-cleanup tasks.
+            Keep in mind that a cloud-based AI can change or update over time, so you won't get the exact
+            same, repeatable results down the line. Confidential or unpublished data should stay on a
+            fully private setup.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. How Terminal Glass Works with This Model -->
+    <section id="how-it-works">
+      <h2 class="text-3xl font-black">How this actually works, step by step</h2>
+      <p class="mt-5 max-w-3xl text-slate-300">
+        You'll interact with everything through <strong class="text-white">OpenWebUI</strong> -- a clean,
+        simple chat window running on your own computer (or you can use the command line, if you prefer).
+        Your chat history, user accounts, and any documents you've indexed for search stay on hardware you
+        control. But the moment you send a question, it -- along with any code snippets or document
+        excerpts your search tool pulls in -- travels out to Ollama's cloud servers to be answered, and
+        the reply streams back to your screen.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        To use the cloud version, you'll need to sign in with an Ollama account on your computer first.
+        RNJ-1's cloud usage is priced in a moderate tier -- generally reasonable for a model this size,
+        though repeated back-and-forth with outside tools can still add up over time.
+      </p>
+      <pre class="mt-5 overflow-x-auto rounded-2xl border border-slate-800 bg-slate-900 p-5 text-sm text-cyan-200"><code>ollama signin
+ollama run rnj-1:8b-cloud</code></pre>
+      <p class="mt-5 text-sm text-amber-300">
+        <strong>What leaves your computer:</strong> your typed questions, code snippets, any document
+        text your search tool pulls up, and any back-and-forth with outside tools. This model only reads
+        and writes text -- it doesn't handle images. <strong>Speed:</strong> includes some delay for the
+        round trip to the cloud and back. <strong>Cost:</strong> based on how much you use it. When you're
+        ready, the same model can run fully on your own hardware through a private setup instead.
+      </p>
+    </section>
+
+    <!-- 6. Honest Guidance -->
+    <section>
+      <h2 class="text-3xl font-black">When you should probably choose something else</h2>
+      <ul class="mt-5 max-w-3xl space-y-3 text-slate-300">
+        <li>
+          <strong class="text-white">You have regulated data or strict rules about where data can be stored</strong> --
+          Choose a fully private setup running RNJ-1 (or another coding model) entirely on hardware you
+          control. This cloud version sends your questions and code out to Ollama's servers.
+        </li>
+        <li>
+          <strong class="text-white">You use it every day, and you already own decent hardware</strong> --
+          The downloadable version of this model is small enough to run on many modest servers, and may
+          cost less over time than paying for cloud usage continuously.
+        </li>
+        <li>
+          <strong class="text-white">You need to rework an entire codebase or run heavy automated coding tasks</strong> --
+          A bigger, more capable coding-focused model such as
+          <a href="/models/qwen3-coder-cloud/" class="text-cyan-300 hover:text-cyan-200">Qwen3-Coder Cloud</a>
+          or <a href="/models/devstral-small-2-cloud/" class="text-cyan-300 hover:text-cyan-200">Devstral Small 2 Cloud</a>
+          may be a better fit than this smaller model.
+        </li>
+        <li>
+          <strong class="text-white">You want a general-purpose assistant for everyday writing or conversation</strong> --
+          RNJ-1 is built for coding and technical problem-solving. Give it clear instructions if you want
+          to use it for non-technical writing or casual conversation.
+        </li>
+        <li>
+          <strong class="text-white">You need the exact same, unchanging version of the model for audits or records</strong> --
+          A private setup with a fixed version gives you more control and predictability than a cloud
+          service that can update behind the scenes.
+        </li>
+      </ul>
+    </section>
+
+    <!-- 7. Recommended Terminal Glass Deployment -->
+    <section>
+      <h2 class="text-3xl font-black">What we recommend</h2>
+      <div class="mt-6 overflow-hidden rounded-2xl border border-slate-800">
+        <table class="w-full text-left text-sm">
+          <thead class="bg-slate-950 text-cyan-200">
+            <tr>
+              <th class="px-4 py-3">Version</th>
+              <th class="px-4 py-3">Best for</th>
+              <th class="px-4 py-3">Notes</th>
+              <th class="px-4 py-3"></th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800 bg-slate-900 text-slate-300">
+            <tr>
+              <td class="px-4 py-3 font-mono text-cyan-200">rnj-1:8b-cloud</td>
+              <td class="px-4 py-3">Individuals and small teams</td>
+              <td class="px-4 py-3">A compact model that handles a good amount of text at once, reads text only (no images), and can use outside tools. Currently the only cloud version of RNJ-1 available. Good for coding help, science and math problems, tool experiments, small automated tasks, and technical support -- when your content is okay to send to the cloud.</td>
+              <td class="px-4 py-3 whitespace-nowrap"><a href="/quote.html" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="mt-4 text-sm text-slate-400">
+        A smaller, downloadable version of this model is also available for anyone who wants to run it
+        entirely on their own equipment through a fully private setup. What's available can change over
+        time -- double-check the current options at
+        <a href="https://ollama.com/library/rnj-1" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">ollama.com/library/rnj-1</a>
+        before committing.
+      </p>
+    </section>
+
+    <!-- 8. Licensing & Access -->
+    <section>
+      <h2 class="text-3xl font-black">The legal fine print, in plain terms</h2>
+      <p class="mt-5 max-w-3xl text-slate-300">
+        RNJ-1 is published by Essential AI under the
+        <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">Apache 2.0 license</a>,
+        which allows commercial use as long as you follow its standard terms. Using the cloud version
+        requires an Ollama Cloud account, and you're billed based on how much you use it -- usage limits
+        and pricing tiers apply and can change. Using Ollama's cloud service also means agreeing to
+        Ollama's own separate terms -- worth reviewing both before relying on this for business purposes.
+      </p>
+      <p class="mt-4 max-w-3xl text-slate-300">
+        Official listing:
+        <a href="https://ollama.com/library/rnj-1" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">ollama.com/library/rnj-1</a>
+        · More information:
+        <a href="https://www.essential.ai/research/rnj-1" target="_blank" rel="noopener" class="text-cyan-300 hover:text-cyan-200">Essential AI's RNJ-1 research post</a>
+      </p>
+      <div class="mt-6 rounded-2xl border border-slate-800 bg-slate-900 p-5 text-sm text-slate-400">
+        <strong class="text-slate-300">A quick disclaimer:</strong> Terminal Glass is our own way of
+        packaging this setup -- we don't own or run RNJ-1 or Ollama Cloud ourselves. Availability,
+        pricing, and behavior are controlled by Essential AI and Ollama, and can change without notice.
+        Data you send to the cloud version leaves your infrastructure. This page isn't legal advice.
+      </div>
+    </section>
+
+    <!-- 9. Final note -->
+    <section class="rounded-3xl border border-slate-800 bg-slate-900 p-8">
+      <h2 class="text-2xl font-black text-white">What Terminal Glass adds</h2>
+      <p class="mt-4 text-slate-300">
+        Terminal Glass sets you up with one simple chat window, a private, locally stored search tool
+        for your own documentation, easy ways to manage multiple users, and help keeping an eye on your
+        cloud usage so costs stay predictable.
+      </p>
+    </section>
+
+    <div class="text-center">
+      <a href="/quote.html" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
+        Get a quote for RNJ-1 Cloud →
+      </a>
+      <p class="mt-3 text-sm text-slate-500">We'll help you figure out the right small computer to run locally and the right cloud option for your team.</p>
+    </div>
+
+  </main>
+
+  <section class="border-t border-slate-800 bg-slate-900 px-6 py-8">
+    <div class="mx-auto max-w-6xl">
+      <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Image and source credits</p>
+      <div class="mt-4 grid gap-4 text-xs text-slate-500 md:grid-cols-2 lg:grid-cols-3">
+        <div>
+          <p class="font-semibold text-slate-400">Hero image</p>
+          <p class="mt-1">See the <a href="https://ollama.com/library/rnj-1" target="_blank" rel="noopener" class="text-cyan-600 hover:text-cyan-500">Ollama RNJ-1 listing</a> for official assets.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-400">Who makes this model</p>
+          <p class="mt-1">RNJ-1 is made by <a href="https://www.essential.ai/" target="_blank" rel="noopener" class="text-cyan-600 hover:text-cyan-500">Essential AI</a>. Terminal Glass and NoCloudGPT are separate services and aren't affiliated with Essential AI or Ollama.</p>
+        </div>
+        <div>
+          <p class="font-semibold text-slate-400">Want it fully private instead?</p>
+          <p class="mt-1">See <a href="/models/qwen2.5-coder/" class="text-cyan-600 hover:text-cyan-500">Qwen2.5-Coder -- NoCloudGPT Private Instances</a> for a coding-focused setup you fully control. The smaller version of RNJ-1 runs on the same NoCloudGPT stack.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t border-slate-800 bg-slate-950 px-6 py-10 text-center text-sm text-slate-500">
+    <p>NoCloudGPT is an independent service. We are not affiliated with Essential AI, Ollama, or any AI developer mentioned on this page.</p>
+    <div class="mx-auto max-w-6xl px-6 py-4">
+      <p class="text-xs text-slate-500 border border-slate-800 rounded-xl px-4 py-3 bg-slate-900">
+        <strong class="text-slate-400">A note on licenses:</strong>
+        Licensing details for open-weight AI models come from official model documentation and developer
+        pages. Always double-check the current license at
+        <a href="https://huggingface.co/models" target="_blank" rel="noopener" class="text-cyan-600 hover:text-cyan-500">Hugging Face</a>
+        or the model developer's official page before using it commercially.
+        We're not lawyers -- talk to a qualified professional if compliance is a concern for your business.
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
