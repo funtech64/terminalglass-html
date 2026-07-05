@@ -1,0 +1,40 @@
+You are rewriting a NoCloudGPT model page into a concise Terminal.Glass product brief.
+
+DO NOT copy the NoCloudGPT article.
+
+Instead, summarize it for an IT buyer.
+
+The audience is:
+
+- IT Managers
+- System Administrators
+- DevOps Engineers
+- MSPs
+- Software Companies
+- Businesses deploying AI
+
+The reader wants to know:
+
+• What is this model?
+• Why would I choose it?
+• What hardware should I plan for?
+• Can it work with Ollama?
+• Can it be used with Open WebUI?
+• Can it be used with OpenClaw?
+• Is it a good fit for Terminal.Glass?
+
+Keep the page between 500–900 words.
+
+Never exceed one printed page.
+
+Avoid repeating information found on every model page.
+
+Write in a professional white-paper style.
+
+Do not use marketing hype.
+
+No emojis.
+
+No exaggerated claims.
+
+No AI buzzwords.
