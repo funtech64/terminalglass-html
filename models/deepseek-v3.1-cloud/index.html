@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DeepSeek V3.1 Cloud — Terminal.Glass Product Brief</title>
+<meta name="description" content="IT brief for DeepSeek V3.1 on Terminal.Glass: Ollama Cloud inference, local Open WebUI host sizing, OpenClaw fit, and honest data-residency trade-offs.">
+<link rel="canonical" href="https://terminal.glass/models/deepseek-v3.1-cloud/">
+<style>
+  :root{
+    --bg:#0b0e14;
+    --bg-alt:#0e1320;
+    --card:#131926;
+    --card-hover:#18202f;
+    --border:#232c3d;
+    --text:#dbe2ee;
+    --muted:#8b96a8;
+    --accent:#4fd1a5;
+    --accent-dim:#2b6e57;
+    --warn:#e8b84a;
+    --warn-bg:rgba(232,184,74,.08);
+    --warn-border:rgba(232,184,74,.35);
+    --mono:ui-monospace,'SF Mono','Cascadia Code','JetBrains Mono',Menlo,Consolas,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Inter',sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:var(--sans);line-height:1.65;font-size:16px}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:820px;margin:0 auto;padding:0 24px}
+  .wrap-wide{max-width:1140px;margin:0 auto;padding:0 24px}
+  h1,h2,h3{line-height:1.25;font-weight:650}
+  h1{font-size:2.1rem;letter-spacing:-.02em;margin-bottom:1rem}
+  h2{font-size:1.35rem;margin:2.25rem 0 .75rem}
+  .kicker{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem;display:block}
+  .breadcrumb{font-size:.88rem;color:var(--muted);margin-bottom:1.5rem}
+  .breadcrumb a{color:var(--muted)}
+  .breadcrumb a:hover{color:var(--text)}
+  p{margin-bottom:1rem;color:var(--muted)}
+  p strong{color:var(--text);font-weight:600}
+  ul{margin:0 0 1rem 1.25rem;color:var(--muted)}
+  li{margin-bottom:.45rem}
+  code{font-family:var(--mono);font-size:.88em;background:var(--card);border:1px solid var(--border);border-radius:4px;padding:.1em .45em;color:var(--accent)}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(11,14,20,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+  .brand:hover{text-decoration:none}
+  .logo-mark{width:38px;height:38px;border:1px solid var(--border);border-radius:9px;background:var(--card);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.68rem;color:var(--accent);letter-spacing:-.02em}
+  .brand-name{font-weight:650;font-size:1.05rem}
+  .nav-toggle{display:none}
+  .nav-toggle-label{display:none;cursor:pointer;font-family:var(--mono);color:var(--muted);padding:8px;font-size:1.2rem;user-select:none}
+  nav ul{display:flex;gap:28px;list-style:none;align-items:center}
+  nav a{color:var(--muted);font-size:.92rem}
+  nav a:hover{color:var(--text);text-decoration:none}
+  nav a.nav-cta{color:var(--bg);background:var(--accent);padding:8px 16px;border-radius:6px;font-weight:600}
+  nav a.nav-cta:hover{background:#63e0b6;text-decoration:none}
+
+  .btn{display:inline-block;padding:11px 20px;border-radius:7px;font-weight:600;font-size:.92rem;border:1px solid transparent}
+  .btn:hover{text-decoration:none}
+  .btn-primary{background:var(--accent);color:#08110d}
+  .btn-primary:hover{background:#63e0b6}
+  .btn-secondary{background:var(--card);color:var(--text);border-color:var(--border)}
+  .btn-secondary:hover{background:var(--card-hover)}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:1.75rem}
+
+  .model-hero{padding:56px 0 48px;border-bottom:1px solid var(--border)}
+  .model-hero .lead{font-size:1.05rem;max-width:680px}
+
+  .callout{background:var(--warn-bg);border:1px solid var(--warn-border);border-radius:10px;padding:22px 24px;margin:1.75rem 0}
+  .callout h2{margin:0 0 .6rem;font-size:1.1rem;color:var(--warn)}
+  .callout p{margin:0;color:var(--muted);font-size:.95rem}
+
+  pre{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px 18px;overflow-x:auto;margin:1rem 0 1.25rem;font-family:var(--mono);font-size:.86rem;color:var(--accent);line-height:1.7}
+
+  .spec-table{width:100%;border-collapse:collapse;font-size:.9rem;margin:1rem 0}
+  .spec-table th,.spec-table td{padding:12px 14px;text-align:left;border:1px solid var(--border)}
+  .spec-table thead th{background:var(--bg-alt);color:var(--accent);font-family:var(--mono);font-size:.78rem;letter-spacing:.04em;text-transform:uppercase}
+  .spec-table tbody td{background:var(--card);color:var(--muted)}
+  .spec-table td:first-child{font-family:var(--mono);color:var(--accent);white-space:nowrap}
+
+  .article{padding:48px 0 64px}
+  .meta-note{font-size:.82rem;color:#6d7889;margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+
+  footer{border-top:1px solid var(--border);padding:40px 0;color:var(--muted);font-size:.88rem}
+  .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+  footer ul{display:flex;gap:24px;list-style:none}
+  footer a{color:var(--muted)}
+  footer a:hover{color:var(--text)}
+
+  @media(max-width:680px){
+    h1{font-size:1.65rem}
+    .nav-toggle-label{display:block}
+    nav ul{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--border);padding:12px 24px}
+    nav ul li{padding:10px 0}
+    .nav-toggle:checked ~ ul{display:flex}
+    nav a.nav-cta{display:inline-block}
+    .spec-table{font-size:.82rem}
+    .spec-table th,.spec-table td{padding:10px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap-wide nav">
+    <a class="brand" href="/">
+      <span class="logo-mark" aria-hidden="true">T&gt;||G</span>
+      <span class="brand-name">Terminal.Glass</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu">☰</label>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/hosting/">Hosting</a></li>
+        <li><a href="/models/">Models</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a class="nav-cta" href="/pricing/">Pricing &amp; Order Now</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="model-hero">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="/models/">Models</a> / DeepSeek V3.1 Cloud</p>
+    <span class="kicker">Cloud-accelerated · Ollama Cloud</span>
+    <h1>DeepSeek V3.1 Cloud</h1>
+    <p class="lead">Product brief for IT teams evaluating a 671B-class hybrid reasoning model through Terminal.Glass — Open WebUI on your server, inference on Ollama Cloud.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/pricing/">Order Now</a>
+      <a class="btn btn-secondary" href="/contact/">Contact</a>
+    </div>
+  </div>
+</section>
+
+<article class="article">
+  <div class="wrap">
+
+    <h2>What is this model?</h2>
+    <p>
+      DeepSeek V3.1 (V3.1-Terminus) is a large hybrid language model from DeepSeek for reasoning, coding,
+      tool-assisted workflows, and long-context technical work. On Ollama, the cloud tag is
+      <code>deepseek-v3.1:671b-cloud</code> — rated high usage, with 160K context, text input, tool support,
+      and thinking support. The same family offers a local <code>deepseek-v3.1:671b</code> build (~404&nbsp;GB)
+      for teams that host inference on their own hardware.
+    </p>
+    <p>
+      One model supports both direct answers and extended reasoning by switching chat templates. That is useful
+      when routine support tickets need fast replies but architecture reviews or policy analysis need deeper
+      passes on the same deployment.
+    </p>
+
+    <h2>Why would I choose it?</h2>
+    <p>
+      Choose DeepSeek V3.1 Cloud when you need more reasoning depth than a small local model provides, but
+      you are not ready to procure multi-GPU servers for a 671B-class checkpoint. It fits pilot programs,
+      internal documentation Q&amp;A, code review preparation, search-assisted agents, and long technical
+      prompts — provided your data policy allows cloud inference.
+    </p>
+    <p>
+      For regulated material, confidential client data, or source code that must stay inside your network,
+      use a <strong>private AI deployment</strong> with local inference instead. For a newer DeepSeek cloud
+      option, see <a href="/models/deepseek-v3.2-cloud/">DeepSeek V3.2 Cloud</a>.
+    </p>
+
+    <h2>What hardware should I plan for?</h2>
+    <p>
+      On a Terminal.Glass cloud-accelerated deployment, your server runs the one-server AI stack — not the
+      671B model weights. Plan a modest Linux host: roughly 4–8&nbsp;GB RAM, two vCPUs, and 40&nbsp;GB or more
+      disk for Open WebUI, logs, and locally stored RAG indexes. A small VM, NUC, or mini-PC is typical.
+      <strong>No GPU is required on the host.</strong>
+    </p>
+    <p>
+      If you run <code>deepseek-v3.1:671b</code> locally instead, size infrastructure for ~404&nbsp;GB storage
+      and sustained multi-GPU inference. That is a separate deployment lane on customer-owned hardware, not
+      this cloud-accelerated workflow.
+    </p>
+
+    <h2>Ollama, Open WebUI, and OpenClaw</h2>
+    <p>
+      <strong>Ollama</strong> — Cloud models use the standard Ollama workflow. Sign in on the Terminal.Glass
+      host with <code>ollama signin</code>, then pull and run the cloud tag. Computation is offloaded to
+      Ollama Cloud per <a href="https://docs.ollama.com/cloud" target="_blank" rel="noopener noreferrer">Ollama's cloud documentation</a>.
+    </p>
+    <pre>ollama signin
+ollama run deepseek-v3.1:671b-cloud</pre>
+    <p>
+      <strong>Open WebUI</strong> — Serves as the team chat interface on your server. User accounts, chat
+      history, and document indexes you build locally remain on hardware you control.
+    </p>
+    <p>
+      <strong>OpenClaw</strong> — Agent workflows can call this model for tool-calling prototypes, code agents,
+      and structured analysis. Treat credentials, private keys, and proprietary logic as leaving your
+      environment during cloud inference unless use has been explicitly approved.
+    </p>
+
+    <div class="callout">
+      <h2>Terminal.Glass fit and trade-offs</h2>
+      <p>
+        Terminal.Glass packages Ollama, Open WebUI, and OpenClaw into a one-server AI stack on your hardware
+        or customer-owned cloud. For DeepSeek V3.1 Cloud, each prompt — including code excerpts, RAG passages,
+        and tool context — is forwarded to Ollama Cloud; responses stream back through Open WebUI.
+      </p>
+      <p style="margin-top:.75rem">
+        This is a <strong>cloud-accelerated private AI workflow</strong>, not fully local private AI
+        deployment. Content processed by the model leaves your network. Usage is billed by Ollama at the
+        high-usage tier; long 160K contexts and thinking-mode prompts increase cost. Expect network-dependent
+        latency and less control over pinned model versions than a local checkpoint.
+      </p>
+    </div>
+
+    <h2>Deployment reference</h2>
+    <table class="spec-table">
+      <thead>
+        <tr>
+          <th>Tag</th>
+          <th>Recommended for</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>deepseek-v3.1:671b-cloud</td>
+          <td>Hybrid reasoning, tool use, code and search agents, long technical analysis when cloud processing is permitted</td>
+        </tr>
+        <tr>
+          <td>deepseek-v3.1:671b</td>
+          <td>Full on-prem inference when your hardware can host ~404&nbsp;GB and sustain multi-GPU serving</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Confirm current tags and availability at
+      <a href="https://ollama.com/library/deepseek-v3.1" target="_blank" rel="noopener noreferrer">ollama.com/library/deepseek-v3.1</a>
+      before production. DeepSeek V3.1 weights are MIT-licensed per the Ollama model card; cloud access is
+      separately governed by Ollama's terms.
+    </p>
+
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/pricing/">Order Now</a>
+      <a class="btn btn-secondary" href="/models/">Back to model catalog</a>
+    </div>
+
+    <p class="meta-note">
+      Terminal.Glass is an independent deployment workflow. We do not own or control DeepSeek V3.1 or Ollama
+      Cloud. Model tags, pricing, and inference behavior may change without notice. This page is not legal
+      advice — verify licenses and compliance requirements before commercial deployment.
+    </p>
+
+  </div>
+</article>
+
+<footer>
+  <div class="wrap-wide foot">
+    <div>
+      <strong style="color:var(--text)">Terminal.Glass</strong><br>
+      One-server private AI deployment — Ollama, Open WebUI, OpenClaw.
+    </div>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+      <li><a href="/hosting/">Hosting</a></li>
+      <li><a href="/models/">Models</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
