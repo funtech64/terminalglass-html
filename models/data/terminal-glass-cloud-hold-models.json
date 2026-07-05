@@ -1,0 +1,28 @@
+[
+  {
+    "priority": 1,
+    "slug": "qwen3.6-cloud",
+    "displayName": "Qwen3.6 Cloud",
+    "ollamaFamily": "qwen3.6",
+    "exampleRun": "ollama run qwen3.6:<tag>-cloud",
+    "category": "agentic-thinking-coding",
+    "folder": "/models/qwen3.6-cloud/",
+    "localFamilyFolder": null,
+    "deploymentMode": "terminal-glass-cloud",
+    "status": "hold",
+    "holdReason": "Ollama library page shows vision/tools/thinking variants but no cloud tag yet."
+  },
+  {
+    "priority": 2,
+    "slug": "nemotron-cascade-2-cloud",
+    "displayName": "Nemotron Cascade 2 Cloud",
+    "ollamaFamily": "nemotron-cascade-2",
+    "exampleRun": "ollama run nemotron-cascade-2:<tag>-cloud",
+    "category": "nvidia-efficient-reasoning-moe",
+    "folder": "/models/nemotron-cascade-2-cloud/",
+    "localFamilyFolder": null,
+    "deploymentMode": "terminal-glass-cloud",
+    "status": "hold",
+    "holdReason": "Ollama library page shows tools/thinking 30b but no cloud tag yet."
+  }
+]
