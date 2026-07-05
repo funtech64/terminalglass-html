@@ -1,10 +1,153 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gemma 4 Cloud -- Model Brief | Terminal.Glass</title>
+  <meta name="description" content="Deployment brief: Gemma 4's cloud variant on Terminal.Glass. What it is, hardware requirements, Ollama/Open WebUI compatibility, and when to choose a different model instead.">
+  <link rel="canonical" href="https://terminal.glass/models/gemma4-cloud/">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100">
+
+  <header class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-4xl px-6 py-4">
+      <nav class="flex items-center justify-between text-sm">
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">Terminal.Glass</a>
+        <div class="flex gap-6 text-slate-400">
+          <a href="/models/" class="hover:text-white">Model Briefs</a>
+          <a href="/pricing/" class="hover:text-white">Pricing</a>
+          <a href="/contact/" class="hover:text-white">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-4xl px-6 py-12">
+      <p class="text-xs font-bold uppercase tracking-[0.3em] text-cyan-300">Model Brief</p>
+      <h1 class="mt-3 text-3xl font-black tracking-tight md:text-4xl">
+        Gemma 4 Cloud
+      </h1>
+      <p class="mt-4 max-w-2xl text-slate-300">
+        Google DeepMind's latest open model family, representing a meaningful step forward from Gemma 3 in
+        reasoning quality, multimodal understanding, and instruction following. Deployed through
+        Terminal.Glass via a dedicated cloud tag routed to Ollama Cloud -- giving access to Gemma 4's
+        improved vision and reasoning without downloading large local weights or provisioning a GPU.
+      </p>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-4xl px-6 py-10 space-y-10">
+
+    <!-- Quick Facts -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Quick Facts</h2>
+      <div class="mt-4 overflow-hidden rounded-xl border border-slate-800">
+        <table class="w-full text-left text-sm">
+          <tbody class="divide-y divide-slate-800 bg-slate-900 text-slate-300">
+            <tr><td class="px-4 py-3 font-semibold text-slate-400 w-1/3">Developer</td><td class="px-4 py-3">Google DeepMind</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">License</td><td class="px-4 py-3">Gemma Terms of Use -- permits commercial use subject to Google's prohibited-use policy</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Cloud Variant</td><td class="px-4 py-3"><code class="text-cyan-200">gemma4:cloud</code></td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Modality</td><td class="px-4 py-3">Text and image input</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Best For</td><td class="px-4 py-3">Complex reasoning, multimodal analysis, summarization, structured output, document-heavy Q&A</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Recommended Deployment</td><td class="px-4 py-3">Terminal.Glass Cloud tier for most users; local Ollama deployment available for teams needing on-hardware inference</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Why Choose This Model -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Why Choose This Model</h2>
+      <p class="mt-3 text-slate-300">
+        Gemma 4 is currently the strongest option in the Gemma line -- a clear step up from Gemma 3 in
+        reasoning quality, vision, and instruction following. It's a good fit for teams that already know
+        the Gemma family and want the newer generation's capability gains without re-evaluating a different
+        model family. Because it's only offered as a single cloud tag, sizing decisions are simpler than
+        with multi-tier families: there's one variant to evaluate rather than choosing between several
+        parameter counts.
+      </p>
+    </section>
+
+    <!-- Terminal.Glass Deployment -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Terminal.Glass Deployment</h2>
+      <p class="mt-3 text-slate-300">
+        Your interface, chat history, user accounts, and RAG index stay on your Terminal.Glass host.
+        When you submit a prompt -- or attach an image -- the request is sent to Ollama Cloud, where Gemma 4
+        runs, and the response streams back. Cloud access requires an Ollama account signed in on the
+        Terminal.Glass machine (<code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">ollama signin</code>).
+        Usage is metered per token. No local GPU is required -- a small VM, NUC, or mini-PC running Open
+        WebUI and the Ollama client is sufficient.
+      </p>
+    </section>
+
+    <!-- Recommended Uses -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Recommended Uses</h2>
+      <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-300">
+        <li>Internal assistants requiring stronger summarization and document analysis</li>
+        <li>Multimodal understanding tasks combining text and image input</li>
+        <li>Complex instruction-following and structured output generation</li>
+        <li>Prototyping and internal tools that benefit from improved reasoning over Gemma 3</li>
+        <li>Literature synthesis and exploratory analysis on public or low-sensitivity datasets</li>
+      </ul>
+      <p class="mt-3 text-sm text-slate-400">
+        Not appropriate for regulated or highly confidential data -- every prompt, RAG-retrieved passage,
+        and submitted image is sent to Ollama Cloud. Specialized coding families may still outperform
+        Gemma 4 on large-scale repository work. Cloud inference does not offer the same version pinning
+        and reproducibility as a local deployment, so it's not ideal for publication-bound research.
+      </p>
+    </section>
+
+    <!-- Hardware Guidance -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Hardware Guidance</h2>
+      <p class="mt-3 text-slate-300">
+        The Gemma 4 cloud tag runs entirely on Ollama Cloud, so the Terminal.Glass host only needs to run
+        Open WebUI, the Ollama client, and your document index -- a small VM or mini-PC is enough. Teams
+        that want to avoid recurring per-token cost, or that need inference to stay entirely on owned
+        hardware, should instead deploy Gemma 4's local weights, which require a GPU sized to the model.
+        Confirm current cloud tag and local weight availability at
+        <a href="https://ollama.com/library/gemma4" class="text-cyan-300 hover:text-cyan-200" target="_blank" rel="noopener">the official Ollama listing</a>.
+      </p>
+    </section>
+
+    <!-- Honest Guidance -->
+    <section class="rounded-2xl border border-amber-500/30 bg-amber-950/20 p-6">
+      <h2 class="text-xl font-bold text-amber-200">Honest Guidance</h2>
+      <ul class="mt-3 space-y-2 text-sm text-amber-100">
+        <li><strong class="text-white">Strict privacy or regulated data:</strong> run Gemma 4 locally on hardware you control rather than through the cloud tag -- Terminal Glass's cloud routing is not a substitute for air-gapped or compliance-critical deployments.</li>
+        <li><strong class="text-white">High predictable volume:</strong> owned inference hardware often becomes more economical than sustained cloud token spend at scale.</li>
+        <li><strong class="text-white">Maximum coding or agent performance:</strong> consider specialized families such as Qwen Coder or DeepSeek when those workloads dominate -- Gemma 4 is a general-purpose model, not a dedicated coding model.</li>
+        <li><strong class="text-white">Clinical or diagnostic use:</strong> Gemma 4 is a general-purpose model, not a validated medical device -- do not use it for patient care decisions without appropriate clinical governance.</li>
+      </ul>
+    </section>
+
+    <!-- Learn More -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Learn More</h2>
+      <p class="mt-3 text-slate-300">
+        Full technical reference and licensing detail for this model family are documented on
+        <a href="https://nocloudgpt.com/models/gemma4/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>.
+        Confirm current tags and availability at
+        <a href="https://ollama.com/library/gemma4" class="text-cyan-300 hover:text-cyan-200" target="_blank" rel="noopener">ollama.com/library/gemma4</a>.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="flex flex-wrap gap-3 border-t border-slate-800 pt-8">
+      <a href="/deploy/gemma4-cloud/" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Deploy with Terminal.Glass →</a>
+      <a href="/pricing/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">View Pricing</a>
+      <a href="/contact/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">Contact</a>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800 bg-slate-950 px-6 py-8 text-center text-sm text-slate-500">
+    <p>Terminal.Glass is an independent deployment platform. Not affiliated with Google, Google DeepMind, or Ollama. Model availability, tags, and pricing may change.</p>
+  </footer>
 </body>
 </html>

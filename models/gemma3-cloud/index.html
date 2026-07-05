@@ -1,10 +1,160 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gemma 3 Cloud -- Model Brief | Terminal.Glass</title>
+  <meta name="description" content="Deployment brief: Gemma 3's 4B–27B cloud variants on Terminal.Glass. What it is, hardware requirements, Ollama/Open WebUI compatibility, and when to choose a different model instead.">
+  <link rel="canonical" href="https://terminal.glass/models/gemma3-cloud/">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100">
+
+  <header class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-4xl px-6 py-4">
+      <nav class="flex items-center justify-between text-sm">
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">Terminal.Glass</a>
+        <div class="flex gap-6 text-slate-400">
+          <a href="/models/" class="hover:text-white">Model Briefs</a>
+          <a href="/pricing/" class="hover:text-white">Pricing</a>
+          <a href="/contact/" class="hover:text-white">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-4xl px-6 py-12">
+      <p class="text-xs font-bold uppercase tracking-[0.3em] text-cyan-300">Model Brief</p>
+      <h1 class="mt-3 text-3xl font-black tracking-tight md:text-4xl">
+        Gemma 3 Cloud
+      </h1>
+      <p class="mt-4 max-w-2xl text-slate-300">
+        Google DeepMind's third-generation open model family, built on Gemini technology. At 4B and above
+        it supports text and image input, covers 140+ languages, and handles instruction following,
+        summarization, and structured output well. Deployed through Terminal.Glass with 4B, 12B, and 27B
+        cloud variants routed to Ollama Cloud -- giving access to 27B-class capability without downloading
+        multi-gigabyte weights or provisioning a GPU.
+      </p>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-4xl px-6 py-10 space-y-10">
+
+    <!-- Quick Facts -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Quick Facts</h2>
+      <div class="mt-4 overflow-hidden rounded-xl border border-slate-800">
+        <table class="w-full text-left text-sm">
+          <tbody class="divide-y divide-slate-800 bg-slate-900 text-slate-300">
+            <tr><td class="px-4 py-3 font-semibold text-slate-400 w-1/3">Developer</td><td class="px-4 py-3">Google DeepMind</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">License</td><td class="px-4 py-3">Gemma Terms of Use -- permits commercial use subject to Google's prohibited-use policy</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Cloud Variants</td><td class="px-4 py-3"><code class="text-cyan-200">gemma3:4b-cloud</code>, <code class="text-cyan-200">gemma3:12b-cloud</code>, <code class="text-cyan-200">gemma3:27b-cloud</code></td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Context</td><td class="px-4 py-3">32K (4B, 12B) · 128K (27B)</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Modality</td><td class="px-4 py-3">Text and image input on all listed variants</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Best For</td><td class="px-4 py-3">Drafting, summarization, multilingual instruction following, structured output, RAG-backed Q&A</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Recommended Deployment</td><td class="px-4 py-3">Terminal.Glass Cloud tier for most users; local Ollama deployment available for teams needing on-hardware inference</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Why Choose This Model -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Why Choose This Model</h2>
+      <p class="mt-3 text-slate-300">
+        Gemma 3 is a proven, general-purpose open model family with strong multilingual coverage and solid
+        instruction following across a wide range of everyday tasks. The 27B cloud variant's 128K context
+        window handles full reports and longer documents in a single pass, while the 4B and 12B tiers offer
+        lighter, lower-cost options for shorter interactions. It's a practical starting point for teams that
+        want capable general-purpose AI without committing to GPU hardware sizing up front -- though teams
+        needing stronger multimodal or coding performance may prefer a newer or specialized family instead.
+      </p>
+    </section>
+
+    <!-- Terminal.Glass Deployment -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Terminal.Glass Deployment</h2>
+      <p class="mt-3 text-slate-300">
+        Your interface, chat history, user accounts, and RAG index stay on your Terminal.Glass host.
+        When you submit a prompt -- or attach an image on 4B+ variants -- the request is sent to Ollama Cloud,
+        where Gemma 3 runs, and the response streams back. Cloud access requires an Ollama account signed in
+        on the Terminal.Glass machine (<code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">ollama signin</code>).
+        Usage is metered per token; larger variants and longer contexts cost more per request. No local GPU
+        is required for any of the three cloud tags -- a small VM, NUC, or mini-PC running Open WebUI and the
+        Ollama client is sufficient.
+      </p>
+    </section>
+
+    <!-- Recommended Uses -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Recommended Uses</h2>
+      <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-300">
+        <li>Drafting emails, documents, and internal communications</li>
+        <li>Meeting-note summarization and policy Q&A</li>
+        <li>Multilingual instruction following and translation-adjacent tasks</li>
+        <li>Extracting structured fields from invoices, reports, or forms</li>
+        <li>Prototyping chat features, RAG pipelines, and agent workflows</li>
+        <li>Exploratory classification and literature synthesis on public or low-sensitivity datasets</li>
+      </ul>
+      <p class="mt-3 text-sm text-slate-400">
+        Not recommended for HIPAA-covered health data, attorney-client material, export-controlled
+        documents, or any workload with strict data-residency requirements -- every prompt, RAG-retrieved
+        passage, and submitted image is sent to Ollama Cloud for the cloud tags. Not a strong fit for
+        repository-scale coding work, where dedicated coding-tuned families perform better. Cloud inference
+        can also change between sessions, so results are not strictly reproducible for research use.
+      </p>
+    </section>
+
+    <!-- Hardware Guidance -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Hardware Guidance</h2>
+      <p class="mt-3 text-slate-300">
+        All three Gemma 3 cloud tags run entirely on Ollama Cloud, so the Terminal.Glass host only needs to
+        run Open WebUI, the Ollama client, and your document index -- a small VM or mini-PC is enough
+        regardless of which variant (4B, 12B, or 27B) you select. Teams that want to avoid recurring
+        per-token cost, or that need inference to stay entirely on owned hardware, should instead deploy
+        Gemma 3's local weights, which require a GPU sized to the chosen parameter count. Confirm current
+        cloud tags and local weight availability at
+        <a href="https://ollama.com/library/gemma3" class="text-cyan-300 hover:text-cyan-200" target="_blank" rel="noopener">the official Ollama listing</a>.
+      </p>
+    </section>
+
+    <!-- Honest Guidance -->
+    <section class="rounded-2xl border border-amber-500/30 bg-amber-950/20 p-6">
+      <h2 class="text-xl font-bold text-amber-200">Honest Guidance</h2>
+      <ul class="mt-3 space-y-2 text-sm text-amber-100">
+        <li><strong class="text-white">Strict privacy, regulated, or confidential data:</strong> run Gemma 3 locally on hardware you control rather than through the cloud tags -- Terminal Glass's cloud routing is not a substitute for air-gapped or compliance-critical deployments.</li>
+        <li><strong class="text-white">Predictable high volume over many months:</strong> owned inference hardware often becomes more economical than sustained cloud token spend at scale.</li>
+        <li><strong class="text-white">Heavy coding, agents, or advanced math:</strong> consider a coding-tuned family instead -- Gemma 3 is not optimized for repository-scale development work.</li>
+        <li><strong class="text-white">Best-available Google multimodal quality:</strong> evaluate a newer generation model if Gemma 3's vision or reasoning limits show up in your testing.</li>
+        <li><strong class="text-white">Clinical or diagnostic use:</strong> Gemma 3 is a general-purpose model, not a validated medical device -- do not use it for patient care decisions without appropriate clinical governance.</li>
+      </ul>
+    </section>
+
+    <!-- Learn More -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Learn More</h2>
+      <p class="mt-3 text-slate-300">
+        Full technical reference and licensing detail for this model family are documented on
+        <a href="https://nocloudgpt.com/models/gemma3/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>.
+        Confirm current tags and availability at
+        <a href="https://ollama.com/library/gemma3" class="text-cyan-300 hover:text-cyan-200" target="_blank" rel="noopener">ollama.com/library/gemma3</a>.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="flex flex-wrap gap-3 border-t border-slate-800 pt-8">
+      <a href="/deploy/gemma3-cloud/" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Deploy with Terminal.Glass →</a>
+      <a href="/pricing/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">View Pricing</a>
+      <a href="/contact/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">Contact</a>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800 bg-slate-950 px-6 py-8 text-center text-sm text-slate-500">
+    <p>Terminal.Glass is an independent deployment platform. Not affiliated with Google, Google DeepMind, or Ollama. Model availability, tags, and pricing may change.</p>
+  </footer>
 </body>
 </html>

@@ -1,10 +1,163 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>gpt-oss Cloud -- Model Brief | Terminal.Glass</title>
+  <meta name="description" content="Deployment brief: gpt-oss's cloud variants on Terminal.Glass. What it is, hardware requirements, Ollama/Open WebUI compatibility, and when to choose a different model instead.">
+  <link rel="canonical" href="https://terminal.glass/models/gpt-oss-cloud/">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100">
+
+  <header class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-4xl px-6 py-4">
+      <nav class="flex items-center justify-between text-sm">
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">Terminal.Glass</a>
+        <div class="flex gap-6 text-slate-400">
+          <a href="/models/" class="hover:text-white">Model Briefs</a>
+          <a href="/pricing/" class="hover:text-white">Pricing</a>
+          <a href="/contact/" class="hover:text-white">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-4xl px-6 py-12">
+      <p class="text-xs font-bold uppercase tracking-[0.3em] text-cyan-300">Model Brief</p>
+      <h1 class="mt-3 text-3xl font-black tracking-tight md:text-4xl">
+        gpt-oss Cloud
+      </h1>
+      <p class="mt-4 max-w-2xl text-slate-300">
+        OpenAI's open-weight mixture-of-experts model family, offered in 20B and 120B sizes for reasoning,
+        agentic workflows, function calling, and structured output. Deployed through Terminal.Glass via
+        cloud-only tags routed to Ollama Cloud -- 128K context and configurable reasoning effort without
+        provisioning an 80 GB-class GPU locally.
+      </p>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-4xl px-6 py-10 space-y-10">
+
+    <!-- Quick Facts -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Quick Facts</h2>
+      <div class="mt-4 overflow-hidden rounded-xl border border-slate-800">
+        <table class="w-full text-left text-sm">
+          <tbody class="divide-y divide-slate-800 bg-slate-900 text-slate-300">
+            <tr><td class="px-4 py-3 font-semibold text-slate-400 w-1/3">Developer</td><td class="px-4 py-3">OpenAI</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">License</td><td class="px-4 py-3">Apache 2.0 -- permits commercial use subject to standard Apache terms</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Sizes</td><td class="px-4 py-3">20B and 120B mixture-of-experts</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Context Window</td><td class="px-4 py-3">128K tokens (both sizes)</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Cloud Variants</td><td class="px-4 py-3"><code class="text-cyan-200">gpt-oss:20b-cloud</code>, <code class="text-cyan-200">gpt-oss:120b-cloud</code></td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Modality</td><td class="px-4 py-3">Text only; configurable reasoning effort (low/medium/high); native tool use</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Local Hardware (if self-hosting)</td><td class="px-4 py-3">20B: ~16 GB memory. 120B: ~80 GB-class GPU</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Best For</td><td class="px-4 py-3">General reasoning, agentic pipelines, function calling, structured output</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Why Choose This Model -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Why Choose This Model</h2>
+      <p class="mt-3 text-slate-300">
+        gpt-oss is a strong general-purpose reasoning and agent model with visible chain-of-thought output,
+        configurable reasoning effort, and native tool calling -- useful for prototyping agent pipelines,
+        validating structured JSON output, and everyday drafting or Q&A work. The 20B tag covers most
+        everyday use at lower cost; the 120B tag is worth the added spend when reasoning quality clearly
+        matters. Because both sizes use standard Ollama tags, code and prompts developed against the cloud
+        variant port to a self-hosted deployment with minimal changes if you later need to move on-premises.
+      </p>
+    </section>
+
+    <!-- Terminal.Glass Deployment -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Terminal.Glass Deployment</h2>
+      <p class="mt-3 text-slate-300">
+        Your interface, chat history, user accounts, and RAG index stay on your Terminal.Glass host.
+        When you submit a prompt -- including any retrieved passages from your RAG index -- to
+        <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">gpt-oss:20b-cloud</code> or
+        <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">gpt-oss:120b-cloud</code>, the
+        request is forwarded to Ollama Cloud, where gpt-oss runs, and the response streams back. Cloud
+        access requires an Ollama account signed in on the Terminal.Glass machine
+        (<code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">ollama signin</code>). Higher
+        reasoning effort settings and the 120B tag increase per-request latency and token cost relative
+        to shorter 20B chats. No local GPU is required to run either cloud tag.
+      </p>
+    </section>
+
+    <!-- Recommended Uses -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Recommended Uses</h2>
+      <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-300">
+        <li>Everyday chat, drafting, and long-form writing assistance</li>
+        <li>Structured reasoning, function calling, and JSON-output prototyping</li>
+        <li>Lightweight document RAG and internal Q&A</li>
+        <li>Agent pipeline prototyping and tool-calling validation</li>
+        <li>Literature summarization and exploratory analysis on public or low-sensitivity text</li>
+      </ul>
+      <p class="mt-3 text-sm text-slate-400">
+        Not appropriate for HIPAA-covered data, PCI-regulated payment details, attorney-client material,
+        proprietary source code, export-controlled documents, or other confidential content -- prompts and
+        RAG-retrieved passages are sent to Ollama Cloud during inference. gpt-oss is text-only with no
+        image upload path; teams needing multimodal or vision input should evaluate another model family.
+        Cloud inference is not strictly reproducible across sessions since backend tags and provider
+        behavior can change. gpt-oss is a general-purpose model, not a validated medical device, and
+        should not be used for clinical or diagnostic decisions.
+      </p>
+    </section>
+
+    <!-- Hardware Guidance -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Hardware Guidance</h2>
+      <p class="mt-3 text-slate-300">
+        Both gpt-oss cloud tags run entirely on Ollama Cloud, so the Terminal.Glass host only needs to run
+        Open WebUI, the Ollama client, and your document index -- a small VM or mini-PC is enough. Teams
+        that want to self-host instead should plan for roughly 16 GB of memory for the 20B model or an
+        80 GB-class GPU for the 120B model, since local weights range from 14–65 GB depending on
+        quantization. Confirm current tag availability at
+        <a href="https://ollama.com/library/gpt-oss" class="text-cyan-300 hover:text-cyan-200" target="_blank" rel="noopener">the official Ollama listing</a>.
+      </p>
+    </section>
+
+    <!-- Honest Guidance -->
+    <section class="rounded-2xl border border-amber-500/30 bg-amber-950/20 p-6">
+      <h2 class="text-xl font-bold text-amber-200">Honest Guidance</h2>
+      <ul class="mt-3 space-y-2 text-sm text-amber-100">
+        <li><strong class="text-white">Strict privacy, regulated, or confidential data:</strong> route this to a self-hosted deployment instead -- Terminal Glass's cloud routing sends prompts and RAG-retrieved content to Ollama Cloud and is not equivalent to an air-gapped setup.</li>
+        <li><strong class="text-white">Heavy proprietary code or sensitive internal documents:</strong> keep inference on hardware you control rather than routing source or contracts through Ollama Cloud.</li>
+        <li><strong class="text-white">Predictable high volume over many months:</strong> a local 20B deployment on owned hardware often becomes more economical than sustained cloud token spend, especially for automated pipelines.</li>
+        <li><strong class="text-white">Fixed model versions or audit-grade reproducibility:</strong> a pinned local gpt-oss build is more reliable for research, compliance review, or regression testing than a cloud tag that may change behavior.</li>
+        <li><strong class="text-white">Multimodal or vision workloads:</strong> gpt-oss is text-only. Teams needing image or document screenshot analysis should evaluate a multimodal model family instead.</li>
+        <li><strong class="text-white">Clinical or diagnostic use:</strong> gpt-oss is a general-purpose model, not a validated medical device -- do not use it for patient care decisions without clinical governance your compliance team approves.</li>
+      </ul>
+    </section>
+
+    <!-- Learn More -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Learn More</h2>
+      <p class="mt-3 text-slate-300">
+        Full technical reference, licensing detail, and local deployment options for this model family are
+        documented on <a href="https://nocloudgpt.com/models/gpt-oss/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>.
+        Confirm current tags and availability at
+        <a href="https://ollama.com/library/gpt-oss" class="text-cyan-300 hover:text-cyan-200" target="_blank" rel="noopener">ollama.com/library/gpt-oss</a>.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="flex flex-wrap gap-3 border-t border-slate-800 pt-8">
+      <a href="/deploy/gpt-oss-cloud/" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Deploy with Terminal.Glass →</a>
+      <a href="/pricing/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">View Pricing</a>
+      <a href="/contact/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">Contact</a>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800 bg-slate-950 px-6 py-8 text-center text-sm text-slate-500">
+    <p>Terminal.Glass is an independent deployment platform. Not affiliated with OpenAI or Ollama. Model availability, tags, and pricing may change.</p>
+  </footer>
 </body>
 </html>

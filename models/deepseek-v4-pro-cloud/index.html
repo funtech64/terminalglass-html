@@ -1,10 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeepSeek V4 Pro Cloud -- Model Brief | Terminal.Glass</title>
+  <meta name="description" content="Deployment brief: DeepSeek V4 Pro on Terminal.Glass via cloud inference. What it is, hardware requirements, Ollama/Open WebUI compatibility, and when to choose a different model instead.">
+  <link rel="canonical" href="https://terminal.glass/models/deepseek-v4-pro-cloud/">
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-slate-950 text-slate-100">
+
+  <header class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-4xl px-6 py-4">
+      <nav class="flex items-center justify-between text-sm">
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">Terminal.Glass</a>
+        <div class="flex gap-6 text-slate-400">
+          <a href="/models/" class="hover:text-white">Model Briefs</a>
+          <a href="/pricing/" class="hover:text-white">Pricing</a>
+          <a href="/contact/" class="hover:text-white">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="border-b border-slate-800 bg-slate-950">
+    <div class="mx-auto max-w-4xl px-6 py-12">
+      <p class="text-xs font-bold uppercase tracking-[0.3em] text-cyan-300">Model Brief</p>
+      <h1 class="mt-3 text-3xl font-black tracking-tight md:text-4xl">
+        DeepSeek V4 Pro Cloud
+      </h1>
+      <p class="mt-4 max-w-2xl text-slate-300">
+        The flagship model in the DeepSeek V4 series -- a 1.6T-parameter Mixture-of-Experts model (49B activated
+        per token), built for frontier-level reasoning across a 1M-token context. Deployed through Terminal.Glass
+        with inference running on Ollama Cloud at the extra-high usage tier -- currently the only access path,
+        since no local weight release exists at this scale.
+      </p>
+    </div>
+  </section>
+
+  <main class="mx-auto max-w-4xl px-6 py-10 space-y-10">
+
+    <!-- Quick Facts -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Quick Facts</h2>
+      <div class="mt-4 overflow-hidden rounded-xl border border-slate-800">
+        <table class="w-full text-left text-sm">
+          <tbody class="divide-y divide-slate-800 bg-slate-900 text-slate-300">
+            <tr><td class="px-4 py-3 font-semibold text-slate-400 w-1/3">Developer</td><td class="px-4 py-3">DeepSeek</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">License</td><td class="px-4 py-3">MIT (per public listing -- verify against official model card before commercial use)</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Typical Sizes</td><td class="px-4 py-3">1.6T total / 49B activated (MoE) -- cloud tag only, <code class="text-cyan-200">deepseek-v4-pro:cloud</code>. No local weight tag listed on Ollama at this scale.</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Context</td><td class="px-4 py-3">1M tokens, three reasoning modes (none / thinking / max thinking), native tool support</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Modality</td><td class="px-4 py-3">Text only -- no vision/image input on this Ollama release</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Best For</td><td class="px-4 py-3">Frontier reasoning, difficult coding tasks, long-context analysis, demanding agent workflows</td></tr>
+            <tr><td class="px-4 py-3 font-semibold text-slate-400">Recommended Deployment</td><td class="px-4 py-3">Terminal.Glass Cloud tier, extra-high usage (only access path today)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Why Choose This Model -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Why Choose This Model</h2>
+      <p class="mt-3 text-slate-300">
+        V4 Pro is DeepSeek's frontier-scale model -- a 1.6T-parameter MoE architecture with three selectable
+        reasoning depths, letting you trade latency and cost for accuracy on a per-request basis. It's built
+        for the hardest problems: complex multi-step coding, deep technical analysis, difficult agent chains,
+        and long-context reasoning across up to 1M tokens. This scale of model is not something most
+        organizations can host locally -- hosting 1.6T total parameters requires infrastructure far beyond a
+        typical GPU workstation or small server, which is why cloud is the only practical way to run it today.
+      </p>
+    </section>
+
+    <!-- Terminal.Glass Deployment -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Terminal.Glass Deployment</h2>
+      <p class="mt-3 text-slate-300">
+        Your interface, chat history, user accounts, and RAG index stay on your Terminal.Glass host.
+        Each request to <code class="rounded bg-slate-800 px-1.5 py-0.5 text-cyan-200">deepseek-v4-pro:cloud</code>
+        -- including prompt text, code excerpts, retrieved passages, and tool context -- is sent to Ollama
+        Cloud for inference and streamed back. This tag is billed at Ollama's extra-high usage tier: expect
+        among the highest per-token costs in the catalog, especially with 1M-token contexts, max-thinking
+        mode, and agentic tool loops. No local GPU is required -- and none would be sufficient for this model
+        at consumer or small-business scale even if a local tag existed.
+      </p>
+    </section>
+
+    <!-- Recommended Uses -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Recommended Uses</h2>
+      <ul class="mt-3 list-disc space-y-2 pl-5 text-slate-300">
+        <li>Frontier-level reasoning on the hardest technical or analytical problems</li>
+        <li>Difficult coding tasks, architecture review, and long-context debugging</li>
+        <li>Multi-step agent workflows and tool-calling prototypes requiring deeper reasoning</li>
+        <li>Long-context synthesis across large document sets, when justified by task difficulty</li>
+      </ul>
+      <p class="mt-3 text-sm text-slate-400">
+        Not recommended for regulated data, credentials, unpublished source code, or client-confidential
+        material -- all request content leaves your network for this tag. Not suitable for vision or
+        image-based tasks; this release is text-only. Reserve max-thinking mode for problems that justify
+        the added latency and cost -- for routine drafting or simpler Q&A, a smaller DeepSeek cloud tag
+        (e.g. V4 Flash or V3.2) is more cost-effective.
+      </p>
+    </section>
+
+    <!-- Hardware Guidance -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Hardware Guidance</h2>
+      <p class="mt-3 text-slate-300">
+        The Terminal.Glass host needs to run Open WebUI, the Ollama client, and your document index --
+        a small VM or mini-PC is sufficient, since all inference happens on Ollama Cloud. At 1.6T total
+        parameters, this model is well beyond what any local GPU setup accessible to most teams could serve;
+        there is currently no local weight release for V4 Pro, and cloud is the only supported path. Watch
+        the <a href="https://ollama.com/library/deepseek-v4-pro" class="text-cyan-300 hover:text-cyan-200" target="_blank" rel="noopener">official Ollama listing</a>
+        for changes.
+      </p>
+    </section>
+
+    <!-- Honest Guidance -->
+    <section class="rounded-2xl border border-amber-500/30 bg-amber-950/20 p-6">
+      <h2 class="text-xl font-bold text-amber-200">Honest Guidance</h2>
+      <ul class="mt-3 space-y-2 text-sm text-amber-100">
+        <li><strong class="text-white">Regulated or confidential data:</strong> no local V4 Pro tag exists -- use a model with a local release if data must stay on owned hardware.</li>
+        <li><strong class="text-white">Routine drafting or tighter budgets:</strong> DeepSeek V4 Flash or an older cloud tag (e.g. V3.2) will handle most everyday tasks at a fraction of the cost.</li>
+        <li><strong class="text-white">Heavy sustained usage:</strong> extra-high tier billing accumulates quickly with 1M-token contexts and max-thinking mode -- model spend before committing to steady daily volume.</li>
+        <li><strong class="text-white">Vision or multimodal needs:</strong> this release is text-only; choose a different model family.</li>
+        <li><strong class="text-white">Version pinning or audit reproducibility:</strong> cloud tags can change server-side; this model offers no local, pinned alternative today.</li>
+        <li><strong class="text-white">Unreviewed agent automation:</strong> tool execution, browser workflows, and multi-step agents need permissions, logging, and rollback practices regardless of model choice.</li>
+      </ul>
+    </section>
+
+    <!-- Learn More -->
+    <section>
+      <h2 class="text-xl font-bold text-white">Learn More</h2>
+      <p class="mt-3 text-slate-300">
+        Full technical reference and licensing detail for the DeepSeek family are documented on
+        <a href="https://nocloudgpt.com/models/deepseek/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>.
+        Confirm current tags and availability at
+        <a href="https://ollama.com/library/deepseek-v4-pro" class="text-cyan-300 hover:text-cyan-200" target="_blank" rel="noopener">ollama.com/library/deepseek-v4-pro</a>.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="flex flex-wrap gap-3 border-t border-slate-800 pt-8">
+      <a href="/deploy/deepseek-v4-pro-cloud/" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Deploy with Terminal.Glass →</a>
+      <a href="/pricing/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">View Pricing</a>
+      <a href="/contact/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">Contact</a>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-800 bg-slate-950 px-6 py-8 text-center text-sm text-slate-500">
+    <p>Terminal.Glass is an independent deployment platform. Not affiliated with DeepSeek or Ollama. Model availability and pricing may change.</p>
+  </footer>
 </body>
 </html>
