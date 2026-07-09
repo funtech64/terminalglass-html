@@ -37,7 +37,6 @@
 
 <main>
 
-<!-- Hero -->
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
@@ -48,51 +47,24 @@
       <div class="cta-row">
         <a class="btn btn-primary" href="/pricing/">Order Now</a>
         <a class="btn btn-secondary" href="/models/">View Models</a>
-        <a class="btn btn-ghost" href="/hosting/">Compare Hosting Options →</a>
       </div>
     </div>
-    <div class="deploy-viz" role="img" aria-label="Deployment diagram showing Terminal.Glass stack: Ollama, Open WebUI, and OpenClaw on one server">
-      <div class="deploy-viz-header">
-        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        <span class="title">terminal.glass — deploy</span>
-      </div>
+    <div class="deploy-viz" role="img" aria-label="One Linux server running Ollama, Open WebUI, and OpenClaw">
+      <div class="deploy-viz-header">your-server.internal</div>
       <div class="deploy-diagram">
-        <div class="deploy-flow">
-          <div class="deploy-node">
-            <span class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12h8M12 8v8"/></svg>
-            </span>
-            <span class="label">Ollama</span>
-            <span class="status">running</span>
+        <div class="server-box">
+          <span class="server-label">Linux Server</span>
+          <div class="deploy-flow">
+            <div class="deploy-node"><strong>Ollama</strong><span class="port">:11434</span></div>
+            <div class="deploy-node"><strong>Open WebUI</strong><span class="port">:8080</span></div>
+            <div class="deploy-node"><strong>OpenClaw</strong><span class="port">agents</span></div>
           </div>
-          <div class="deploy-connector" aria-hidden="true"></div>
-          <div class="deploy-node">
-            <span class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h.01M10 8h8"/></svg>
-            </span>
-            <span class="label">Open WebUI</span>
-            <span class="status">running</span>
-          </div>
-          <div class="deploy-connector" aria-hidden="true"></div>
-          <div class="deploy-node">
-            <span class="icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-            </span>
-            <span class="label">OpenClaw</span>
-            <span class="status">running</span>
-          </div>
-        </div>
-        <div class="deploy-terminal" aria-hidden="true">
-          <span class="prompt">$</span> terminal.glass deploy<br>
-          <span class="ok">✓</span> stack live → https://ai.yourcompany.internal<br>
-          <span class="prompt">$</span> _
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- What Terminal.Glass Deploys -->
 <section class="section" id="stack">
   <div class="wrap">
     <span class="kicker">The Stack</span>
@@ -118,97 +90,69 @@
   </div>
 </section>
 
-<!-- Why IT Teams Care -->
 <section class="section section-alt" id="why">
   <div class="wrap">
     <span class="kicker">For IT Teams</span>
     <h2>Why IT Teams Care</h2>
     <p class="section-sub">Private AI deployment usually means gluing together a half-dozen tutorials. Terminal.Glass replaces that with one supported install.</p>
-    <ul class="why-grid">
-      <li>Fewer moving parts to configure and patch</li>
-      <li>One Linux server — not a cloud architecture diagram</li>
-      <li>Private model hosting behind your own firewall</li>
-      <li>Customer-owned cloud option for client work</li>
-      <li>Easier OpenClaw agent testing against local models</li>
-      <li>Simpler support story for your users and clients</li>
-      <li>No scattered manual setup across GitHub READMEs</li>
-      <li>Clear documentation you can hand to a colleague</li>
-    </ul>
+    <div class="grid-4">
+      <div class="card value-card">
+        <p>Fewer moving parts to configure and patch</p>
+      </div>
+      <div class="card value-card">
+        <p>One Linux server — not a cloud architecture diagram</p>
+      </div>
+      <div class="card value-card">
+        <p>Private model hosting behind your own firewall</p>
+      </div>
+      <div class="card value-card">
+        <p>Clear documentation you can hand to a colleague</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Model Catalog Preview -->
 <section class="section" id="models">
   <div class="wrap">
     <span class="kicker">Model Catalog</span>
     <h2>28 Model Families, Ready to Deploy</h2>
-    <p class="section-sub">Every model in the Terminal.Glass catalog is Ollama-compatible and validated for OpenClaw agent use. Each model page includes deployment steps and a recommended hosting size.</p>
+    <p class="section-sub">Every model in the Terminal.Glass catalog is Ollama-compatible and validated for OpenClaw agent use.</p>
     <div class="model-grid">
 
       <article class="model-card">
-        <div class="model-art" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none"><rect x="8" y="16" width="48" height="36" rx="4" stroke="#4fd1a5" stroke-width="1.5"/><path d="M20 32h24M32 24v16" stroke="#4fd1a5" stroke-width="1.5"/><circle cx="48" cy="20" r="6" fill="rgba(79,209,165,0.15)" stroke="#4fd1a5" stroke-width="1"/></svg>
-        </div>
-        <div class="model-card-body">
-          <h3>DeepSeek V3.1 Cloud</h3>
-          <p class="desc">Hybrid reasoning, tools, and long-context technical work without local 671B-class hardware.</p>
-          <a class="link" href="/models/deepseek-v3.1-cloud/">Product brief →</a>
-        </div>
+        <h3>DeepSeek V3.1 Cloud</h3>
+        <p class="desc">Hybrid reasoning, tools, and long-context technical work without local 671B-class hardware.</p>
+        <a class="link" href="/models/deepseek-v3.1-cloud/">Product brief →</a>
       </article>
 
       <article class="model-card">
-        <div class="model-art" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none"><path d="M12 44L32 12l20 32H12z" stroke="#4fd1a5" stroke-width="1.5" fill="rgba(79,209,165,0.08)"/><path d="M24 36h16" stroke="#4fd1a5" stroke-width="1.5"/></svg>
-        </div>
-        <div class="model-card-body">
-          <h3>DeepSeek V3.2 Cloud</h3>
-          <p class="desc">Efficient reasoning and agent performance on Ollama Cloud.</p>
-          <a class="link" href="/models/deepseek-v3.2-cloud/">Product brief →</a>
-        </div>
+        <h3>DeepSeek V3.2 Cloud</h3>
+        <p class="desc">Efficient reasoning and agent performance on Ollama Cloud.</p>
+        <a class="link" href="/models/deepseek-v3.2-cloud/">Product brief →</a>
       </article>
 
       <article class="model-card">
-        <div class="model-art" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="20" stroke="#4fd1a5" stroke-width="1.5"/><path d="M32 20v12l8 8" stroke="#4fd1a5" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div class="model-card-body">
-          <h3>GPT-OSS Cloud</h3>
-          <p class="desc">Flagship cloud reasoning and agentic workloads.</p>
-          <a class="link" href="/models/gpt-oss-cloud/">Product brief →</a>
-        </div>
+        <h3>GPT-OSS Cloud</h3>
+        <p class="desc">Flagship cloud reasoning and agentic workloads.</p>
+        <a class="link" href="/models/gpt-oss-cloud/">Product brief →</a>
       </article>
 
       <article class="model-card">
-        <div class="model-art" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none"><rect x="14" y="14" width="36" height="36" rx="6" stroke="#4fd1a5" stroke-width="1.5"/><path d="M22 28h20M22 36h14" stroke="#4fd1a5" stroke-width="1.5" stroke-linecap="round"/></svg>
-        </div>
-        <div class="model-card-body">
-          <h3>Qwen 3.5 Cloud</h3>
-          <p class="desc">General-purpose thinking, tools, and business workflows.</p>
-          <a class="link" href="/models/qwen3.5-cloud/">Product brief →</a>
-        </div>
+        <h3>Qwen 3.5 Cloud</h3>
+        <p class="desc">General-purpose thinking, tools, and business workflows.</p>
+        <a class="link" href="/models/qwen3.5-cloud/">Product brief →</a>
       </article>
 
       <article class="model-card">
-        <div class="model-art" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none"><path d="M32 10l6 18h18l-14 10 6 18-16-12-16 12 6-18-14-10h18z" stroke="#4fd1a5" stroke-width="1.5" fill="rgba(79,209,165,0.06)"/></svg>
-        </div>
-        <div class="model-card-body">
-          <h3>Gemma 4 Cloud</h3>
-          <p class="desc">Multimodal and general-purpose cloud option.</p>
-          <a class="link" href="/models/gemma4-cloud/">Product brief →</a>
-        </div>
+        <h3>Gemma 4 Cloud</h3>
+        <p class="desc">Multimodal and general-purpose cloud option.</p>
+        <a class="link" href="/models/gemma4-cloud/">Product brief →</a>
       </article>
 
       <article class="model-card">
-        <div class="model-art" aria-hidden="true">
-          <svg viewBox="0 0 64 64" fill="none"><path d="M16 48V24l16-10 16 10v24" stroke="#4fd1a5" stroke-width="1.5"/><path d="M28 48V34h8v14" stroke="#4fd1a5" stroke-width="1.5"/></svg>
-        </div>
-        <div class="model-card-body">
-          <h3>Kimi K2.6 Cloud</h3>
-          <p class="desc">Long-horizon coding, design, and autonomous execution.</p>
-          <a class="link" href="/models/kimi-k2.6-cloud/">Product brief →</a>
-        </div>
+        <h3>Kimi K2.6 Cloud</h3>
+        <p class="desc">Long-horizon coding, design, and autonomous execution.</p>
+        <a class="link" href="/models/kimi-k2.6-cloud/">Product brief →</a>
       </article>
 
     </div>
@@ -216,7 +160,6 @@
   </div>
 </section>
 
-<!-- Hosting Options -->
 <section class="section section-alt" id="hosting">
   <div class="wrap">
     <span class="kicker">Deployment Targets</span>
@@ -226,68 +169,45 @@
       <div class="card host-path">
         <h3>Self-Hosted</h3>
         <p class="path-desc">Models run on hardware you control — local server, on-prem box, or customer-owned cloud. Inference stays on your infrastructure.</p>
-        <ul class="host-features">
-          <li>Local Linux Server</li>
-          <li>Private VPS / Dedicated Server</li>
-          <li>AWS in a customer-owned account</li>
-        </ul>
-        <a class="path-link" href="/hosting/">Compare self-hosted options →</a>
       </div>
       <div class="card host-path">
         <h3>Managed Hosting</h3>
         <p class="path-desc">Every plan includes software setup, deployment support, model guidance, and a hosting recommendation.</p>
-        <ul class="host-features">
-          <li>Terminal.Glass software setup</li>
-          <li>One-server deployment support</li>
-          <li>Hosting size recommendation</li>
-        </ul>
-        <a class="path-link" href="/hosting/">Compare hosting options in detail →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Order Now -->
 <section class="section" id="order">
   <div class="wrap">
     <div class="order-panel">
       <div class="order-panel-header">
         <span class="kicker">Order</span>
         <h2>Simple Plans, Clear Scope</h2>
-        <p>Every plan includes software setup, deployment support, model guidance, and a hosting recommendation. Full details on the pricing page.</p>
+        <p>Every plan includes software setup, deployment support, model guidance, and a hosting recommendation.</p>
       </div>
       <div class="order-steps">
         <div class="order-step">
-          <span class="order-step-num">Step 1</span>
-          <h3>Choose a plan</h3>
-          <p>Starter, Business, or Professional.</p>
+          <span class="order-step-num">1</span>
+          <h3>Choose Hosting</h3>
         </div>
         <div class="order-step">
-          <span class="order-step-num">Step 2</span>
-          <h3>Deploy the stack</h3>
-          <p>Terminal.Glass packages Ollama, Open WebUI, and OpenClaw on your server — configured, connected, and ready to support.</p>
+          <span class="order-step-num">2</span>
+          <h3>Choose Models</h3>
         </div>
         <div class="order-step">
-          <span class="order-step-num">Step 3</span>
-          <h3>Select models</h3>
-          <p>Every model in the catalog is Ollama-compatible and validated for OpenClaw agent use.</p>
+          <span class="order-step-num">3</span>
+          <h3>We Deploy</h3>
+        </div>
+        <div class="order-step">
+          <span class="order-step-num">4</span>
+          <h3>Done</h3>
         </div>
       </div>
       <div class="order-panel-footer">
         <p class="order-reassurance">Software setup, deployment support, model guidance, and a hosting recommendation — included with every plan.</p>
         <a class="btn btn-primary" href="/pricing/">Pricing &amp; Order Now</a>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Final CTA -->
-<section class="final-cta">
-  <div class="wrap">
-    <h2>Ready to deploy private AI on one server?</h2>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="/pricing/">Order Now</a>
-      <a class="btn btn-secondary" href="/contact/">Contact</a>
     </div>
   </div>
 </section>
