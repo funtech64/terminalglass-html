@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hosting — Terminal.Glass</title>
+<meta name="description" content="Terminal.Glass hosting options: self-hosted Linux servers, managed hosting, DigitalOcean, AWS, and more. Deploy private AI on infrastructure you control.">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/">
+      <span class="logo-mark" aria-hidden="true">T&gt;||G</span>
+      <span class="brand-name">Terminal.Glass</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu">☰</label>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pricing/">Pricing &amp; Order Now</a></li>
+        <li><a href="/hosting/">Hosting</a></li>
+        <li><a href="/models/">Models</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-primary btn-sm" href="/pricing/">Order Now</a>
+      </div>
+      <div class="nav-actions-mobile">
+        <a class="btn btn-primary" href="/pricing/">Order Now</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="kicker">Deployment Targets</span>
+    <h1>Hosting Options</h1>
+    <p class="lead">Terminal.Glass runs anywhere you can run a Linux server. Choose local hardware or a customer-owned cloud account — you keep control either way.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/pricing/">Order Now</a>
+      <a class="btn btn-secondary" href="/contact/">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="kicker">Paths</span>
+    <h2>Self-Hosted or Managed</h2>
+    <p class="section-sub">Two operational models. Pick the one that matches how your team runs infrastructure.</p>
+    <div class="grid-2">
+      <div class="card host-path">
+        <h3>Self-Hosted</h3>
+        <p class="path-desc">Customer-owned Linux server — on-premise or private datacenter. You control hardware, network, and patching. Best for maximum operational control.</p>
+        <ul class="check-list" style="margin-top:1rem;">
+          <li>You provision and own the server</li>
+          <li>Inference stays on your infrastructure (local models)</li>
+          <li>Terminal.Glass installs and configures the stack</li>
+        </ul>
+      </div>
+      <div class="card host-path">
+        <h3>Managed Hosting</h3>
+        <p class="path-desc">Server provisioned and configured for you. Terminal.Glass stack installed and prepared. A simpler starting path when you want deployment handled.</p>
+        <ul class="check-list" style="margin-top:1rem;">
+          <li>We coordinate server provisioning with your team</li>
+          <li>Terminal.Glass software setup included</li>
+          <li>Infrastructure ownership and billing explained before launch</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <span class="kicker">Providers</span>
+    <h2>Where Terminal.Glass Runs</h2>
+    <p class="section-sub">Supported deployment targets. Provider fees are billed separately unless you bring your own hardware.</p>
+    <div class="grid-2">
+
+      <div class="card provider-card">
+        <span class="badge badge-live">Available</span>
+        <h3>Local Server and Private Datacenter</h3>
+        <p>Deploy on hardware in your office or rack. Full data locality, no cloud bill from a hyperscaler. Requires a Linux host meeting your chosen model's sizing requirements.</p>
+      </div>
+
+      <div class="card provider-card">
+        <span class="badge badge-live">Available</span>
+        <h3>DigitalOcean</h3>
+        <p>Simple droplet-based deployment. A solid fit for small teams and pilots. Customer-owned account — you keep control of the droplet and billing.</p>
+      </div>
+
+      <div class="card provider-card">
+        <span class="badge badge-live">Available</span>
+        <h3>AWS</h3>
+        <p>Deploy into a customer-owned AWS account on EC2, including GPU instances. Suitable when your organization already standardizes on AWS.</p>
+      </div>
+
+      <div class="card provider-card">
+        <span class="badge">Coming Soon</span>
+        <h3>Google Cloud</h3>
+        <p>GCP Compute Engine deployment profiles are in testing now.</p>
+      </div>
+
+      <div class="card provider-card">
+        <span class="badge">Coming Soon</span>
+        <h3>Azure</h3>
+        <p>Azure VM deployment support is on the near-term roadmap.</p>
+      </div>
+
+      <div class="card provider-card">
+        <span class="badge badge-live">Available</span>
+        <h3>Private VPS / Dedicated Server</h3>
+        <p>Bring any VPS or dedicated box from your preferred provider. Terminal.Glass packages the stack on standard Linux — you choose the host.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <span class="kicker">Sizing</span>
+    <h2>Hardware and Model Sizing</h2>
+    <p class="section-sub">Model capability depends on server resources. We recommend a hosting size with every order.</p>
+    <div class="grid-2">
+      <div class="card">
+        <h3>Local and self-hosted models</h3>
+        <p>RAM and GPU requirements vary by model family. Small models may run on CPU-only hosts with 8–16 GB RAM. Larger reasoning models and GPU workloads need appropriately sized hardware. Each model page in the catalog includes a recommended hosting size.</p>
+      </div>
+      <div class="card">
+        <h3>Cloud-accelerated models</h3>
+        <p>Some Terminal.Glass deployments use Ollama Cloud-backed models. Your host runs Open WebUI and the stack on a modest Linux server — typically 4–8 GB RAM, no GPU required on the host. Inference is handled by Ollama Cloud; prompts leave your network per Ollama's terms. This is cloud-accelerated model inference with a small private Linux host — not a fully offline deployment.</p>
+      </div>
+    </div>
+    <p class="section-link"><a href="/models/">Browse model catalog for sizing guidance →</a></p>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="wrap">
+    <span class="kicker">Order</span>
+    <h2>Choose a hosting path and order</h2>
+    <p class="section-sub">Not sure which option fits? Contact us with your environment and workload — we will recommend a path.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="/pricing/">Order Now</a>
+      <a class="btn btn-secondary" href="/contact/">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <strong style="color:var(--text)">Terminal.Glass</strong><br>
+      One-server private AI deployment — Ollama, Open WebUI, OpenClaw.
+    </div>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+      <li><a href="/hosting/">Hosting</a></li>
+      <li><a href="/models/">Models</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

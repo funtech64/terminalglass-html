@@ -582,6 +582,236 @@ footer a:hover {
   color: var(--accent);
 }
 
+/* ---------- Inner page hero ---------- */
+
+.page-hero {
+  padding: 80px 0 72px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.page-hero h1 {
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.page-hero .lead {
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 560px;
+  line-height: 1.75;
+}
+
+.page-hero-compact {
+  padding: 64px 0 56px;
+}
+
+/* ---------- Pricing ---------- */
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.price-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-card.featured {
+  border-color: var(--accent-dim);
+}
+
+.price-card .plan-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  margin-bottom: 1.25rem;
+}
+
+.price-card .card-cta {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.check-list {
+  list-style: none;
+  margin: 0;
+}
+
+.check-list li {
+  color: var(--muted);
+  font-size: 0.88rem;
+  padding: 7px 0;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  line-height: 1.55;
+}
+
+.check-list li::before {
+  content: "—";
+  color: var(--muted-dim);
+  font-family: var(--mono);
+  flex-shrink: 0;
+}
+
+.note-box {
+  background: var(--card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 28px 26px;
+  max-width: 720px;
+}
+
+.note-box p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.note-box p + p {
+  margin-top: 0.85rem;
+}
+
+/* ---------- Hosting providers ---------- */
+
+.badge {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-dim);
+  margin-bottom: 0.75rem;
+  display: inline-block;
+}
+
+.badge-live {
+  color: var(--accent);
+}
+
+.provider-card h3 {
+  font-size: 1.05rem;
+}
+
+/* ---------- Contact form ---------- */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.form-card {
+  background: var(--card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+}
+
+.form-field {
+  margin-bottom: 18px;
+}
+
+.form-field label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--accent-dim);
+}
+
+.form-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-note {
+  font-size: 0.82rem;
+  color: var(--muted-dim);
+  margin-top: 14px;
+  line-height: 1.6;
+}
+
+.reason-list {
+  list-style: none;
+}
+
+.reason-list li {
+  color: var(--muted);
+  font-size: 0.9rem;
+  padding: 10px 0;
+  border-top: 1px solid var(--border-subtle);
+  line-height: 1.55;
+}
+
+.reason-list li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.info-block h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.info-block p,
+.info-block li {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+.info-block ul {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.info-block li {
+  padding: 6px 0;
+}
+
+.info-block li::before {
+  content: "·";
+  margin-right: 8px;
+  color: var(--muted-dim);
+}
+
+.info-block + .info-block {
+  margin-top: 32px;
+}
+
+.text-link {
+  color: var(--accent);
+}
+
+.text-link:hover {
+  color: var(--accent-hover);
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1024px) {
@@ -596,6 +826,11 @@ footer a:hover {
 
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .price-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
 
   .order-steps {
@@ -628,6 +863,7 @@ footer a:hover {
   .grid-3,
   .grid-2,
   .grid-4,
+  .price-grid,
   .model-grid,
   .order-steps {
     grid-template-columns: 1fr;
