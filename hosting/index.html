@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hosting — Terminal.Glass</title>
-<meta name="description" content="Terminal.Glass hosting options: self-hosted Linux servers, managed hosting, DigitalOcean, AWS, and more. Deploy private AI on infrastructure you control.">
+<title>Hosting - Terminal.Glass</title>
+<meta name="description" content="Terminal.Glass deployment lanes: NoCloudGPT on your server, YourCloudGPT in your cloud, Glass Agents, and Jet Agent model lanes.">
 <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
@@ -39,38 +39,56 @@
 
 <section class="page-hero">
   <div class="wrap">
-    <span class="kicker">Deployment Targets</span>
-    <h1>Hosting Options</h1>
-    <p class="lead">Terminal.Glass runs anywhere you can run a Linux server. Choose local hardware or a customer-owned cloud account — you keep control either way.</p>
+    <span class="kicker">Deployment lanes</span>
+    <h1>Where do you want your AI to live?</h1>
+    <p class="lead">Terminal.Glass supports a Nextcloud-style ownership pattern: the customer buys licenses, deploys the server or cloud instance, and chats on their own Terminal.Glass environment.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="/pricing/">Order Now</a>
-      <a class="btn btn-secondary" href="/contact/">Contact Us</a>
+      <a class="btn btn-primary" href="/pricing/">Buy Sunrise</a>
+      <a class="btn btn-secondary" href="/contact/">Ask for guidance</a>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <span class="kicker">Paths</span>
-    <h2>Self-Hosted or Managed</h2>
-    <p class="section-sub">Two operational models. Pick the one that matches how your team runs infrastructure.</p>
+    <span class="kicker">Choices</span>
+    <h2>Four clean paths</h2>
+    <p class="section-sub">The sales app should not need to log into a customer server by default. It should create an easy install, launch, or activation path.</p>
     <div class="grid-2">
       <div class="card host-path">
-        <h3>Self-Hosted</h3>
-        <p class="path-desc">Customer-owned Linux server — on-premise or private datacenter. You control hardware, network, and patching. Best for maximum operational control.</p>
+        <h3>Install on my server - NoCloudGPT</h3>
+        <p class="path-desc">Local/private GPT host running on customer-owned hardware, office Linux servers, homelabs, clinics, shops, churches, or other customer-controlled systems.</p>
         <ul class="check-list" style="margin-top:1rem;">
-          <li>You provision and own the server</li>
-          <li>Inference stays on your infrastructure (local models)</li>
-          <li>Terminal.Glass installs and configures the stack</li>
+          <li>Customer owns the server</li>
+          <li>Local models can stay on customer infrastructure</li>
+          <li>Best when local control matters</li>
         </ul>
       </div>
       <div class="card host-path">
-        <h3>Managed Hosting</h3>
-        <p class="path-desc">Server provisioned and configured for you. Terminal.Glass stack installed and prepared. A simpler starting path when you want deployment handled.</p>
+        <h3>Launch in my cloud - YourCloudGPT</h3>
+        <p class="path-desc">Customer-owned cloud deployment, such as AWS-hosted Terminal.Glass. The customer owns the cloud account while Terminal.Glass provides the launch and activation path.</p>
         <ul class="check-list" style="margin-top:1rem;">
-          <li>We coordinate server provisioning with your team</li>
-          <li>Terminal.Glass software setup included</li>
-          <li>Infrastructure ownership and billing explained before launch</li>
+          <li>Good when local hardware is not ready</li>
+          <li>Supports customer-owned AWS-style deployment</li>
+          <li>Can start with modest servers and Jet Agent lanes</li>
+        </ul>
+      </div>
+      <div class="card host-path">
+        <h3>Add Glass Agents</h3>
+        <p class="path-desc">OpenClaw-based action workers that act inside approved customer environments. This is the local/action lane for future workflow automation.</p>
+        <ul class="check-list" style="margin-top:1rem;">
+          <li>OpenClaw-powered workflows</li>
+          <li>Approved environment boundary</li>
+          <li>Future Alchemist coordination target</li>
+        </ul>
+      </div>
+      <div class="card host-path">
+        <h3>Add Jet Agents</h3>
+        <p class="path-desc">Curated cloud-model lanes for speed, coding, research, drafting, and model variety. Jet Agents are not a separate license type.</p>
+        <ul class="check-list" style="margin-top:1rem;">
+          <li>Useful when GPU hardware is too expensive</li>
+          <li>Cloud model power without buying a big local GPU server first</li>
+          <li>Available through Glass License package capacity</li>
         </ul>
       </div>
     </div>
@@ -79,79 +97,43 @@
 
 <section class="section section-alt">
   <div class="wrap">
-    <span class="kicker">Providers</span>
-    <h2>Where Terminal.Glass Runs</h2>
-    <p class="section-sub">Supported deployment targets. Provider fees are billed separately unless you bring your own hardware.</p>
-    <div class="grid-2">
-
-      <div class="card provider-card">
-        <span class="badge badge-live">Available</span>
-        <h3>Local Server and Private Datacenter</h3>
-        <p>Deploy on hardware in your office or rack. Full data locality, no cloud bill from a hyperscaler. Requires a Linux host meeting your chosen model's sizing requirements.</p>
+    <span class="kicker">Activation</span>
+    <h2>Customer-controlled connection flow</h2>
+    <p class="section-sub">Terminal.Glass should provide the path. The customer deployment activates outward to the license system.</p>
+    <div class="order-steps" style="margin-bottom:0;border-top:none;padding-top:0;">
+      <div class="order-step">
+        <span class="order-step-num">1</span>
+        <h3>Buy Sunrise</h3>
+        <p style="color:var(--muted);font-size:0.86rem;margin-top:0.5rem;line-height:1.6;">The customer receives portable Glass Licenses.</p>
       </div>
-
-      <div class="card provider-card">
-        <span class="badge badge-live">Available</span>
-        <h3>DigitalOcean</h3>
-        <p>Simple droplet-based deployment. A solid fit for small teams and pilots. Customer-owned account — you keep control of the droplet and billing.</p>
+      <div class="order-step">
+        <span class="order-step-num">2</span>
+        <h3>Choose lane</h3>
+        <p style="color:var(--muted);font-size:0.86rem;margin-top:0.5rem;line-height:1.6;">Server, cloud, Glass Agent, or Jet Agent lane.</p>
       </div>
-
-      <div class="card provider-card">
-        <span class="badge badge-live">Available</span>
-        <h3>AWS</h3>
-        <p>Deploy into a customer-owned AWS account on EC2, including GPU instances. Suitable when your organization already standardizes on AWS.</p>
+      <div class="order-step">
+        <span class="order-step-num">3</span>
+        <h3>Activate</h3>
+        <p style="color:var(--muted);font-size:0.86rem;margin-top:0.5rem;line-height:1.6;">Deployment uses a revocable Deployment Key.</p>
       </div>
-
-      <div class="card provider-card">
-        <span class="badge">Coming Soon</span>
-        <h3>Google Cloud</h3>
-        <p>GCP Compute Engine deployment profiles are in testing now.</p>
+      <div class="order-step">
+        <span class="order-step-num">4</span>
+        <h3>Chat</h3>
+        <p style="color:var(--muted);font-size:0.86rem;margin-top:0.5rem;line-height:1.6;">Customer users chat on their own instance.</p>
       </div>
-
-      <div class="card provider-card">
-        <span class="badge">Coming Soon</span>
-        <h3>Azure</h3>
-        <p>Azure VM deployment support is on the near-term roadmap.</p>
-      </div>
-
-      <div class="card provider-card">
-        <span class="badge badge-live">Available</span>
-        <h3>Private VPS / Dedicated Server</h3>
-        <p>Bring any VPS or dedicated box from your preferred provider. Terminal.Glass packages the stack on standard Linux — you choose the host.</p>
-      </div>
-
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <span class="kicker">Sizing</span>
-    <h2>Hardware and Model Sizing</h2>
-    <p class="section-sub">Model capability depends on server resources. We recommend a hosting size with every order.</p>
-    <div class="grid-2">
-      <div class="card">
-        <h3>Local and self-hosted models</h3>
-        <p>RAM and GPU requirements vary by model family. Small models may run on CPU-only hosts with 8–16 GB RAM. Larger reasoning models and GPU workloads need appropriately sized hardware. Each model page in the catalog includes a recommended hosting size.</p>
-      </div>
-      <div class="card">
-        <h3>Cloud-accelerated models</h3>
-        <p>Some Terminal.Glass deployments use Ollama Cloud-backed models. Your host runs Open WebUI and the stack on a modest Linux server — typically 4–8 GB RAM, no GPU required on the host. Inference is handled by Ollama Cloud; prompts leave your network per Ollama's terms. This is cloud-accelerated model inference with a small private Linux host — not a fully offline deployment.</p>
-      </div>
+    <span class="kicker">Trust message</span>
+    <h2>Terminal.Glass does not need access to your server by default.</h2>
+    <div class="note-box">
+      <p>The standard customer path is customer-owned: they install or launch the deployment in their own environment, and the deployment activates outward to the license dashboard.</p>
+      <p>White-glove setup can be offered as a support option later, but it should not be the default trust model.</p>
     </div>
-    <p class="section-link"><a href="/models/">Browse model catalog for sizing guidance →</a></p>
-  </div>
-</section>
-
-<section class="section section-alt">
-  <div class="wrap">
-    <span class="kicker">Order</span>
-    <h2>Choose a hosting path and order</h2>
-    <p class="section-sub">Not sure which option fits? Contact us with your environment and workload — we will recommend a path.</p>
-    <div class="cta-row">
-      <a class="btn btn-primary" href="/pricing/">Order Now</a>
-      <a class="btn btn-secondary" href="/contact/">Contact Us</a>
-    </div>
+    <p class="section-link"><a href="/pricing/">Choose a Sunrise package -></a></p>
   </div>
 </section>
 
@@ -161,7 +143,7 @@
   <div class="wrap foot">
     <div>
       <strong style="color:var(--text)">Terminal.Glass</strong><br>
-      One-server private AI deployment — Ollama, Open WebUI, OpenClaw.
+      Private business AI with model choice, Glass Agents, Jet Agents, and customer-controlled deployment.
     </div>
     <ul>
       <li><a href="/">Home</a></li>
