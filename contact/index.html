@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Terminal.Glass</title>
-<meta name="description" content="Contact Terminal.Glass for deployment questions, hosting guidance, model selection, and order inquiries.">
+<title>Contact - Terminal.Glass</title>
+<meta name="description" content="Contact Terminal.Glass about Sunrise packages, Glass Licenses, NoCloudGPT, YourCloudGPT, Glass Agents, Jet Agents, and Alchemist Conductor readiness.">
 <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
@@ -40,8 +40,8 @@
 <section class="page-hero page-hero-compact">
   <div class="wrap">
     <span class="kicker">Contact</span>
-    <h1>Ask before you order</h1>
-    <p class="lead">Questions about hosting, models, or deployment scope? Send a message — we respond to serious buyer inquiries directly.</p>
+    <h1>Build your Terminal.Glass launch path.</h1>
+    <p class="lead">Ask about Sunrise packages, Glass Licenses, NoCloudGPT, YourCloudGPT, Glass Agents, Jet Agent model lanes, or the Alchemist Conductor roadmap.</p>
   </div>
 </section>
 
@@ -63,31 +63,40 @@
           <input type="email" id="email" name="email" required autocomplete="email">
         </div>
         <div class="form-field">
-          <label for="hosting">Preferred hosting</label>
+          <label for="package">Sunrise package interest</label>
+          <select id="package" name="package">
+            <option value="">Select an option</option>
+            <option value="sunrise-starter">Sunrise Starter - $200 - 2 Glass Licenses</option>
+            <option value="sunrise-group">Sunrise Group Plan - $400 - 5-6 Glass Licenses TBD</option>
+            <option value="custom">Custom deployment or support scope</option>
+            <option value="undecided">Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="hosting">First deployment lane</label>
           <select id="hosting" name="hosting">
             <option value="">Select an option</option>
-            <option value="self-hosted">Self-hosted — local or on-premise</option>
-            <option value="managed">Managed hosting</option>
-            <option value="digitalocean">DigitalOcean</option>
-            <option value="aws">AWS (customer-owned account)</option>
-            <option value="vps">Private VPS / dedicated server</option>
+            <option value="nocloudgpt">NoCloudGPT - install on my server</option>
+            <option value="yourcloudgpt">YourCloudGPT - launch in my cloud</option>
+            <option value="glass-agent">Glass Agent - OpenClaw action worker</option>
+            <option value="jet-agent">Jet Agent - cloud model lane</option>
             <option value="undecided">Not sure yet</option>
           </select>
         </div>
         <div class="form-field">
           <label for="workload">Intended AI workload</label>
-          <input type="text" id="workload" name="workload" placeholder="e.g. internal chat, coding agents, document Q&amp;A">
+          <input type="text" id="workload" name="workload" placeholder="e.g. office assistant, coding, research, document Q&amp;A, agent work">
         </div>
         <div class="form-field">
-          <label for="users">Approximate number of users</label>
-          <input type="text" id="users" name="users" placeholder="e.g. 5–20">
+          <label for="users">Approximate number of users or agents</label>
+          <input type="text" id="users" name="users" placeholder="e.g. 1 owner, 5 staff, 3 agents">
         </div>
         <div class="form-field">
           <label for="message">Message</label>
-          <textarea id="message" name="message" required placeholder="Tell us about your environment, timeline, and any constraints."></textarea>
+          <textarea id="message" name="message" required placeholder="Tell us about your business, model needs, deployment target, and whether you want local/private AI, cloud model lanes, or agent workflows."></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Send message</button>
-        <p class="form-note">Do not include passwords, API keys, or confidential documents. Your message is used only to respond to your inquiry.</p>
+        <p class="form-note">Do not include passwords, API keys, private documents, or sensitive customer data. Your message is used only to respond to your inquiry.</p>
       </form>
     </div>
 
@@ -95,24 +104,24 @@
       <div class="info-block">
         <h3>Common reasons to contact</h3>
         <ul class="reason-list">
-          <li>Model selection</li>
-          <li>Hosting guidance</li>
-          <li>Hardware sizing</li>
-          <li>Managed deployment</li>
-          <li>Private datacenter deployment</li>
-          <li>Custom requirements</li>
-          <li>Questions before ordering</li>
+          <li>Choosing Sunrise Starter or Sunrise Group Plan</li>
+          <li>Understanding Glass Licenses</li>
+          <li>NoCloudGPT local/private deployment</li>
+          <li>YourCloudGPT customer-owned cloud deployment</li>
+          <li>Jet Agent model lane selection</li>
+          <li>Glass Agent / OpenClaw action workflows</li>
+          <li>Alchemist Conductor founder path</li>
         </ul>
       </div>
 
       <div class="info-block">
         <h3>What helps us respond</h3>
         <ul>
-          <li>Where you plan to run the server (on-prem, cloud provider, region)</li>
-          <li>Whether you need local inference or cloud-accelerated models</li>
-          <li>Rough user count and primary use cases</li>
-          <li>Any compliance, data residency, or network constraints</li>
-          <li>Target timeline — pilot vs production</li>
+          <li>Whether you want the AI on your server, in your cloud, or both</li>
+          <li>Whether model choice, speed, privacy, or agent work matters most</li>
+          <li>Which model lanes you are interested in</li>
+          <li>How many people or agents you expect to use</li>
+          <li>Any hardware, hosting, or policy constraints</li>
         </ul>
       </div>
 
@@ -123,7 +132,7 @@
 
       <div class="info-block">
         <h3>Ready to order?</h3>
-        <p>Review plans and begin an order on the pricing page.</p>
+        <p>Review Sunrise packages and begin with the pricing page.</p>
         <div class="cta-row" style="margin-top:1rem;">
           <a class="btn btn-primary" href="/pricing/">Order Now</a>
         </div>
@@ -139,7 +148,7 @@
   <div class="wrap foot">
     <div>
       <strong style="color:var(--text)">Terminal.Glass</strong><br>
-      One-server private AI deployment — Ollama, Open WebUI, OpenClaw.
+      Private business AI with model choice, Glass Agents, Jet Agents, and customer-controlled deployment.
     </div>
     <ul>
       <li><a href="/">Home</a></li>

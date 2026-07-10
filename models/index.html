@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Models — Terminal.Glass</title>
-<meta name="description" content="Terminal.Glass model catalog: Ollama-compatible families for private AI deployment and cloud-accelerated workflows via Ollama Cloud.">
+<title>Models - Terminal.Glass</title>
+<meta name="description" content="Terminal.Glass model catalog: Jet Agent cloud-model lanes, NoCloudGPT local models, and business AI model choices for private deployments.">
 <style>
   :root{
     --bg:#0b0e14;
@@ -28,7 +28,7 @@
   h1{font-size:2.2rem;letter-spacing:-.02em;margin-bottom:1rem}
   h2{font-size:1.5rem;margin-bottom:.5rem}
   .kicker{font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem;display:block}
-  .section-sub{color:var(--muted);max-width:640px;margin-bottom:40px}
+  .section-sub{color:var(--muted);max-width:720px;margin-bottom:40px}
   .section{padding:56px 0 72px}
 
   header{position:sticky;top:0;z-index:50;background:rgba(11,14,20,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}
@@ -56,7 +56,8 @@
   .model-card h3{font-size:1rem}
   .model-card p{color:var(--muted);font-size:.83rem;flex-grow:1}
   .model-card .tag{font-family:var(--mono);font-size:.68rem;color:var(--accent);letter-spacing:.05em}
-  .model-card a{font-size:.83rem;margin-top:8px}
+  .note{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:24px;margin-top:36px;color:var(--muted)}
+  .note strong{color:var(--text)}
 
   footer{border-top:1px solid var(--border);padding:40px 0;color:var(--muted);font-size:.88rem}
   .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
@@ -100,65 +101,77 @@
 <main>
 <section class="section">
   <div class="wrap">
-    <span class="kicker">Model Catalog</span>
+    <span class="kicker">Model lanes</span>
     <h1>Models for Terminal.Glass</h1>
-    <p class="section-sub">Ollama-compatible model families for private AI deployment on one server, plus cloud-accelerated options that route inference through Ollama Cloud.</p>
+    <p class="section-sub">Terminal.Glass organizes models into useful lanes: NoCloudGPT local/private models for customer-controlled infrastructure and Jet Agent cloud-model lanes for speed, coding, research, drafting, and model variety.</p>
 
     <div class="lane-grid">
       <div class="lane-card">
-        <h2>Private AI deployment</h2>
-        <p>Models run on hardware you control — local server, on-prem box, or customer-owned cloud. Inference stays on your infrastructure. GPU sizing depends on the model family.</p>
+        <h2>NoCloudGPT local/private model lane</h2>
+        <p>Models run on customer-owned hardware, on-prem boxes, or customer-controlled servers. This is the local/private lane when data locality and infrastructure control matter.</p>
       </div>
       <div class="lane-card">
-        <h2>Cloud-accelerated workflow</h2>
-        <p>Open WebUI and your stack run on a modest host; heavy inference is handled by Ollama Cloud. Prompts and retrieved context leave your network — suitable when your policy permits cloud processing.</p>
+        <h2>Jet Agent cloud-model lane</h2>
+        <p>Curated cloud-model workflows for stronger answers and faster reasoning without buying a large GPU server first. Jet Agents are not separate licenses; they live inside Glass License package capacity.</p>
+      </div>
+      <div class="lane-card">
+        <h2>Glass Agent action lane</h2>
+        <p>OpenClaw-based workers that can act inside approved customer environments. Glass Agents are the action-capable lane for future Alchemist coordination.</p>
+      </div>
+      <div class="lane-card">
+        <h2>Alchemist-ready workflows</h2>
+        <p>Alchemist Conductor will coordinate Glass Agents and Jet Agents into business workflows with owner approval, logs, routing, and memory.</p>
       </div>
     </div>
 
-    <span class="kicker">Cloud-accelerated families</span>
-    <h2>Ollama Cloud model briefs</h2>
-    <p class="section-sub">Each page is a concise IT brief: what the model does, host sizing, stack fit, and data trade-offs.</p>
+    <span class="kicker">Jet Agent model lanes</span>
+    <h2>Cloud model briefs</h2>
+    <p class="section-sub">Each page is a concise buyer brief: what the model is good at, why a customer would choose it, and how it fits the Terminal.Glass package.</p>
     <div class="model-grid">
 
       <div class="model-card">
-        <span class="tag">CLOUD</span>
+        <span class="tag">JET AGENT</span>
         <h3>DeepSeek V3.1 Cloud</h3>
         <p>Hybrid reasoning, tools, and long-context technical work without local 671B-class hardware.</p>
-        <a href="/models/deepseek-v3.1-cloud/">Product brief →</a>
+        <a href="/models/deepseek-v3.1-cloud/">Product brief -></a>
       </div>
       <div class="model-card">
-        <span class="tag">CLOUD</span>
+        <span class="tag">JET AGENT</span>
         <h3>DeepSeek V3.2 Cloud</h3>
-        <p>Efficient reasoning and agent performance on Ollama Cloud.</p>
-        <a href="/models/">Brief coming soon</a>
+        <p>Efficient reasoning and agent performance as a cloud model lane.</p>
+        <a href="/models/deepseek-v3.2-cloud/">Product brief -></a>
       </div>
       <div class="model-card">
-        <span class="tag">CLOUD</span>
+        <span class="tag">JET AGENT</span>
         <h3>GPT-OSS Cloud</h3>
         <p>Flagship cloud reasoning and agentic workloads.</p>
-        <a href="/models/">Brief coming soon</a>
+        <a href="/models/gpt-oss-cloud/">Product brief -></a>
       </div>
       <div class="model-card">
-        <span class="tag">CLOUD</span>
+        <span class="tag">JET AGENT</span>
         <h3>Qwen 3.5 Cloud</h3>
-        <p>General-purpose thinking, tools, and business workflows.</p>
-        <a href="/models/">Brief coming soon</a>
+        <p>General-purpose thinking, tools, coding, multilingual, and business workflows.</p>
+        <a href="/models/qwen3.5-cloud/">Product brief -></a>
       </div>
       <div class="model-card">
-        <span class="tag">CLOUD</span>
+        <span class="tag">JET AGENT</span>
         <h3>Gemma 4 Cloud</h3>
         <p>Multimodal and general-purpose cloud option.</p>
-        <a href="/models/">Brief coming soon</a>
+        <a href="/models/gemma4-cloud/">Product brief -></a>
       </div>
       <div class="model-card">
-        <span class="tag">CLOUD</span>
+        <span class="tag">JET AGENT</span>
         <h3>Kimi K2.6 Cloud</h3>
         <p>Long-horizon coding, design, and autonomous execution.</p>
-        <a href="/models/">Brief coming soon</a>
+        <a href="/models/kimi-k2.6-cloud/">Product brief -></a>
       </div>
 
     </div>
-    <p style="margin-top:28px;color:var(--muted)">Additional cloud and local model briefs are added as pages are published. <a href="/pricing/">Order Now</a> or <a href="/contact/">contact</a> for deployment guidance.</p>
+
+    <div class="note">
+      <p><strong>License note:</strong> Glass Licenses are the sellable capacity unit. Jet Agent model lanes are not separate licenses. They are cloud-model capabilities available through the customer package and deployment.</p>
+      <p style="margin-top:12px;">Additional local/private model briefs from NoCloudGPT should be migrated carefully, using the existing /models work as the source asset instead of rewriting everything by hand.</p>
+    </div>
   </div>
 </section>
 </main>
@@ -167,7 +180,7 @@
   <div class="wrap foot">
     <div>
       <strong style="color:var(--text)">Terminal.Glass</strong><br>
-      One-server private AI deployment — Ollama, Open WebUI, OpenClaw.
+      Private business AI with model choice, Glass Agents, Jet Agents, and customer-controlled deployment.
     </div>
     <ul>
       <li><a href="/">Home</a></li>
