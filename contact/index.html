@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Terminal.Glass</title>
+<meta name="description" content="Contact Terminal.Glass for deployment questions, hosting guidance, model selection, and order inquiries.">
+<link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="/">
+      <span class="logo-mark" aria-hidden="true">T&gt;||G</span>
+      <span class="brand-name">Terminal.Glass</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu">☰</label>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/pricing/">Pricing &amp; Order Now</a></li>
+        <li><a href="/hosting/">Hosting</a></li>
+        <li><a href="/models/">Models</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a class="btn btn-primary btn-sm" href="/pricing/">Order Now</a>
+      </div>
+      <div class="nav-actions-mobile">
+        <a class="btn btn-primary" href="/pricing/">Order Now</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="page-hero page-hero-compact">
+  <div class="wrap">
+    <span class="kicker">Contact</span>
+    <h1>Ask before you order</h1>
+    <p class="lead">Questions about hosting, models, or deployment scope? Send a message — we respond to serious buyer inquiries directly.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap contact-grid">
+
+    <div class="form-card">
+      <form action="mailto:contact@terminal.glass" method="post" enctype="text/plain">
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required autocomplete="name">
+        </div>
+        <div class="form-field">
+          <label for="organization">Business or organization</label>
+          <input type="text" id="organization" name="organization" autocomplete="organization">
+        </div>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+        <div class="form-field">
+          <label for="hosting">Preferred hosting</label>
+          <select id="hosting" name="hosting">
+            <option value="">Select an option</option>
+            <option value="self-hosted">Self-hosted — local or on-premise</option>
+            <option value="managed">Managed hosting</option>
+            <option value="digitalocean">DigitalOcean</option>
+            <option value="aws">AWS (customer-owned account)</option>
+            <option value="vps">Private VPS / dedicated server</option>
+            <option value="undecided">Not sure yet</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="workload">Intended AI workload</label>
+          <input type="text" id="workload" name="workload" placeholder="e.g. internal chat, coding agents, document Q&amp;A">
+        </div>
+        <div class="form-field">
+          <label for="users">Approximate number of users</label>
+          <input type="text" id="users" name="users" placeholder="e.g. 5–20">
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Tell us about your environment, timeline, and any constraints."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send message</button>
+        <p class="form-note">Do not include passwords, API keys, or confidential documents. Your message is used only to respond to your inquiry.</p>
+      </form>
+    </div>
+
+    <div>
+      <div class="info-block">
+        <h3>Common reasons to contact</h3>
+        <ul class="reason-list">
+          <li>Model selection</li>
+          <li>Hosting guidance</li>
+          <li>Hardware sizing</li>
+          <li>Managed deployment</li>
+          <li>Private datacenter deployment</li>
+          <li>Custom requirements</li>
+          <li>Questions before ordering</li>
+        </ul>
+      </div>
+
+      <div class="info-block">
+        <h3>What helps us respond</h3>
+        <ul>
+          <li>Where you plan to run the server (on-prem, cloud provider, region)</li>
+          <li>Whether you need local inference or cloud-accelerated models</li>
+          <li>Rough user count and primary use cases</li>
+          <li>Any compliance, data residency, or network constraints</li>
+          <li>Target timeline — pilot vs production</li>
+        </ul>
+      </div>
+
+      <div class="info-block">
+        <h3>Direct email</h3>
+        <p><a class="text-link" href="mailto:contact@terminal.glass">contact@terminal.glass</a></p>
+      </div>
+
+      <div class="info-block">
+        <h3>Ready to order?</h3>
+        <p>Review plans and begin an order on the pricing page.</p>
+        <div class="cta-row" style="margin-top:1rem;">
+          <a class="btn btn-primary" href="/pricing/">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <strong style="color:var(--text)">Terminal.Glass</strong><br>
+      One-server private AI deployment — Ollama, Open WebUI, OpenClaw.
+    </div>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/pricing/">Pricing</a></li>
+      <li><a href="/hosting/">Hosting</a></li>
+      <li><a href="/models/">Models</a></li>
+      <li><a href="/contact/">Contact</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
