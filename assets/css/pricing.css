@@ -1,0 +1,696 @@
+/* terminal.glass — pricing page styles */
+
+/* ---------- Hero ---------- */
+
+.pricing-hero {
+  padding: 88px 0 80px;
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 20% 40%, rgba(61, 184, 138, 0.06), transparent 70%),
+    radial-gradient(ellipse 40% 40% at 80% 60%, rgba(30, 40, 54, 0.5), transparent 70%);
+  pointer-events: none;
+}
+
+.pricing-hero .wrap {
+  position: relative;
+}
+
+.pricing-hero h1 {
+  font-size: clamp(2rem, 4.5vw, 2.85rem);
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+  max-width: 720px;
+}
+
+.pricing-hero .lead {
+  color: var(--muted);
+  font-size: 1.08rem;
+  max-width: 640px;
+  line-height: 1.75;
+  margin-bottom: 0.85rem;
+}
+
+.pricing-hero .hero-tagline {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  margin-bottom: 2rem;
+}
+
+.pricing-hero-viz {
+  margin-top: 48px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 24px 28px;
+  max-width: 640px;
+}
+
+.pricing-hero-viz-header {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  color: var(--muted-dim);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.pricing-hero-viz-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.pricing-hero-viz-node {
+  background: var(--bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 14px 12px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--muted);
+  transition: border-color 0.2s ease;
+}
+
+.pricing-hero-viz-node strong {
+  display: block;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.pricing-hero-viz-node:hover {
+  border-color: var(--accent-dim);
+}
+
+/* ---------- Positioning strip ---------- */
+
+.positioning-strip {
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border-subtle);
+  background: var(--bg-alt);
+}
+
+.positioning-strip p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.positioning-strip strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ---------- Pricing cards ---------- */
+
+.pricing-cards-grid {
+  margin-top: 8px;
+}
+
+.price-card-header {
+  margin-bottom: 0.5rem;
+}
+
+.price-badge {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(61, 184, 138, 0.1);
+  border: 1px solid var(--accent-dim);
+  border-radius: 4px;
+  padding: 4px 8px;
+  margin-bottom: 12px;
+  margin-right: 6px;
+}
+
+.price-badge-promo {
+  color: #e8c87a;
+  background: rgba(232, 200, 122, 0.08);
+  border-color: rgba(232, 200, 122, 0.25);
+}
+
+.price-card.featured {
+  border-color: var(--accent-dim);
+  box-shadow: 0 0 0 1px rgba(61, 184, 138, 0.12);
+}
+
+.plan-billing {
+  font-size: 0.8rem;
+  color: var(--muted-dim);
+  margin-bottom: 0.25rem;
+}
+
+.plan-price-block {
+  margin-bottom: 0.5rem;
+}
+
+.plan-price {
+  font-family: var(--mono);
+  font-size: 2rem;
+  color: var(--text);
+  margin-bottom: 0.15rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.plan-price-promo {
+  color: var(--accent);
+}
+
+.plan-price-original {
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  color: var(--muted-dim);
+}
+
+.plan-price-original s {
+  text-decoration: line-through;
+}
+
+.plan-features {
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.plan-footnote {
+  font-size: 0.8rem;
+  color: var(--muted-dim);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+  padding: 10px 12px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.plan-secondary-text {
+  font-size: 0.82rem;
+  color: var(--muted-dim);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.plan-bonus-note {
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.promo-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  background: rgba(61, 184, 138, 0.08);
+  border: 1px solid var(--accent-dim);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.promo-banner-badge {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.promo-banner-expiry {
+  margin-left: auto;
+  font-size: 0.82rem;
+  color: var(--muted-dim);
+}
+
+/* ---------- Promotions section ---------- */
+
+.promo-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.promo-offer-price {
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.promo-offer-price s {
+  color: var(--muted-dim);
+  margin-right: 8px;
+}
+
+.promo-offer-detail {
+  margin-top: 12px;
+  font-size: 0.88rem;
+  color: var(--accent);
+}
+
+/* ---------- Pricing logic ---------- */
+
+.pricing-logic-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.pricing-example h3 {
+  margin-bottom: 1rem;
+  color: var(--muted-dim);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.pricing-example-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.pricing-example-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.pricing-example-line-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pricing-example-line-main strong {
+  font-size: 0.88rem;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.pricing-example-line-main span {
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.pricing-example-price {
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  color: var(--text);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.pricing-example-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 14px;
+  margin-top: 4px;
+}
+
+.pricing-example-total strong {
+  font-size: 0.9rem;
+  color: var(--text);
+}
+
+.pricing-example-total span:not(.pricing-example-price) {
+  font-size: 0.84rem;
+  color: var(--muted);
+  flex-grow: 1;
+  margin-left: 8px;
+}
+
+.pricing-example-highlight .pricing-example-total .pricing-example-price {
+  color: var(--accent);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* ---------- Glass license explainer ---------- */
+
+.license-explainer-lead {
+  font-size: 1.15rem;
+  color: var(--text);
+  max-width: 560px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.license-explainer-note {
+  margin-top: 32px;
+  padding: 20px 22px;
+  background: var(--card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  max-width: 720px;
+}
+
+.license-explainer-note p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.license-explainer-note p + p {
+  margin-top: 0.75rem;
+}
+
+.license-explainer-note strong {
+  color: var(--text);
+}
+
+.deployment-type-card {
+  text-align: center;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.deployment-type-card:hover {
+  border-color: var(--accent-dim);
+  transform: translateY(-2px);
+}
+
+.deployment-type-icon {
+  display: block;
+  font-size: 1.25rem;
+  color: var(--accent-dim);
+  margin-bottom: 12px;
+}
+
+.deployment-type-card h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Comparison table ---------- */
+
+.comparison-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  background: var(--card);
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+  line-height: 1.55;
+}
+
+.comparison-table thead th {
+  background: var(--bg-alt);
+  font-weight: 600;
+  color: var(--text);
+  font-size: 0.85rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.comparison-table tbody th {
+  color: var(--muted);
+  font-weight: 500;
+  min-width: 180px;
+}
+
+.comparison-table td {
+  color: var(--muted);
+}
+
+.comparison-table tbody tr:last-child th,
+.comparison-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tbody tr:hover td,
+.comparison-table tbody tr:hover th[scope="row"] {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ---------- Alchemist section ---------- */
+
+.alchemist-section {
+  position: relative;
+}
+
+.alchemist-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 50% 60% at 50% 100%, rgba(61, 184, 138, 0.04), transparent 70%);
+  pointer-events: none;
+}
+
+.alchemist-section .wrap {
+  position: relative;
+}
+
+.alchemist-bridge {
+  margin: 24px 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--muted);
+}
+
+.alchemist-bridge strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* ---------- FAQ ---------- */
+
+.faq-list {
+  max-width: 760px;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--border-subtle);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 0;
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.45;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::marker {
+  display: none;
+  content: "";
+}
+
+.faq-item summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: var(--radius-sm);
+}
+
+.faq-toggle {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.faq-toggle::before,
+.faq-toggle::after {
+  content: "";
+  position: absolute;
+  background: var(--muted-dim);
+  border-radius: 1px;
+  transition: transform 0.2s ease;
+}
+
+.faq-toggle::before {
+  width: 12px;
+  height: 2px;
+  top: 9px;
+  left: 4px;
+}
+
+.faq-toggle::after {
+  width: 2px;
+  height: 12px;
+  top: 4px;
+  left: 9px;
+}
+
+.faq-item[open] .faq-toggle::after {
+  transform: rotate(90deg);
+  opacity: 0;
+}
+
+.faq-answer {
+  padding: 0 0 18px;
+}
+
+.faq-answer p {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  max-width: 680px;
+}
+
+/* ---------- CTA closing ---------- */
+
+.pricing-cta-panel {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.pricing-cta-panel h2 {
+  margin-bottom: 1rem;
+}
+
+.pricing-cta-panel p {
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 1024px) {
+  .pricing-hero-viz-flow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-logic-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .pricing-hero {
+    padding: 64px 0 56px;
+  }
+
+  .pricing-hero-viz-flow {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .promo-banner-expiry {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .comparison-table {
+    min-width: 0;
+  }
+
+  .comparison-table thead {
+    display: none;
+  }
+
+  .comparison-table,
+  .comparison-table tbody,
+  .comparison-table tr,
+  .comparison-table td,
+  .comparison-table th {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .comparison-table tr {
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .comparison-table tr:last-child {
+    border-bottom: none;
+  }
+
+  .comparison-table tbody th[scope="row"] {
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 0 0 10px;
+    border-bottom: none;
+    background: transparent;
+  }
+
+  .comparison-table td {
+    padding: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    border-bottom: none;
+  }
+
+  .comparison-table td::before {
+    content: attr(data-label);
+    font-weight: 500;
+    color: var(--muted-dim);
+    font-size: 0.78rem;
+    flex-shrink: 0;
+  }
+
+  .comparison-table td:last-child {
+    padding-bottom: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .deployment-type-card,
+  .pricing-hero-viz-node {
+    transition: none;
+  }
+
+  .deployment-type-card:hover {
+    transform: none;
+  }
+}
