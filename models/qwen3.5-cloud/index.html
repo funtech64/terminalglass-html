@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Qwen 3.5 Cloud -- A Do-It-All AI, No Fancy Hardware Required | Terminal Glass</title>
   <meta name="description" content="Qwen 3.5 can read images, work in 201 languages, and handle huge documents in one go. Here's a plain-English guide to using it through Terminal Glass -- what it does, what it costs, and what you're trading away.">
-  <link rel="canonical" href="https://nocloudgpt.com/models/qwen3.5-cloud/">
-  <meta property="og:title" content="Qwen 3.5 Cloud -- Terminal Glass | NoCloudGPT">
+  <link rel="canonical" href="https://terminal.glass/models/qwen3.5-cloud/">
+  <meta property="og:title" content="Qwen 3.5 Cloud -- Terminal Glass | Terminal.Glass">
   <meta property="og:description" content="A no-jargon look at running Qwen 3.5 through Terminal Glass: what you get, what it costs, and where your data actually goes.">
-  <meta property="og:image" content="/models/qwen3.5-cloud/hero.webp">
+  <meta property="og:image" content="https://terminal.glass/models/qwen3.5-cloud/hero.webp">
+  <meta property="og:url" content="https://terminal.glass/models/qwen3.5-cloud/">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-slate-100">
@@ -17,11 +19,11 @@
   <header class="border-b border-slate-800 bg-slate-950">
     <div class="mx-auto max-w-6xl px-6 py-4">
       <nav class="flex items-center justify-between text-sm">
-        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">Terminal.Glass</a>
         <div class="flex gap-6 text-slate-400">
-          <a href="/models/" class="hover:text-white">Models</a>
-          <a href="/deploy/lightsail-guide.html" class="hover:text-white">Deploy</a>
-          <a href="/quote.html" class="hover:text-white">Get a Quote</a>
+          <a href="/models/" class="hover:text-white">Model Briefs</a>
+          <a href="/pricing/" class="hover:text-white">Pricing</a>
+          <a href="/contact/" class="hover:text-white">Contact</a>
         </div>
       </nav>
     </div>
@@ -54,9 +56,9 @@
         you upload travel out to those cloud servers, and you're billed based on how much you use it.
       </p>
       <div class="mt-10 flex flex-wrap gap-3">
-        <a href="/quote.html" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
+        <a href="/contact/?intent=order" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
         <a href="#how-it-works" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See how it works</a>
-        <a href="/models/qwen3.5/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See the fully private version instead</a>
+        <a href="https://nocloudgpt.com/models/qwen3.5/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See the fully private version instead</a>
       </div>
       <p class="mt-6 text-sm text-emerald-400">
         In short: your computer runs the chat window. Qwen 3.5, running on Ollama's cloud, does the heavy lifting.
@@ -99,7 +101,7 @@
         <strong>Here's what that really means:</strong> every prompt, every document snippet your search
         tool pulls up, and any image you upload gets sent out over the internet to be processed. This is
         <em>not</em> a locked-down, private setup -- it's a different thing entirely from
-        <a href="/models/qwen3.5/" class="underline hover:text-amber-200">NoCloudGPT Private Instances</a>,
+        <a href="https://nocloudgpt.com/models/qwen3.5/" class="underline hover:text-amber-200">NoCloudGPT Private Instances</a>,
         where everything stays on machines you own and control. You'll also pay an ongoing, usage-based fee
         that grows as your team, your documents, and your chat volume grow. If privacy matters more to you
         than convenience, choose a <a href="/models/">NoCloudGPT Air Gapped</a> setup instead.
@@ -228,7 +230,7 @@ ollama run qwen3.5:cloud</code></pre>
       <ul class="mt-5 max-w-3xl space-y-3 text-slate-300">
         <li>
           <strong class="text-white">You handle strictly private, regulated, or confidential data</strong> --
-          Choose <a href="/models/qwen3.5/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
+          Choose <a href="https://nocloudgpt.com/models/qwen3.5/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
           and run Qwen 3.5 entirely on your own hardware. Terminal Glass is not a substitute for a fully
           locked-down, compliance-ready setup.
         </li>
@@ -273,13 +275,13 @@ ollama run qwen3.5:cloud</code></pre>
               <td class="px-4 py-3 font-mono text-cyan-200">qwen3.5:cloud</td>
               <td class="px-4 py-3">Individuals and small teams</td>
               <td class="px-4 py-3">Handles very long documents and understands images. The default, everyday choice for chatting, drafting, document search, and light experimentation, in any of 201 languages.</td>
-              <td class="px-4 py-3 whitespace-nowrap"><a href="/quote.html" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
+              <td class="px-4 py-3 whitespace-nowrap"><a href="/contact/?intent=order" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
             </tr>
             <tr>
               <td class="px-4 py-3 font-mono text-cyan-200">qwen3.5:397b-cloud</td>
               <td class="px-4 py-3">Demanding reasoning and multi-step tasks</td>
               <td class="px-4 py-3">Same long-document and image capabilities, but the largest and most capable version available. Costs more per use -- worth it when the extra quality clearly pays off.</td>
-              <td class="px-4 py-3 whitespace-nowrap"><a href="/quote.html" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
+              <td class="px-4 py-3 whitespace-nowrap"><a href="/contact/?intent=order" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
             </tr>
           </tbody>
         </table>
@@ -321,7 +323,7 @@ ollama run qwen3.5:cloud</code></pre>
     </section>
 
     <div class="text-center">
-      <a href="/quote.html" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
+      <a href="/contact/?intent=order" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
         Get a quote for Qwen 3.5 Cloud →
       </a>
       <p class="mt-3 text-sm text-slate-500">We'll help you figure out the right small computer to run locally and the right cloud option for your team.</p>
@@ -336,7 +338,7 @@ ollama run qwen3.5:cloud</code></pre>
       <div class="mt-4 grid gap-4 text-xs text-slate-500 md:grid-cols-2 lg:grid-cols-3">
         <div>
           <p class="font-semibold text-slate-400">Hero image</p>
-          <p class="mt-1">Shared with the <a href="/models/qwen3.5/" class="text-cyan-600 hover:text-cyan-500">local Qwen 3.5 page</a>. Sourced from the Ollama library listing.</p>
+          <p class="mt-1">Shared with the <a href="https://nocloudgpt.com/models/qwen3.5/" class="text-cyan-600 hover:text-cyan-500">local Qwen 3.5 page</a>. Sourced from the Ollama library listing.</p>
         </div>
         <div>
           <p class="font-semibold text-slate-400">Who makes this model</p>
@@ -344,14 +346,14 @@ ollama run qwen3.5:cloud</code></pre>
         </div>
         <div>
           <p class="font-semibold text-slate-400">Want it fully private instead?</p>
-          <p class="mt-1">See <a href="/models/qwen3.5/" class="text-cyan-600 hover:text-cyan-500">Qwen 3.5 -- NoCloudGPT Private Instances</a> for a version that runs entirely, air-gapped, on hardware you control.</p>
+          <p class="mt-1">See <a href="https://nocloudgpt.com/models/qwen3.5/" class="text-cyan-600 hover:text-cyan-500">Qwen 3.5 -- NoCloudGPT Private Instances</a> for a version that runs entirely, air-gapped, on hardware you control.</p>
         </div>
       </div>
     </div>
   </section>
 
   <footer class="border-t border-slate-800 bg-slate-950 px-6 py-10 text-center text-sm text-slate-500">
-    <p>NoCloudGPT is an independent service. We are not affiliated with Alibaba Cloud, Ollama, or any AI developer mentioned on this page.</p>
+    <p>Terminal.Glass is an independent deployment platform. For local self-hosting guides, see <a href="https://nocloudgpt.com/models/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>. Not affiliated with Alibaba Cloud, Ollama, or any AI developer mentioned on this page.</p>
     <div class="mx-auto max-w-6xl px-6 py-4">
       <p class="text-xs text-slate-500 border border-slate-800 rounded-xl px-4 py-3 bg-slate-900">
         <strong class="text-slate-400">A note on licenses:</strong>

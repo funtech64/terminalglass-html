@@ -5,10 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GLM-5.2 Cloud -- Cloud-Accelerated Private AI | Terminal Glass</title>
   <meta name="description" content="Run GLM-5.2 through Terminal Glass and Ollama Cloud. Long-horizon engineering and coding-agent workflows without 756B-class local hardware -- honest trade-offs on data movement and usage cost.">
-  <link rel="canonical" href="https://nocloudgpt.com/models/glm-5.2-cloud/">
-  <meta property="og:title" content="GLM-5.2 Cloud -- Terminal Glass | NoCloudGPT">
+  <link rel="canonical" href="https://terminal.glass/models/glm-5.2-cloud/">
+  <meta property="og:title" content="GLM-5.2 Cloud -- Terminal Glass | Terminal.Glass">
   <meta property="og:description" content="GLM-5.2 on Ollama Cloud via Terminal Glass. OpenWebUI locally, inference in the cloud. Honest trade-offs on data residency, cost, and hardware.">
+  <meta property="og:url" content="https://terminal.glass/models/glm-5.2-cloud/">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-slate-100">
@@ -16,11 +18,11 @@
   <header class="border-b border-slate-800 bg-slate-950">
     <div class="mx-auto max-w-6xl px-6 py-4">
       <nav class="flex items-center justify-between text-sm">
-        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">Terminal.Glass</a>
         <div class="flex gap-6 text-slate-400">
-          <a href="/models/" class="hover:text-white">Models</a>
-          <a href="/deploy/lightsail-guide.html" class="hover:text-white">Deploy</a>
-          <a href="/quote.html" class="hover:text-white">Get a Quote</a>
+          <a href="/models/" class="hover:text-white">Model Briefs</a>
+          <a href="/pricing/" class="hover:text-white">Pricing</a>
+          <a href="/contact/" class="hover:text-white">Contact</a>
         </div>
       </nav>
     </div>
@@ -52,9 +54,9 @@
         You reduce local hardware requirements; in exchange, prompts, code, retrieved context, tool output, and recurring usage costs leave your infrastructure.
       </p>
       <div class="mt-10 flex flex-wrap gap-3">
-        <a href="/quote.html" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
+        <a href="/contact/?intent=order" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
         <a href="#how-it-works" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See how it works</a>
-        <a href="/models/glm5/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">Compare NoCloudGPT Private Instances</a>
+        <a href="https://nocloudgpt.com/models/glm5/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">Compare NoCloudGPT Private Instances</a>
       </div>
       <p class="mt-6 text-sm text-emerald-400">
         Terminal Glass runs OpenWebUI on your server while GLM-5.2 inference happens on Ollama Cloud.
@@ -190,7 +192,7 @@ ollama run glm-5.2:cloud</code></pre>
         </li>
         <li>
           <strong class="text-white">Model-version pinning or audit-grade reproducibility</strong> --
-          A pinned local deployment on <a href="/models/glm5/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a> provides more control than a cloud-only tag.
+          A pinned local deployment on <a href="https://nocloudgpt.com/models/glm5/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a> provides more control than a cloud-only tag.
         </li>
       </ul>
     </section>
@@ -213,7 +215,7 @@ ollama run glm-5.2:cloud</code></pre>
               <td class="px-4 py-3 font-mono text-cyan-200">glm-5.2:cloud</td>
               <td class="px-4 py-3">Long-horizon engineering, coding agents, complex debugging, automated research, project-scale technical work</td>
               <td class="px-4 py-3">976K listed context, text only, thinking and tools, high usage tier. Only verified GLM-5.2 tag on Ollama. Configurable thinking effort (High and Max) for harder agentic tasks.</td>
-              <td class="px-4 py-3 whitespace-nowrap"><a href="/quote.html" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
+              <td class="px-4 py-3 whitespace-nowrap"><a href="/contact/?intent=order" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
             </tr>
           </tbody>
         </table>
@@ -259,7 +261,7 @@ ollama run glm-5.2:cloud</code></pre>
     </section>
 
     <div class="text-center">
-      <a href="/quote.html" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
+      <a href="/contact/?intent=order" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
         Get a quote for GLM-5.2 Cloud →
       </a>
       <p class="mt-3 text-sm text-slate-500">We help you size the local host and choose the right cloud variant for your team.</p>
@@ -281,7 +283,7 @@ ollama run glm-5.2:cloud</code></pre>
         </div>
         <div>
           <p class="font-semibold text-slate-400">Private deployment</p>
-          <p class="mt-1">For local GLM deployments on hardware you control, see <a href="/models/glm5/" class="text-cyan-600 hover:text-cyan-500">GLM-5 -- NoCloudGPT Private Instances</a>. Also compare <a href="/models/glm-5.1-cloud/" class="text-cyan-600 hover:text-cyan-500">GLM-5.1 Cloud</a>, <a href="/models/glm-5-cloud/" class="text-cyan-600 hover:text-cyan-500">GLM-5 Cloud</a>, and <a href="/models/glm-4.7-cloud/" class="text-cyan-600 hover:text-cyan-500">GLM-4.7 Cloud</a>.</p>
+          <p class="mt-1">For local GLM deployments on hardware you control, see <a href="https://nocloudgpt.com/models/glm5/" class="text-cyan-600 hover:text-cyan-500">GLM-5 -- NoCloudGPT Private Instances</a>. Also compare <a href="/models/glm-5.1-cloud/" class="text-cyan-600 hover:text-cyan-500">GLM-5.1 Cloud</a>, <a href="/models/glm-5-cloud/" class="text-cyan-600 hover:text-cyan-500">GLM-5 Cloud</a>, and <a href="/models/glm-4.7-cloud/" class="text-cyan-600 hover:text-cyan-500">GLM-4.7 Cloud</a>.</p>
         </div>
       </div>
     </div>

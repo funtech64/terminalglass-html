@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Qwen3-Coder-Next Cloud -- A Powerful Coding AI, No Fancy Hardware Required | Terminal Glass</title>
   <meta name="description" content="Thinking about using Qwen3-Coder-Next, Alibaba's newest coding AI, without buying expensive hardware? Here's a plain-English guide to using it through Terminal Glass -- what it does, what it costs, and what you're trading away.">
-  <link rel="canonical" href="https://nocloudgpt.com/models/qwen3-coder-next-cloud/">
-  <meta property="og:title" content="Qwen3-Coder-Next Cloud -- Terminal Glass | NoCloudGPT">
+  <link rel="canonical" href="https://terminal.glass/models/qwen3-coder-next-cloud/">
+  <meta property="og:title" content="Qwen3-Coder-Next Cloud -- Terminal Glass | Terminal.Glass">
   <meta property="og:description" content="A no-jargon look at running Qwen3-Coder-Next through Terminal Glass: what you get, what it costs, and where your code actually goes.">
-  <meta property="og:image" content="/models/qwen3-coder-next-cloud/hero.webp">
+  <meta property="og:image" content="https://terminal.glass/models/qwen3-coder-next-cloud/hero.webp">
+  <meta property="og:url" content="https://terminal.glass/models/qwen3-coder-next-cloud/">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-slate-100">
@@ -17,11 +19,11 @@
   <header class="border-b border-slate-800 bg-slate-950">
     <div class="mx-auto max-w-6xl px-6 py-4">
       <nav class="flex items-center justify-between text-sm">
-        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">Terminal.Glass</a>
         <div class="flex gap-6 text-slate-400">
-          <a href="/models/" class="hover:text-white">Models</a>
-          <a href="/deploy/lightsail-guide.html" class="hover:text-white">Deploy</a>
-          <a href="/quote.html" class="hover:text-white">Get a Quote</a>
+          <a href="/models/" class="hover:text-white">Model Briefs</a>
+          <a href="/pricing/" class="hover:text-white">Pricing</a>
+          <a href="/contact/" class="hover:text-white">Contact</a>
         </div>
       </nav>
     </div>
@@ -54,9 +56,9 @@
         prompts and code travel out to those cloud servers, and you're billed based on how much you use it.
       </p>
       <div class="mt-10 flex flex-wrap gap-3">
-        <a href="/quote.html" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
+        <a href="/contact/?intent=order" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
         <a href="#how-it-works" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See how it works</a>
-        <a href="/models/qwen3-coder/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See the fully private version instead</a>
+        <a href="https://nocloudgpt.com/models/qwen3-coder/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See the fully private version instead</a>
       </div>
       <p class="mt-6 text-sm text-emerald-400">
         In short: your computer runs the chat window. Alibaba's newest coding model, running on Ollama's cloud, does the heavy lifting.
@@ -98,7 +100,7 @@
         <strong>Here's what that really means:</strong> every prompt and every piece of code you send gets
         sent out over the internet to be processed. This is <em>not</em> a private, locked-down setup --
         it's a different thing entirely from
-        <a href="/models/qwen3-coder/" class="underline hover:text-amber-200">NoCloudGPT Private Instances</a>,
+        <a href="https://nocloudgpt.com/models/qwen3-coder/" class="underline hover:text-amber-200">NoCloudGPT Private Instances</a>,
         where everything, including your code, stays on machines you own and control. You'll also pay an
         ongoing, usage-based fee. If your code or data can never leave your network, run Qwen3-Coder locally
         through NoCloudGPT instead.
@@ -217,7 +219,7 @@ ollama run qwen3-coder-next:cloud</code></pre>
       <ul class="mt-5 max-w-3xl space-y-3 text-slate-300">
         <li>
           <strong class="text-white">Your code is proprietary or under strict data rules</strong> --
-          Choose <a href="/models/qwen3-coder/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
+          Choose <a href="https://nocloudgpt.com/models/qwen3-coder/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
           and run Qwen3-Coder entirely on your own hardware instead.
         </li>
         <li>
@@ -251,7 +253,7 @@ ollama run qwen3-coder-next:cloud</code></pre>
               <td class="px-4 py-3 font-mono text-cyan-200">qwen3-coder-next:cloud</td>
               <td class="px-4 py-3">Self-directed coding tasks, whole-codebase work, connecting the AI to other tools</td>
               <td class="px-4 py-3">Performs especially well on AI coding agents and multi-step development work, delivered through the cloud.</td>
-              <td class="px-4 py-3 whitespace-nowrap"><a href="/quote.html" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
+              <td class="px-4 py-3 whitespace-nowrap"><a href="/contact/?intent=order" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
             </tr>
           </tbody>
         </table>
@@ -284,7 +286,7 @@ ollama run qwen3-coder-next:cloud</code></pre>
     </section>
 
     <div class="text-center">
-      <a href="/quote.html" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
+      <a href="/contact/?intent=order" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
         Get a quote for Qwen3-Coder-Next Cloud →
       </a>
       <p class="mt-3 text-sm text-slate-500">We'll help you figure out the right small computer to run locally and the right cloud option for your needs.</p>
@@ -307,14 +309,14 @@ ollama run qwen3-coder-next:cloud</code></pre>
         </div>
         <div>
           <p class="font-semibold text-slate-400">Want it fully private instead?</p>
-          <p class="mt-1">See <a href="/models/qwen3-coder/" class="text-cyan-600 hover:text-cyan-500">Qwen3-Coder -- NoCloudGPT Private Instances</a> for a version that runs entirely on hardware you control.</p>
+          <p class="mt-1">See <a href="https://nocloudgpt.com/models/qwen3-coder/" class="text-cyan-600 hover:text-cyan-500">Qwen3-Coder -- NoCloudGPT Private Instances</a> for a version that runs entirely on hardware you control.</p>
         </div>
       </div>
     </div>
   </section>
 
   <footer class="border-t border-slate-800 bg-slate-950 px-6 py-10 text-center text-sm text-slate-500">
-    <p>NoCloudGPT is an independent service. We are not affiliated with Alibaba, Qwen, Ollama, or any AI developer mentioned on this page.</p>
+    <p>Terminal.Glass is an independent deployment platform. For local self-hosting guides, see <a href="https://nocloudgpt.com/models/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>. Not affiliated with Alibaba, Qwen, Ollama, or any AI developer mentioned on this page.</p>
     <div class="mx-auto max-w-6xl px-6 py-4">
       <p class="text-xs text-slate-500 border border-slate-800 rounded-xl px-4 py-3 bg-slate-900">
         <strong class="text-slate-400">A note on licenses:</strong>
