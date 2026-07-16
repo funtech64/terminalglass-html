@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nemotron 3 Nano Cloud -- A Smart, Efficient AI Helper, Explained Simply | Terminal Glass</title>
   <meta name="description" content="Thinking about using NVIDIA's Nemotron 3 Nano AI model but don't want to buy a fancy computer? Here's a plain-English guide to using it through Terminal Glass -- what it does, what it costs, and what you're trading away.">
-  <link rel="canonical" href="https://nocloudgpt.com/models/nemotron-3-nano-cloud/">
-  <meta property="og:title" content="Nemotron 3 Nano Cloud -- Terminal Glass | NoCloudGPT">
+  <link rel="canonical" href="https://terminal.glass/models/nemotron-3-nano-cloud/">
+  <meta property="og:title" content="Nemotron 3 Nano Cloud -- Terminal Glass | Terminal.Glass">
   <meta property="og:description" content="A no-jargon look at running Nemotron 3 Nano through Terminal Glass: what you get, what it costs, and where your data actually goes.">
-  <meta property="og:image" content="/models/nemotron-3-nano-cloud/hero.jpg">
+  <meta property="og:image" content="https://terminal.glass/models/nemotron-3-nano-cloud/hero.jpg">
+  <meta property="og:url" content="https://terminal.glass/models/nemotron-3-nano-cloud/">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-slate-100">
@@ -17,11 +19,11 @@
   <header class="border-b border-slate-800 bg-slate-950">
     <div class="mx-auto max-w-6xl px-6 py-4">
       <nav class="flex items-center justify-between text-sm">
-        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">Terminal.Glass</a>
         <div class="flex gap-6 text-slate-400">
-          <a href="/models/" class="hover:text-white">Models</a>
-          <a href="/deploy/lightsail-guide.html" class="hover:text-white">Deploy</a>
-          <a href="/quote.html" class="hover:text-white">Get a Quote</a>
+          <a href="/models/" class="hover:text-white">Model Briefs</a>
+          <a href="/pricing/" class="hover:text-white">Pricing</a>
+          <a href="/contact/" class="hover:text-white">Contact</a>
         </div>
       </nav>
     </div>
@@ -59,9 +61,9 @@
         adds up in ongoing cost.
       </p>
       <div class="mt-10 flex flex-wrap gap-3">
-        <a href="/quote.html" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
+        <a href="/contact/?intent=order" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
         <a href="#how-it-works" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See how it works</a>
-        <a href="/models/nemotron/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See the fully private version instead</a>
+        <a href="https://nocloudgpt.com/models/nemotron/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See the fully private version instead</a>
       </div>
       <p class="mt-6 text-sm text-emerald-400">
         In short: your computer runs the chat window. NVIDIA's model, running on Ollama's cloud, does the heavy lifting.
@@ -89,7 +91,7 @@
         and it's marked as a "light usage" model, meaning it's relatively affordable to run compared to the
         biggest AI models. There's also a smaller version you can download and run entirely on your own
         hardware, and an even smaller one that fits on modest computers -- both live on
-        <a href="/models/nemotron/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
+        <a href="https://nocloudgpt.com/models/nemotron/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
         if you'd rather keep everything in-house. Whichever way you go, it's worth setting a clear house rule
         about what kinds of documents and code are allowed to leave your network.
       </p>
@@ -112,7 +114,7 @@
         search tool digs up, snippets of code, and anything a connected tool sends back all get sent over the
         internet to be processed. This is <em>not</em> a private, locked-down setup -- it's a different thing
         entirely from
-        <a href="/models/nemotron/" class="underline hover:text-amber-200">NoCloudGPT Private Instances</a>,
+        <a href="https://nocloudgpt.com/models/nemotron/" class="underline hover:text-amber-200">NoCloudGPT Private Instances</a>,
         where everything stays on machines you own and control. You'll also pay an ongoing, usage-based fee to
         Ollama that grows the more you use it -- especially if you're having very long conversations or letting
         the AI use its "show your work" reasoning mode a lot, or having it use tools over and over in a row.
@@ -253,7 +255,7 @@ ollama run nemotron-3-nano:30b-cloud</code></pre>
       <ul class="mt-5 max-w-3xl space-y-3 text-slate-300">
         <li>
           <strong class="text-white">You handle sensitive or regulated information</strong> --
-          Choose <a href="/models/nemotron/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
+          Choose <a href="https://nocloudgpt.com/models/nemotron/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
           with a version of this model that runs entirely on your own hardware. This cloud setup sends data out
           to the internet.
         </li>
@@ -298,7 +300,7 @@ ollama run nemotron-3-nano:30b-cloud</code></pre>
               <td class="px-4 py-3 font-mono text-cyan-200">nemotron-3-nano:30b-cloud</td>
               <td class="px-4 py-3">Individuals and small teams who want an efficient, budget-friendly AI that can reason and use tools</td>
               <td class="px-4 py-3">Handles very long documents in one go, works with text only, can reason step by step, can use other software tools, on Ollama's more affordable usage tier. Good for step-by-step problem-solving, tool-using assistants, support workflows, and long-document research, as long as you're okay with data leaving your network.</td>
-              <td class="px-4 py-3 whitespace-nowrap"><a href="/quote.html" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
+              <td class="px-4 py-3 whitespace-nowrap"><a href="/contact/?intent=order" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
             </tr>
           </tbody>
         </table>
@@ -346,7 +348,7 @@ ollama run nemotron-3-nano:30b-cloud</code></pre>
     </section>
 
     <div class="text-center">
-      <a href="/quote.html" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
+      <a href="/contact/?intent=order" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
         Get a quote for Nemotron 3 Nano Cloud →
       </a>
       <p class="mt-3 text-sm text-slate-500">We'll help you figure out the right small computer to run locally and the right cloud option for your needs.</p>
@@ -360,7 +362,7 @@ ollama run nemotron-3-nano:30b-cloud</code></pre>
       <div class="mt-4 grid gap-4 text-xs text-slate-500 md:grid-cols-2 lg:grid-cols-3">
         <div>
           <p class="font-semibold text-slate-400">Hero image</p>
-          <p class="mt-1">Same artwork used on the <a href="/models/nemotron/" class="text-cyan-600 hover:text-cyan-500">Nemotron family page</a>, originally from the Ollama library listing.</p>
+          <p class="mt-1">Same artwork used on the <a href="https://nocloudgpt.com/models/nemotron/" class="text-cyan-600 hover:text-cyan-500">Nemotron family page</a>, originally from the Ollama library listing.</p>
         </div>
         <div>
           <p class="font-semibold text-slate-400">Who makes this model</p>
@@ -368,14 +370,14 @@ ollama run nemotron-3-nano:30b-cloud</code></pre>
         </div>
         <div>
           <p class="font-semibold text-slate-400">Want it fully private instead?</p>
-          <p class="mt-1">See <a href="/models/nemotron/" class="text-cyan-600 hover:text-cyan-500">Nemotron -- NoCloudGPT Private Instances</a>, or check out <a href="/models/nemotron-3-super-cloud/" class="text-cyan-600 hover:text-cyan-500">Nemotron-3 Super Cloud</a> for a bigger, more capable option.</p>
+          <p class="mt-1">See <a href="https://nocloudgpt.com/models/nemotron/" class="text-cyan-600 hover:text-cyan-500">Nemotron -- NoCloudGPT Private Instances</a>, or check out <a href="/models/nemotron-3-super-cloud/" class="text-cyan-600 hover:text-cyan-500">Nemotron-3 Super Cloud</a> for a bigger, more capable option.</p>
         </div>
       </div>
     </div>
   </section>
 
   <footer class="border-t border-slate-800 bg-slate-950 px-6 py-10 text-center text-sm text-slate-500">
-    <p>NoCloudGPT is an independent service. We are not affiliated with NVIDIA, Ollama, or any AI developer mentioned on this page.</p>
+    <p>Terminal.Glass is an independent deployment platform. For local self-hosting guides, see <a href="https://nocloudgpt.com/models/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>. Not affiliated with NVIDIA, Ollama, or any AI developer mentioned on this page.</p>
     <div class="mx-auto max-w-6xl px-6 py-4">
       <p class="text-xs text-slate-500 border border-slate-800 rounded-xl px-4 py-3 bg-slate-900">
         <strong class="text-slate-400">A note on licenses:</strong>

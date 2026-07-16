@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nemotron-3 Super Cloud -- Cloud-Accelerated Private AI | Terminal Glass</title>
   <meta name="description" content="Run Nemotron-3 Super through Terminal Glass and Ollama Cloud. 120B MoE reasoning and agentic workflows without an 87 GB local download -- honest trade-offs on data movement and usage cost.">
-  <link rel="canonical" href="https://nocloudgpt.com/models/nemotron-3-super-cloud/">
-  <meta property="og:title" content="Nemotron-3 Super Cloud -- Terminal Glass | NoCloudGPT">
+  <link rel="canonical" href="https://terminal.glass/models/nemotron-3-super-cloud/">
+  <meta property="og:title" content="Nemotron-3 Super Cloud -- Terminal Glass | Terminal.Glass">
   <meta property="og:description" content="Nemotron-3 Super on Ollama Cloud via Terminal Glass. OpenWebUI locally, inference in the cloud. Honest trade-offs on data residency, cost, and hardware.">
-  <meta property="og:image" content="/models/nemotron-3-super-cloud/hero.jpg">
+  <meta property="og:image" content="https://terminal.glass/models/nemotron-3-super-cloud/hero.jpg">
+  <meta property="og:url" content="https://terminal.glass/models/nemotron-3-super-cloud/">
   <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-slate-950 text-slate-100">
@@ -17,11 +19,11 @@
   <header class="border-b border-slate-800 bg-slate-950">
     <div class="mx-auto max-w-6xl px-6 py-4">
       <nav class="flex items-center justify-between text-sm">
-        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>
+        <a href="/" class="font-bold text-cyan-300 hover:text-cyan-200">Terminal.Glass</a>
         <div class="flex gap-6 text-slate-400">
-          <a href="/models/" class="hover:text-white">Models</a>
-          <a href="/deploy/lightsail-guide.html" class="hover:text-white">Deploy</a>
-          <a href="/quote.html" class="hover:text-white">Get a Quote</a>
+          <a href="/models/" class="hover:text-white">Model Briefs</a>
+          <a href="/pricing/" class="hover:text-white">Pricing</a>
+          <a href="/contact/" class="hover:text-white">Contact</a>
         </div>
       </nav>
     </div>
@@ -53,9 +55,9 @@
         prompts and retrieved context leave your infrastructure and usage is billed per token.
       </p>
       <div class="mt-10 flex flex-wrap gap-3">
-        <a href="/quote.html" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
+        <a href="/contact/?intent=order" class="rounded-xl bg-cyan-300 px-6 py-3 font-bold text-slate-950 hover:bg-cyan-200">Get quote →</a>
         <a href="#how-it-works" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">See how it works</a>
-        <a href="/models/nemotron/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">Compare NoCloudGPT Private Instances</a>
+        <a href="https://nocloudgpt.com/models/nemotron/" class="rounded-xl border border-slate-700 px-6 py-3 font-bold text-white hover:bg-slate-900">Compare NoCloudGPT Private Instances</a>
       </div>
       <p class="mt-6 text-sm text-emerald-400">
         Terminal Glass runs OpenWebUI on your server while Nemotron-3 Super inference happens on Ollama Cloud.
@@ -99,7 +101,7 @@
       <p class="mt-4 text-sm text-amber-300">
         <strong>Honest reality:</strong> Every prompt and retrieved RAG chunk leaves your infrastructure
         and is processed on Ollama Cloud. This is not air-gapped and is not equivalent to
-        <a href="/models/nemotron/" class="underline hover:text-amber-200">NoCloudGPT Private Instances</a>,
+        <a href="https://nocloudgpt.com/models/nemotron/" class="underline hover:text-amber-200">NoCloudGPT Private Instances</a>,
         where inference stays on hardware you control. You also pay recurring, usage-based Ollama Cloud fees
         that grow with reasoning depth, context length, and agent loop volume. When confidential or regulated
         work must stay on your network, choose a <a href="/models/">NoCloudGPT Air Gapped</a> deployment instead.
@@ -231,7 +233,7 @@ ollama run nemotron-3-super:cloud</code></pre>
       <ul class="mt-5 max-w-3xl space-y-3 text-slate-300">
         <li>
           <strong class="text-white">Regulated, confidential, or data-residency-sensitive work</strong> --
-          Choose <a href="/models/nemotron/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
+          Choose <a href="https://nocloudgpt.com/models/nemotron/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT Private Instances</a>
           running Nemotron locally. Terminal Glass routes prompts to Ollama Cloud.
         </li>
         <li>
@@ -278,7 +280,7 @@ ollama run nemotron-3-super:cloud</code></pre>
               <td class="px-4 py-3 font-mono text-cyan-200">nemotron-3-super:cloud</td>
               <td class="px-4 py-3">Teams evaluating agentic and reasoning workflows</td>
               <td class="px-4 py-3">256K context, text only, medium usage tier on Ollama. Only verified Nemotron-3 Super cloud tag. Pair with local RAG for internal knowledge assistants when document indexes can stay local but inference may leave your network.</td>
-              <td class="px-4 py-3 whitespace-nowrap"><a href="/quote.html" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
+              <td class="px-4 py-3 whitespace-nowrap"><a href="/contact/?intent=order" class="text-cyan-300 hover:text-cyan-200">Get quote →</a></td>
             </tr>
           </tbody>
         </table>
@@ -326,7 +328,7 @@ ollama run nemotron-3-super:cloud</code></pre>
     </section>
 
     <div class="text-center">
-      <a href="/quote.html" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
+      <a href="/contact/?intent=order" class="inline-block rounded-2xl bg-cyan-300 px-8 py-4 text-lg font-bold text-slate-950 hover:bg-cyan-200">
         Get a quote for Nemotron-3 Super Cloud →
       </a>
       <p class="mt-3 text-sm text-slate-500">We help you size the local host and choose the right cloud variant for your team.</p>
@@ -340,7 +342,7 @@ ollama run nemotron-3-super:cloud</code></pre>
       <div class="mt-4 grid gap-4 text-xs text-slate-500 md:grid-cols-2 lg:grid-cols-3">
         <div>
           <p class="font-semibold text-slate-400">Hero image</p>
-          <p class="mt-1">Artwork shared with the <a href="/models/nemotron/" class="text-cyan-600 hover:text-cyan-500">Nemotron family page</a>. Sourced from the Ollama library listing.</p>
+          <p class="mt-1">Artwork shared with the <a href="https://nocloudgpt.com/models/nemotron/" class="text-cyan-600 hover:text-cyan-500">Nemotron family page</a>. Sourced from the Ollama library listing.</p>
         </div>
         <div>
           <p class="font-semibold text-slate-400">Model developer</p>
@@ -348,7 +350,7 @@ ollama run nemotron-3-super:cloud</code></pre>
         </div>
         <div>
           <p class="font-semibold text-slate-400">Private deployment</p>
-          <p class="mt-1">For fully local Nemotron on hardware you control, see <a href="/models/nemotron/" class="text-cyan-600 hover:text-cyan-500">Nemotron -- NoCloudGPT Private Instances</a>.</p>
+          <p class="mt-1">For fully local Nemotron on hardware you control, see <a href="https://nocloudgpt.com/models/nemotron/" class="text-cyan-600 hover:text-cyan-500">Nemotron -- NoCloudGPT Private Instances</a>.</p>
         </div>
       </div>
     </div>
