@@ -13,9 +13,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Models — Terminal.Glass | Jet Models and Private AI Catalog">
 <meta name="twitter:description" content="Browse Terminal.Glass Jet Models for cloud-accelerated AI capability, or explore 100+ Private Models for customer-controlled infrastructure through NoCloudGPT.">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/css/site.css">
 </head>
 <body>
+
+<a class="skip-link" href="#main">Skip to content</a>
 
 <header>
   <div class="wrap nav">
@@ -26,24 +29,25 @@
     <nav aria-label="Main navigation">
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
       <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu">☰</label>
-      <ul>
+            <ul>
         <li><a href="/">Home</a></li>
-        <li><a href="/pricing/">Pricing &amp; Order Now</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
         <li><a href="/hosting/">Hosting</a></li>
-        <li><a href="/models/">Models</a></li>
+        <li><a href="/models/" aria-current="page">Models</a></li>
+        <li><a href="/agents/">Agents</a></li>
         <li><a href="/contact/">Contact</a></li>
       </ul>
       <div class="nav-actions">
-        <a class="btn btn-primary btn-sm" href="/contact/?intent=order">Start Your Order</a>
+        <a class="btn btn-primary btn-sm" href="/contact/?intent=order">Contact Sales</a>
       </div>
       <div class="nav-actions-mobile">
-        <a class="btn btn-primary" href="/contact/?intent=order">Start Your Order</a>
+        <a class="btn btn-primary" href="/contact/?intent=order">Contact Sales</a>
       </div>
     </nav>
   </div>
 </header>
 
-<main>
+<main id="main">
 
 <section class="page-hero page-hero-compact">
   <div class="wrap">
@@ -281,7 +285,7 @@
     <h2>Not sure which models fit your workload?</h2>
     <p class="section-sub">Tell us what your team needs to accomplish and where you want the system hosted. We will recommend an appropriate starting set.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="/contact/?intent=order">Start Your Order</a>
+      <a class="btn btn-primary" href="/contact/?intent=order">Contact Sales</a>
       <a class="btn btn-secondary" href="/hosting/">Hosting Options</a>
     </div>
   </div>
@@ -291,10 +295,11 @@
   <div class="wrap">
     <span class="kicker">Get started</span>
     <h2>Ready to deploy?</h2>
-    <p class="section-sub">Start with Sunrise Starter for $199 (2 Glass Licenses) or compare packages for your team. One license powers one active deployment.</p>
+    <p class="section-sub">Start with Sunrise Starter for $199 (2 Glass Licenses) or Sunrise Business for $399 (6 licenses). One license powers one active deployment.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" href="/contact/?intent=order&package=sunrise-starter">Start with Sunrise</a>
+      <a class="btn btn-primary" href="/contact/?intent=order&amp;package=sunrise-starter">Start with Sunrise</a>
       <a class="btn btn-secondary" href="/pricing/">View Pricing</a>
+      <a class="btn btn-secondary" href="/agents/">Glass &amp; Jet Agents</a>
       <a class="btn btn-secondary" href="/contact/">Contact Sales</a>
     </div>
   </div>
@@ -302,19 +307,53 @@
 
 </main>
 
-<footer>
-  <div class="wrap foot">
-    <div>
-      <strong style="color:var(--text)">Terminal.Glass</strong><br>
-      Private AI on one computer — over 100 models and a familiar ChatGPT-style interface.
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <strong>Terminal.Glass</strong>
+      <p>Your business AI, on your server or in your cloud.</p>
+      <p class="footer-contact"><a href="mailto:jonathan@nocloudgpt.com">jonathan@nocloudgpt.com</a></p>
     </div>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/pricing/">Pricing</a></li>
-      <li><a href="/hosting/">Hosting</a></li>
-      <li><a href="/models/">Models</a></li>
-      <li><a href="/contact/">Contact</a></li>
-    </ul>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul>
+        <li><a href="/pricing/#plans">Sunrise Starter</a></li>
+        <li><a href="/pricing/#plans">Sunrise Business</a></li>
+        <li><a href="/pricing/#glass-license">Glass Licenses</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Deployments</h4>
+      <ul>
+        <li><a href="/hosting/">Hosting</a></li>
+        <li><a href="/contact/?interest=NoCloudGPT+Deployment">NoCloudGPT</a></li>
+        <li><a href="/contact/?interest=YourCloudGPT+Deployment">YourCloudGPT</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="/models/">Models</a></li>
+        <li><a href="/agents/#glass-agents">Glass Agents</a></li>
+        <li><a href="/agents/#jet-agents">Jet Agents</a></li>
+        <li><a href="/agents/#alchemist">Alchemist Conductor</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Technical education</h4>
+      <ul>
+        <li><a href="https://nocloudgpt.com/models/" rel="noopener noreferrer">NoCloudGPT</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© 2026 terminal.glass. Portable Glass Licenses for private AI deployments.</p>
   </div>
 </footer>
 

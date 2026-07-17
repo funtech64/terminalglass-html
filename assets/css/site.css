@@ -532,11 +532,46 @@ nav a:hover {
   line-height: 1.6;
 }
 
+/* ---------- Skip link ---------- */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 200;
+  padding: 12px 16px;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  overflow: visible;
+}
+
+.hero-tagline {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
 /* ---------- Footer ---------- */
 
-footer {
+footer,
+.site-footer {
   border-top: 1px solid var(--border-subtle);
-  padding: 48px 0;
+  padding: 48px 0 0;
   color: var(--muted);
   font-size: 0.85rem;
 }
@@ -549,6 +584,57 @@ footer {
   gap: 24px;
 }
 
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(5, 1fr);
+  gap: 32px 24px;
+  padding-bottom: 40px;
+}
+
+.footer-brand strong {
+  color: var(--text);
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.footer-brand p {
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.footer-contact {
+  margin-top: 0.75rem;
+}
+
+.footer-contact a {
+  color: var(--accent);
+}
+
+.footer-col h4 {
+  font-size: 0.72rem;
+  font-family: var(--mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-dim);
+  margin-bottom: 0.85rem;
+  font-weight: 600;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border-subtle);
+  padding: 20px 0 28px;
+  font-size: 0.78rem;
+  color: var(--muted-dim);
+}
+
 footer ul {
   display: flex;
   gap: 24px;
@@ -556,11 +642,13 @@ footer ul {
   flex-wrap: wrap;
 }
 
-footer a {
+footer a,
+.site-footer a {
   color: var(--muted);
 }
 
-footer a:hover {
+footer a:hover,
+.site-footer a:hover {
   color: var(--text);
 }
 
@@ -1154,5 +1242,14 @@ footer a:hover {
   .foot {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 20px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
   }
 }

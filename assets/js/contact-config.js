@@ -12,7 +12,7 @@ const contactFormConfig = {
 const contactInterestOptions = [
   { value: "Sunrise Starter", label: "Sunrise Starter" },
   { value: "Sunrise Business", label: "Sunrise Business" },
-  { value: "Additional Glass License ($99)", label: "Additional Glass License ($99)" },
+  { value: "Additional Glass License", label: "Additional Glass License" },
   { value: "NoCloudGPT Deployment", label: "NoCloudGPT Deployment" },
   { value: "YourCloudGPT Deployment", label: "YourCloudGPT Deployment" },
   { value: "Glass Agents", label: "Glass Agents" },
@@ -56,7 +56,7 @@ const contactPathOptions = [
     title: "Expand an existing deployment",
     description:
       "For customers adding another $99 Glass License.",
-    interest: "Additional Glass License ($99)",
+    interest: "Additional Glass License",
     param: "path=expand",
   },
   {
@@ -73,12 +73,12 @@ const contactPathOptions = [
 const contactUrlInterestMap = {
   "sunrise-starter": "Sunrise Starter",
   "sunrise-business": "Sunrise Business",
-  "glass-license": "Additional Glass License ($99)",
+  "glass-license": "Additional Glass License",
   "alchemist-founders": "Alchemist Conductor",
 };
 
 const contactPathInterestMap = {
   sunrise: "Sunrise Starter",
-  expand: "Additional Glass License ($99)",
+  expand: "Additional Glass License",
   custom: "Enterprise Deployment",
 };

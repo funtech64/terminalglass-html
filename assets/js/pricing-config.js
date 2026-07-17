@@ -70,7 +70,7 @@ const pricingPlans = [
     id: "glass-license-expansion",
     name: "Additional Glass License",
     price: 99,
-    billingLabel: "Per additional active deployment",
+    billingLabel: "Expansion price for existing customers",
     badge: null,
     featured: false,
     description:
