@@ -1002,3 +1002,32 @@ To prevent naming confusion, rename the public website folder and route:
 
 ```text
 agents/ into jet-agents/
+```
+
+The public URL becomes:
+
+```text
+https://terminal.glass/jet-agents/
+```
+
+## 4. Update every reference
+
+Update all internal links, canonical URLs, Open Graph URLs, Twitter card URLs, sitemap entries, navigation items, footer links, model brief cross-links, generated chrome in `scripts/update-site-chrome.py`, and validation scripts so they point to `/jet-agents/` instead of `/agents/`.
+
+Do not rename the repository instruction folder (`agents/` or `AGENTS/`). Only the public website route changes.
+
+## 5. Permanent redirect
+
+Keep `agents/index.html` as a permanent redirect to `/jet-agents/`.
+
+Preserve query parameters and URL fragments where practical using client-side `location.replace` plus a `<link rel="canonical">` and meta refresh fallback.
+
+Do not list `/agents/` in `sitemap.xml`. The canonical agents page is `/jet-agents/`.
+
+## 6. Navigation label
+
+The navigation item may continue to read **Agents** while linking to `/jet-agents/`.
+
+## 7. Emoji note (conversation override)
+
+The owner conversation specifies **😎** (cool sunglasses) as the guided-deployment symbol associated with “no more guesswork,” overriding the earlier 🙂 example in draft copy.

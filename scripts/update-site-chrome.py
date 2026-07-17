@@ -15,13 +15,13 @@ CORE_NAV = """      <ul>
         <li><a href="/pricing/">Pricing</a></li>
         <li><a href="/hosting/">Hosting</a></li>
         <li><a href="/models/">Models</a></li>
-        <li><a href="/agents/">Agents</a></li>
+        <li><a href="/jet-agents/">Agents</a></li>
         <li><a href="/contact/">Contact</a></li>
       </ul>"""
 
 MODEL_NAV = """        <div class="flex gap-6 text-slate-400">
           <a href="/models/" class="hover:text-white">Model Briefs</a>
-          <a href="/agents/" class="hover:text-white">Agents</a>
+          <a href="/jet-agents/" class="hover:text-white">Agents</a>
           <a href="/pricing/" class="hover:text-white">Pricing</a>
           <a href="/contact/" class="hover:text-white">Contact</a>
         </div>"""
@@ -46,16 +46,15 @@ FOOTER = """<footer class="site-footer">
       <ul>
         <li><a href="/hosting/">Hosting</a></li>
         <li><a href="/contact/?interest=NoCloudGPT+Deployment">NoCloudGPT</a></li>
-        <li><a href="/contact/?interest=YourCloudGPT+Deployment">YourCloudGPT</a></li>
+        <li><a href="/contact/?interest=AWS+or+DigitalOcean+Deployment">AWS or DigitalOcean</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Explore</h4>
       <ul>
         <li><a href="/models/">Models</a></li>
-        <li><a href="/agents/#glass-agents">Glass Agents</a></li>
-        <li><a href="/agents/#jet-agents">Jet Agents</a></li>
-        <li><a href="/agents/#alchemist">Alchemist Conductor</a></li>
+        <li><a href="/jet-agents/#glass-agents">Glass Agents</a></li>
+        <li><a href="/jet-agents/#jet-agents">Jet Agents</a></li>
       </ul>
     </div>
     <div class="footer-col">
@@ -78,7 +77,7 @@ FOOTER = """<footer class="site-footer">
 
 MODEL_FOOTER = """  <footer class="border-t border-slate-800 bg-slate-950 px-6 py-8 text-center text-sm text-slate-500">
     <p>Terminal.Glass is an independent deployment platform. For local self-hosting guides, see <a href="https://nocloudgpt.com/models/" class="text-cyan-300 hover:text-cyan-200">NoCloudGPT</a>.</p>
-    <p class="mt-3"><a href="/pricing/" class="text-cyan-300 hover:text-cyan-200">Pricing</a> · <a href="/agents/" class="text-cyan-300 hover:text-cyan-200">Agents</a> · <a href="/contact/" class="text-cyan-300 hover:text-cyan-200">Contact</a></p>
+    <p class="mt-3"><a href="/pricing/" class="text-cyan-300 hover:text-cyan-200">Pricing</a> · <a href="/jet-agents/" class="text-cyan-300 hover:text-cyan-200">Agents</a> · <a href="/contact/" class="text-cyan-300 hover:text-cyan-200">Contact</a></p>
   </footer>"""
 
 
@@ -117,8 +116,8 @@ def replace_core_nav(content, current_page=None):
         content = content.replace('<li><a href="/hosting/">Hosting</a></li>', '<li><a href="/hosting/" aria-current="page">Hosting</a></li>', 1)
     elif current_page == 'models':
         content = content.replace('<li><a href="/models/">Models</a></li>', '<li><a href="/models/" aria-current="page">Models</a></li>', 1)
-    elif current_page == 'agents':
-        content = content.replace('<li><a href="/agents/">Agents</a></li>', '<li><a href="/agents/" aria-current="page">Agents</a></li>', 1)
+    elif current_page == 'jet-agents':
+        content = content.replace('<li><a href="/jet-agents/">Agents</a></li>', '<li><a href="/jet-agents/" aria-current="page">Agents</a></li>', 1)
     # normalize CTA labels
     content = content.replace('Pricing &amp; Order Now', 'Pricing')
     content = content.replace('Start Your Order', 'Contact Sales')

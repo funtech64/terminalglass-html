@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hosting — Terminal.Glass | Private AI Deployment Options</title>
-<meta name="description" content="Where to host your private AI server: on-premises, private datacenter, customer-owned cloud, or managed hosting. One deployment, one system you control.">
+<title>Hosting — Terminal.Glass | Guided Private AI Deployment</title>
+<meta name="description" content="Deploy Terminal.Glass on NoCloudGPT Ubuntu Linux VMs, customer-owned AWS, or DigitalOcean. We handle server specification and remove the guesswork. GCP and Azure coming soon.">
 <link rel="canonical" href="https://terminal.glass/hosting/">
-<meta property="og:title" content="Hosting — Terminal.Glass | Private AI Deployment Options">
-<meta property="og:description" content="Where to host your private AI server: on-premises, private datacenter, customer-owned cloud, or managed hosting. One deployment, one system you control.">
+<meta property="og:title" content="Hosting — Terminal.Glass | Guided Private AI Deployment">
+<meta property="og:description" content="NoCloudGPT, AWS, and DigitalOcean deployment paths with fully guided server sizing. Private AI with no more guesswork.">
 <meta property="og:url" content="https://terminal.glass/hosting/">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Hosting — Terminal.Glass | Private AI Deployment Options">
-<meta name="twitter:description" content="Where to host your private AI server: on-premises, private datacenter, customer-owned cloud, or managed hosting. One deployment, one system you control.">
+<meta name="twitter:title" content="Hosting — Terminal.Glass | Guided Private AI Deployment">
+<meta name="twitter:description" content="NoCloudGPT, AWS, and DigitalOcean deployment paths with fully guided server sizing. Private AI with no more guesswork.">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/css/site.css">
 </head>
@@ -29,12 +29,12 @@
     <nav aria-label="Main navigation">
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
       <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle menu">☰</label>
-            <ul>
+      <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/pricing/">Pricing</a></li>
         <li><a href="/hosting/" aria-current="page">Hosting</a></li>
         <li><a href="/models/">Models</a></li>
-        <li><a href="/agents/">Agents</a></li>
+        <li><a href="/jet-agents/">Agents</a></li>
         <li><a href="/contact/">Contact</a></li>
       </ul>
       <div class="nav-actions">
@@ -52,55 +52,54 @@
 <section class="page-hero">
   <div class="wrap">
     <span class="kicker">Hosting</span>
-    <h1>Where should your private AI server run?</h1>
-    <p class="lead">Terminal.Glass deploys on one Linux server you control — on-premises, in a private datacenter, or on customer-owned cloud infrastructure. One deployment. One place to manage.</p>
+    <h1>😎 Private AI with no more guesswork.</h1>
+    <p class="lead">Tell us which models, users, agents, and workloads you need. We translate those requirements into a complete server specification and step-by-step guided deployment path — then you run one installation script on infrastructure you control.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="/contact/?intent=order">Contact Sales</a>
-      <a class="btn btn-secondary" href="/contact/">Contact Us</a>
+      <a class="btn btn-secondary" href="/pricing/">View Pricing</a>
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="wrap">
-    <span class="kicker">Choices</span>
-    <h2>Four deployment paths</h2>
-    <p class="section-sub">Choose where your private AI system lives. Every path delivers a familiar ChatGPT-style interface with access to 100+ models.</p>
+    <span class="kicker">Current paths</span>
+    <h2>Three supported deployment paths</h2>
+    <p class="section-sub">Customers choose a supported deployment location. Terminal.Glass remains the product they buy and use. We remove the CPU, memory, storage, GPU, operating-system, and cloud-instance guesswork.</p>
     <div class="grid-2">
       <div class="card host-path">
-        <h3>Install on my server</h3>
-        <p class="path-desc">Hosted privately on one Linux server you own — office hardware, on-premise systems, clinics, shops, or other machines under your control.</p>
+        <h3>NoCloudGPT — Ubuntu Linux VMs and standalone servers</h3>
+        <p class="path-desc">Run Terminal.Glass on an Ubuntu Linux 24/26 virtual machine or standalone server you control — customer-owned, customer-controlled private AI on local, virtualized, or bare-metal infrastructure.</p>
         <ul class="check-list" style="margin-top:1rem;">
-          <li>You own the server</li>
-          <li>Models can stay on your infrastructure</li>
-          <li>Best when local control matters most</li>
+          <li>Ubuntu Linux 24/26 VM or standalone server</li>
+          <li>Completely private when inference stays on your hardware</li>
+          <li>One installation script, one Terminal.Glass instance</li>
         </ul>
       </div>
       <div class="card host-path">
-        <h3>Launch in my cloud</h3>
-        <p class="path-desc">A private AI server in a cloud account you control — such as AWS or a private VPS. You own the account; Terminal.Glass handles deployment.</p>
+        <h3>AWS — customer-owned account</h3>
+        <p class="path-desc">Terminal.Glass recommends the appropriate AWS instance, matched to selected models and workloads, with one-script deployment in a cloud account you own.</p>
         <ul class="check-list" style="margin-top:1rem;">
-          <li>Good when local hardware is not ready</li>
-          <li>Customer-owned cloud deployment</li>
-          <li>Start modest and scale as needed</li>
+          <li>Guided instance sizing for your workload</li>
+          <li>Customer owns the AWS account</li>
+          <li>Complete guided deployment instructions</li>
         </ul>
       </div>
       <div class="card host-path">
-        <h3>Add agent workflows</h3>
-        <p class="path-desc">Action-capable workflows that run inside approved environments on your private AI system — for teams that need more than chat.</p>
+        <h3>DigitalOcean — customer-owned account</h3>
+        <p class="path-desc">Terminal.Glass recommends the appropriate DigitalOcean server, matched to selected models and workloads, with one-script deployment in an account you control.</p>
         <ul class="check-list" style="margin-top:1rem;">
-          <li>Approved environment boundary</li>
-          <li>Extends your private AI server</li>
-          <li>Built with OpenClaw</li>
+          <li>Guided server sizing for your workload</li>
+          <li>Customer owns the DigitalOcean account</li>
+          <li>One script, one Terminal.Glass instance</li>
         </ul>
       </div>
       <div class="card host-path">
-        <h3>Add cloud model access</h3>
-        <p class="path-desc">Access stronger models through cloud inference while your private AI server handles the chat interface, user accounts, and document chat.</p>
+        <h3>Coming soon</h3>
+        <p class="path-desc">Google Cloud Platform and Microsoft Azure support are in development. Contact us if you are planning a deployment on GCP or Azure.</p>
         <ul class="check-list" style="margin-top:1rem;">
-          <li>More model power without a large local GPU</li>
-          <li>Third-party usage billed separately</li>
-          <li>Your team still uses one familiar interface</li>
+          <li>Google Cloud Platform — coming soon</li>
+          <li>Microsoft Azure — coming soon</li>
         </ul>
       </div>
     </div>
@@ -110,28 +109,28 @@
 <section class="section section-alt">
   <div class="wrap">
     <span class="kicker">Process</span>
-    <h2>From hosting choice to running system</h2>
-    <p class="section-sub">Your private AI server activates on infrastructure you own or control.</p>
+    <h2>From requirements to running system</h2>
+    <p class="section-sub">We handle the server specification and remove the guesswork. You create the recommended server, run one installation script, and receive one complete Terminal.Glass instance.</p>
     <div class="order-steps" style="margin-bottom:0;border-top:none;padding-top:0;">
       <div class="order-step">
         <span class="order-step-num">1</span>
-        <h3>Choose a plan</h3>
-        <p style="color:var(--muted);font-size:0.86rem;margin-top:0.5rem;line-height:1.6;">Sunrise Starter ($199, 2 licenses) or Sunrise Business ($399, 6 licenses) — based on team size and scope.</p>
+        <h3>Share your requirements</h3>
+        <p style="color:var(--muted);font-size:0.86rem;margin-top:0.5rem;line-height:1.6;">Models, users, agents, workloads, and preferred deployment path — NoCloudGPT, AWS, or DigitalOcean.</p>
       </div>
       <div class="order-step">
         <span class="order-step-num">2</span>
-        <h3>Choose hosting</h3>
-        <p style="color:var(--muted);font-size:0.86rem;margin-top:0.5rem;line-height:1.6;">On-premises, cloud account, agent workflows, or cloud model access.</p>
+        <h3>Receive your server specification</h3>
+        <p style="color:var(--muted);font-size:0.86rem;margin-top:0.5rem;line-height:1.6;">CPU, RAM, storage, GPU, operating system, and provider instance — sized for your deployment.</p>
       </div>
       <div class="order-step">
         <span class="order-step-num">3</span>
-        <h3>We deploy</h3>
-        <p style="color:var(--muted);font-size:0.86rem;margin-top:0.5rem;line-height:1.6;">Your private AI system — models, interface, and configuration on one Linux server.</p>
+        <h3>Run one installation script</h3>
+        <p style="color:var(--muted);font-size:0.86rem;margin-top:0.5rem;line-height:1.6;">😎 Complete guided deployment instructions on infrastructure you control.</p>
       </div>
       <div class="order-step">
         <span class="order-step-num">4</span>
         <h3>Your team starts</h3>
-        <p style="color:var(--muted);font-size:0.86rem;margin-top:0.5rem;line-height:1.6;">Users log in through a familiar ChatGPT-style interface.</p>
+        <p style="color:var(--muted);font-size:0.86rem;margin-top:0.5rem;line-height:1.6;">Happy Nerds Menu, built-in DokuWiki, Glass Agents, and Jet Agents on one Terminal.Glass instance.</p>
       </div>
     </div>
   </div>
@@ -142,10 +141,10 @@
     <span class="kicker">Ownership</span>
     <h2>Your server. Your data. Your control.</h2>
     <div class="note-box">
-      <p>The standard path is customer-owned: you install or launch your private AI server in your own environment. Terminal.Glass does not need access to your server by default.</p>
-      <p>White-glove setup can be offered as a support option, but customer ownership remains the default trust model. Infrastructure and third-party model usage are billed separately unless included in a written managed-hosting agreement.</p>
+      <p>The customer owns or controls the server or cloud account. Terminal.Glass does not need access to your server by default.</p>
+      <p>One server license activates one Terminal.Glass instance on one computer or cloud server. Deployment documentation and available support options are provided with your account.</p>
     </div>
-    <p class="section-link"><a href="/pricing/">Compare pricing plans →</a></p>
+    <p class="section-link"><a href="/pricing/">Compare Sunrise packages →</a></p>
   </div>
 </section>
 
@@ -171,16 +170,15 @@
       <ul>
         <li><a href="/hosting/">Hosting</a></li>
         <li><a href="/contact/?interest=NoCloudGPT+Deployment">NoCloudGPT</a></li>
-        <li><a href="/contact/?interest=YourCloudGPT+Deployment">YourCloudGPT</a></li>
+        <li><a href="/contact/?interest=AWS+or+DigitalOcean+Deployment">AWS or DigitalOcean</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Explore</h4>
       <ul>
         <li><a href="/models/">Models</a></li>
-        <li><a href="/agents/#glass-agents">Glass Agents</a></li>
-        <li><a href="/agents/#jet-agents">Jet Agents</a></li>
-        <li><a href="/agents/#alchemist">Alchemist Conductor</a></li>
+        <li><a href="/jet-agents/#glass-agents">Glass Agents</a></li>
+        <li><a href="/jet-agents/#jet-agents">Jet Agents</a></li>
       </ul>
     </div>
     <div class="footer-col">

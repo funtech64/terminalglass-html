@@ -48,9 +48,6 @@
     if (params.path && contactPathInterestMap[params.path]) {
       return contactPathInterestMap[params.path];
     }
-    if (params.intent === "alchemist-founders") {
-      return "Alchemist Conductor";
-    }
     return "";
   }
 

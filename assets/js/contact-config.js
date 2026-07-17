@@ -14,10 +14,9 @@ const contactInterestOptions = [
   { value: "Sunrise Business", label: "Sunrise Business" },
   { value: "Additional Glass License", label: "Additional Glass License" },
   { value: "NoCloudGPT Deployment", label: "NoCloudGPT Deployment" },
-  { value: "YourCloudGPT Deployment", label: "YourCloudGPT Deployment" },
+  { value: "AWS or DigitalOcean Deployment", label: "AWS or DigitalOcean Deployment" },
   { value: "Glass Agents", label: "Glass Agents" },
   { value: "Jet Agents", label: "Jet Agents" },
-  { value: "Alchemist Conductor", label: "Alchemist Conductor" },
   { value: "Enterprise Deployment", label: "Enterprise Deployment" },
   { value: "Partnership", label: "Partnership" },
   { value: "Technical Support", label: "Technical Support" },
@@ -27,7 +26,7 @@ const contactInterestOptions = [
 const contactDeploymentOptions = [
   { value: "", label: "Select an option (optional)" },
   { value: "My own server — NoCloudGPT", label: "My own server — NoCloudGPT" },
-  { value: "My own cloud — YourCloudGPT", label: "My own cloud — YourCloudGPT" },
+  { value: "My own cloud — AWS or DigitalOcean", label: "My own cloud — AWS or DigitalOcean" },
   { value: "Hybrid local and cloud", label: "Hybrid local and cloud" },
   { value: "Glass or Jet Agents", label: "Glass or Jet Agents" },
   { value: "Not sure yet", label: "Not sure yet" },
@@ -74,7 +73,6 @@ const contactUrlInterestMap = {
   "sunrise-starter": "Sunrise Starter",
   "sunrise-business": "Sunrise Business",
   "glass-license": "Additional Glass License",
-  "alchemist-founders": "Alchemist Conductor",
 };
 
 const contactPathInterestMap = {

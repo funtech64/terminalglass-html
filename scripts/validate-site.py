@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
-"""Validate terminal.glass static site before launch."""
+"""Validate terminal.glass static site — base checks plus B1 product-truth gates."""
 
 import os
 import re
 import sys
 import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
 from html.parser import HTMLParser
 from urllib.parse import urljoin
 
@@ -13,6 +12,19 @@ ROOT = "/workspace"
 BASE = "https://terminal.glass"
 ERRORS = []
 WARNINGS = []
+
+INTERNAL_DOC_GLOBS = (
+    "agents/cursorFileB1.md",
+    "LAUNCH-READINESS.md",
+    "PRODUCT-COPY-AUDIT-B1.md",
+    "PRODUCT-TRUTH.md",
+    "OWNER-DECISIONS-B1.md",
+    "README.md",
+    "terminal-glass-artwork-plan.md",
+    "models/terminal-glass_cloudModels.md",
+    "models/AGENTS.txt",
+)
+
 
 class MetaParser(HTMLParser):
     def __init__(self):
@@ -25,6 +37,7 @@ class MetaParser(HTMLParser):
         self.has_og = False
         self.has_twitter = False
         self.links = []
+        self.body_text = []
 
     def handle_starttag(self, tag, attrs):
         d = dict(attrs)
@@ -55,6 +68,7 @@ class MetaParser(HTMLParser):
             self.title += data
         elif self.in_h1:
             self.h1.append(data.strip())
+        self.body_text.append(data)
 
 
 def collect_pages():
@@ -94,11 +108,32 @@ def resolve(base, href):
     return p
 
 
+def is_internal_doc(rel):
+    return rel in INTERNAL_DOC_GLOBS or rel.startswith("models/data/")
+
+
+def scan_public_text(pattern, label, exclude_redirect=True):
+    rx = re.compile(pattern, re.I)
+    for root, _, files in os.walk(ROOT):
+        if ".git" in root:
+            continue
+        for f in files:
+            if not f.endswith((".html", ".js", ".css")):
+                continue
+            rel = os.path.relpath(os.path.join(root, f), ROOT)
+            if is_internal_doc(rel):
+                continue
+            if exclude_redirect and rel == "agents/index.html":
+                continue
+            content = open(os.path.join(root, f)).read()
+            if rx.search(content):
+                ERRORS.append(f"Public {label} remains in {rel}")
+
+
 def main():
     pages = collect_pages()
     print(f"Public pages: {len(pages)}")
 
-    # pricing in repo
     for path, info in pages.items():
         content = open(info["file"]).read()
         if re.search(r"\$200|\$400|Group Plan|Professional plan", content, re.I):
@@ -114,13 +149,13 @@ def main():
 
         p = MetaParser()
         p.feed(content)
-        if not p.h1:
+        if info["rel"] != "agents/index.html" and not p.h1:
             ERRORS.append(f"Missing H1: {path}")
-        if not p.canonical:
+        if info["rel"] != "agents/index.html" and not p.canonical:
             WARNINGS.append(f"Missing canonical: {path}")
-        elif not p.canonical.startswith(BASE):
+        elif p.canonical and not p.canonical.startswith(BASE):
             ERRORS.append(f"Wrong canonical domain on {path}: {p.canonical}")
-        if not p.has_og:
+        if info["rel"] != "agents/index.html" and not p.has_og:
             WARNINGS.append(f"Missing OG tags: {path}")
 
         for href in p.links:
@@ -129,8 +164,40 @@ def main():
                 continue
             if any(resolved.endswith(ext) for ext in (".css", ".js", ".webp", ".png", ".jpg", ".svg")):
                 continue
-            if resolved not in pages:
+            if resolved not in pages and resolved != "/agents/":
                 ERRORS.append(f"Broken link {href} -> {resolved} from {path}")
+
+        if info["rel"] == "jet-agents/index.html":
+            text = " ".join(p.body_text)
+            if "openclaw" not in text.lower():
+                ERRORS.append("jet-agents page missing OpenClaw reference")
+            if "ollama" not in text.lower():
+                ERRORS.append("jet-agents page missing Ollama reference")
+
+        if info["rel"] == "index.html":
+            text = " ".join(p.body_text)
+            if "no more guesswork" not in text.lower():
+                ERRORS.append("Homepage missing primary headline")
+            if "240" not in text:
+                ERRORS.append("Homepage missing 240 model families claim")
+
+    # Redirect page checks
+    redirect_path = os.path.join(ROOT, "agents/index.html")
+    if os.path.exists(redirect_path):
+        redirect = open(redirect_path).read()
+        if "/jet-agents/" not in redirect:
+            ERRORS.append("agents/index.html redirect missing /jet-agents/ target")
+        if "location.replace" not in redirect and 'http-equiv="refresh"' not in redirect:
+            ERRORS.append("agents/index.html missing redirect mechanism")
+        if "canonical" not in redirect or "jet-agents" not in redirect:
+            ERRORS.append("agents/index.html missing canonical to jet-agents")
+    else:
+        ERRORS.append("Missing agents/index.html redirect")
+
+    # B1 forbidden public terms
+    scan_public_text(r"alchemist", "Alchemist reference")
+    scan_public_text(r"yourcloudgpt", "YourCloudGPT public product reference")
+    scan_public_text(r'href="/agents/"', "legacy /agents/ internal link", exclude_redirect=True)
 
     # config checks
     cfg = open(os.path.join(ROOT, "assets/js/contact-config.js")).read()
@@ -138,11 +205,15 @@ def main():
         ERRORS.append("contact-config.js missing Formspree endpoint")
     if "jonathan@nocloudgpt.com" not in cfg:
         ERRORS.append("contact-config.js missing fallback email")
+    if "alchemist" in cfg.lower():
+        ERRORS.append("contact-config.js still references Alchemist")
 
     pricing = open(os.path.join(ROOT, "assets/js/pricing-config.js")).read()
     for price in ("price: 199", "price: 399", "price: 99"):
         if price not in pricing:
             ERRORS.append(f"pricing-config.js missing {price}")
+    if "alchemist" in pricing.lower():
+        ERRORS.append("pricing-config.js still references Alchemist")
 
     # sitemap
     sitemap_path = os.path.join(ROOT, "sitemap.xml")
@@ -160,13 +231,15 @@ def main():
             path += "/"
         sitemap_urls.add(path)
 
-    page_urls = set(pages.keys())
+    page_urls = set(pages.keys()) - {"/agents/"}
     missing_from_sitemap = page_urls - sitemap_urls
     extra_in_sitemap = sitemap_urls - page_urls
     if missing_from_sitemap:
         ERRORS.append(f"Pages missing from sitemap: {sorted(missing_from_sitemap)}")
     if extra_in_sitemap:
         ERRORS.append(f"Sitemap URLs without pages: {sorted(extra_in_sitemap)}")
+    if "https://terminal.glass/agents/" in locs or "/agents/" in sitemap_urls:
+        ERRORS.append("Sitemap still lists legacy /agents/ URL")
 
     robots = open(os.path.join(ROOT, "robots.txt")).read()
     if "Allow: /" not in robots or "terminal.glass/sitemap.xml" not in robots:
