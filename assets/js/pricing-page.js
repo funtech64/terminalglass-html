@@ -421,6 +421,24 @@
     };
 
     script.textContent = JSON.stringify(data);
+
+    const faqScript = document.createElement("script");
+    faqScript.type = "application/ld+json";
+    faqScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: pricingFaqs.map(function (faq) {
+        return {
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        };
+      }),
+    });
+    script.parentNode.insertBefore(faqScript, script.nextSibling);
   }
 
   function init() {
