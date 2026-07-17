@@ -338,33 +338,6 @@
     wrapper.innerHTML = html;
   }
 
-  function renderAlchemistSection() {
-    const container = document.getElementById("alchemist-section-content");
-    if (!container) return;
-
-    container.innerHTML =
-      "<p>" +
-      escapeHtml(alchemistConductor.description) +
-      "</p>" +
-      "<p>It will:</p>" +
-      '<ul class="check-list">' +
-      alchemistConductor.capabilities
-        .map(function (c) {
-          return "<li>" + escapeHtml(c) + "</li>";
-        })
-        .join("") +
-      "</ul>" +
-      '<p class="alchemist-bridge"><strong>' +
-      escapeHtml(alchemistConductor.bridge) +
-      "</strong></p>" +
-      '<div class="cta-row">' +
-      '<a class="btn btn-secondary" href="' +
-      escapeHtml(alchemistConductor.ctaHref) +
-      '">' +
-      escapeHtml(alchemistConductor.ctaLabel) +
-      "</a></div>";
-  }
-
   function renderFaqs() {
     const container = document.getElementById("faq-list");
     if (!container) return;
@@ -447,7 +420,6 @@
     renderPricingLogic();
     renderDeploymentTypes();
     renderComparisonTable();
-    renderAlchemistSection();
     renderFaqs();
     renderStructuredData();
   }

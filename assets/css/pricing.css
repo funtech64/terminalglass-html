@@ -463,36 +463,6 @@
   background: rgba(255, 255, 255, 0.02);
 }
 
-/* ---------- Alchemist section ---------- */
-
-.alchemist-section {
-  position: relative;
-}
-
-.alchemist-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 50% 60% at 50% 100%, rgba(61, 184, 138, 0.04), transparent 70%);
-  pointer-events: none;
-}
-
-.alchemist-section .wrap {
-  position: relative;
-}
-
-.alchemist-bridge {
-  margin: 24px 0;
-  font-size: 1rem;
-  line-height: 1.65;
-  color: var(--muted);
-}
-
-.alchemist-bridge strong {
-  color: var(--text);
-  font-weight: 600;
-}
-
 /* ---------- FAQ ---------- */
 
 .faq-list {
