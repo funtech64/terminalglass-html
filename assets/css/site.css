@@ -558,6 +558,14 @@ nav a:hover {
   overflow: visible;
 }
 
+.hero-qualifier {
+  color: var(--muted);
+  font-size: 0.92rem;
+  max-width: 520px;
+  margin-bottom: 1rem;
+  line-height: 1.65;
+}
+
 .hero-tagline {
   font-family: var(--mono);
   font-size: 0.82rem;

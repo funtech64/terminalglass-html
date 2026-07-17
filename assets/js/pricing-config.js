@@ -28,7 +28,7 @@ const pricingPlans = [
       "2 portable Glass Licenses",
       "Deploy NoCloudGPT on customer-owned hardware",
       "Deploy YourCloudGPT in the customer's own cloud",
-      "Assign licenses to servers, Glass Agents, or Jet Agents",
+      "Assign licenses to servers with Glass Agent and Jet Agent beta eligibility",
       "Starter Happy Nerds Menu agents",
       "OpenClaw-Glass beta eligibility",
       "Private customer-controlled deployment",
@@ -59,7 +59,7 @@ const pricingPlans = [
       "Priority access to Glass Agent and Jet Agent betas",
       "Founding-member discount for Alchemist Conductor",
       "Better fit for teams, departments, and multi-location businesses",
-      "Ability to mix NoCloudGPT, YourCloudGPT, Glass Agents, and Jet Agents",
+      "Ability to mix NoCloudGPT, YourCloudGPT, and eligible Glass Agent or Jet Agent betas",
     ],
     ctaLabel: "Choose Sunrise Business",
     ctaHref: "/contact/?intent=order&package=sunrise-business",
@@ -80,8 +80,8 @@ const pricingPlans = [
       "Add one additional portable Glass License",
       "Use it for another NoCloudGPT server",
       "Use it for another YourCloudGPT server",
-      "Assign it to a Glass Agent",
-      "Assign it to a Jet Agent",
+      "Assign it to an eligible Glass Agent beta",
+      "Assign it to an eligible Jet Agent beta",
       "Reassign it later to a different supported deployment",
       "Available to existing terminal.glass customers",
       "No need to purchase another complete starter package",
@@ -172,13 +172,13 @@ const glassLicenseDeploymentTypes = [
     id: "glass-agent",
     name: "Glass Agent",
     description:
-      "An action-capable worker operating inside an approved environment",
+      "Supported beta: an action-capable worker operating inside an approved environment",
   },
   {
     id: "jet-agent",
     name: "Jet Agent",
     description:
-      "A cloud-model-powered AI helper for advanced reasoning, drafting, research, and technical work",
+      "Supported beta: a cloud-model-powered AI helper for advanced reasoning, drafting, research, and technical work",
   },
 ];
 
@@ -238,12 +238,12 @@ const pricingFaqs = [
   {
     question: "What are Glass Agents?",
     answer:
-      "Glass Agents are action-capable workers that operate within an environment approved by the customer.",
+      "Glass Agents are supported beta offerings: action-capable workers that operate within an environment approved by the customer. Eligibility is included with Sunrise packages; availability and rollout vary by deployment path and current beta access.",
   },
   {
     question: "What are Jet Agents?",
     answer:
-      "Jet Agents use powerful cloud models for reasoning, research, drafting, coding, and other advanced tasks.",
+      "Jet Agents are supported beta offerings that use powerful cloud models for reasoning, research, drafting, coding, and other advanced tasks. Eligibility is included with Sunrise packages; availability and rollout vary by deployment path and current beta access.",
   },
   {
     question: "Is $99 a promotional price?",

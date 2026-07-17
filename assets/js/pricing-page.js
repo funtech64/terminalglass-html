@@ -153,7 +153,7 @@
     html += "</div>";
 
     html +=
-      '<p class="infra-disclaimer">Buy private AI licenses once. Run them on your server, in your cloud, or as Glass and Jet Agents. Hardware, cloud servers, storage, and third-party model usage are billed separately by your provider.</p>';
+      '<p class="infra-disclaimer">Buy portable Glass Licenses once. Run them on your server, in your cloud, or assign eligible Glass Agent and Jet Agent betas when available. Hardware, cloud servers, storage, and third-party model usage are billed separately by your provider.</p>';
 
     container.innerHTML = html;
   }
