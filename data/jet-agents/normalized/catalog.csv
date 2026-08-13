@@ -1,0 +1,27 @@
+ollama_tag,slug,display_name,publisher,context_length,parameter_size,eight_ball_featured,classifications,official_url
+mistral-large-3:675b-cloud,mistral-large-3-675b-cloud,Mistral Large 3,Mistral AI,256K,not stated,True,vision-multimodal;tool-use;long-context;enterprise-large,https://ollama.com/library/mistral-large-3
+qwen3-coder:480b-cloud,qwen3-coder-480b-cloud,Qwen3 Coder,Alibaba Cloud (Qwen team),256K,not stated,True,coding;tool-use;agentic-work;long-context;enterprise-large,https://ollama.com/library/qwen3-coder
+qwen3.5:cloud,qwen3-5-cloud,Qwen3.5,Alibaba Cloud (Qwen team),256K,not stated,True,vision-multimodal;reasoning;tool-use;agentic-work;long-context,https://ollama.com/library/qwen3.5
+deepseek-v4-flash:0731-cloud,deepseek-v4-flash-0731-cloud,Deepseek V4 Flash,DeepSeek,1M,not stated,False,reasoning;tool-use;agentic-work;long-context;lightweight-fast,https://ollama.com/library/deepseek-v4-flash
+deepseek-v4-flash:cloud,deepseek-v4-flash-cloud,Deepseek V4 Flash,DeepSeek,1M,not stated,False,reasoning;tool-use;agentic-work;long-context;lightweight-fast,https://ollama.com/library/deepseek-v4-flash
+deepseek-v4-flash:preview-cloud,deepseek-v4-flash-preview-cloud,Deepseek V4 Flash,DeepSeek,1M,not stated,False,reasoning;tool-use;agentic-work;long-context;lightweight-fast,https://ollama.com/library/deepseek-v4-flash
+deepseek-v4-pro:cloud,deepseek-v4-pro-cloud,Deepseek V4 Pro,DeepSeek,1M,not stated,False,reasoning;tool-use;agentic-work;long-context;enterprise-large,https://ollama.com/library/deepseek-v4-pro
+devstral-2:123b-cloud,devstral-2-123b-cloud,Devstral 2,Mistral AI,256K,not stated,False,coding;tool-use;agentic-work;long-context,https://ollama.com/library/devstral-2
+devstral-small-2:24b-cloud,devstral-small-2-24b-cloud,Devstral Small 2,Mistral AI,384K,not stated,False,vision-multimodal;coding;tool-use;agentic-work;long-context;lightweight-fast,https://ollama.com/library/devstral-small-2
+gemini-3-flash-preview:cloud,gemini-3-flash-preview-cloud,Gemini 3 Flash Preview,Google,unknown,not stated,False,lightweight-fast,https://ollama.com/library/gemini-3-flash-preview
+gemma4:31b-cloud,gemma4-31b-cloud,Gemma4,Google,128K,not stated,False,vision-multimodal;reasoning;tool-use;agentic-work,https://ollama.com/library/gemma4
+gemma4:cloud,gemma4-cloud,Gemma4,Google,128K,not stated,False,vision-multimodal;reasoning;tool-use;agentic-work,https://ollama.com/library/gemma4
+glm-5.1:cloud,glm-5-1-cloud,Glm 5.1,Z.ai,198K,not stated,False,coding;reasoning;tool-use;agentic-work,https://ollama.com/library/glm-5.1
+glm-5.2:cloud,glm-5-2-cloud,Glm 5.2,Z.ai,976K,not stated,False,reasoning;tool-use;agentic-work;long-context,https://ollama.com/library/glm-5.2
+gpt-oss:120b-cloud,gpt-oss-120b-cloud,Gpt Oss,OpenAI (open-weight),128K,20B,False,reasoning;tool-use;agentic-work;enterprise-large,https://ollama.com/library/gpt-oss
+gpt-oss:20b-cloud,gpt-oss-20b-cloud,Gpt Oss,OpenAI (open-weight),128K,20B,False,reasoning;tool-use;agentic-work,https://ollama.com/library/gpt-oss
+kimi-k2.6:cloud,kimi-k2-6-cloud,Kimi K2.6,Moonshot AI,256K,not stated,False,vision-multimodal;reasoning;tool-use;agentic-work;long-context,https://ollama.com/library/kimi-k2.6
+kimi-k2.7-code:cloud,kimi-k2-7-code-cloud,Kimi K2.7 Code,Moonshot AI,256K,not stated,False,vision-multimodal;coding;reasoning;tool-use;agentic-work;long-context,https://ollama.com/library/kimi-k2.7-code
+kimi-k3:cloud,kimi-k3-cloud,Kimi K3,Moonshot AI,1M,not stated,False,vision-multimodal;reasoning;tool-use;agentic-work;long-context,https://ollama.com/library/kimi-k3
+minimax-m2.1:cloud,minimax-m2-1-cloud,Minimax M2.1,MiniMax,unknown,not stated,False,coding,https://ollama.com/library/minimax-m2.1
+minimax-m2.7:cloud,minimax-m2-7-cloud,Minimax M2.7,MiniMax,200K,not stated,False,vision-multimodal;reasoning;tool-use;agentic-work,https://ollama.com/library/minimax-m2.7
+minimax-m3:cloud,minimax-m3-cloud,Minimax M3,MiniMax,1M,not stated,False,vision-multimodal;reasoning;tool-use;agentic-work;long-context,https://ollama.com/library/minimax-m3
+nemotron-3-nano:30b-cloud,nemotron-3-nano-30b-cloud,Nemotron 3 Nano,NVIDIA,1M,4B,False,reasoning;tool-use;agentic-work;long-context;lightweight-fast,https://ollama.com/library/nemotron-3-nano
+nemotron-3-super:cloud,nemotron-3-super-cloud,Nemotron 3 Super,NVIDIA,256K,12B,False,reasoning;tool-use;agentic-work;long-context;enterprise-large,https://ollama.com/library/nemotron-3-super
+nemotron-3-ultra:cloud,nemotron-3-ultra-cloud,Nemotron 3 Ultra,NVIDIA,256K,not stated,False,reasoning;tool-use;agentic-work;long-context;enterprise-large,https://ollama.com/library/nemotron-3-ultra
+qwen3.5:397b-cloud,qwen3-5-397b-cloud,Qwen3.5,Alibaba Cloud (Qwen team),256K,not stated,False,vision-multimodal;reasoning;tool-use;agentic-work;long-context;enterprise-large,https://ollama.com/library/qwen3.5

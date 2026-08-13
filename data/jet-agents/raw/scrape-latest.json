@@ -1,0 +1,730 @@
+{
+  "scrape_date": "2026-08-13",
+  "source_url": "https://ollama.com/search?c=cloud",
+  "tags_api_url": "https://ollama.com/api/tags?c=cloud",
+  "search_families": [
+    "deepseek-v4-flash",
+    "deepseek-v4-pro",
+    "gemma4",
+    "glm-5.1",
+    "glm-5.2",
+    "gpt-oss",
+    "kimi-k2.6",
+    "kimi-k2.7-code",
+    "kimi-k3",
+    "minimax-m2.7",
+    "minimax-m3",
+    "mistral-large-3",
+    "nemotron-3-nano",
+    "nemotron-3-super",
+    "nemotron-3-ultra",
+    "qwen3.5"
+  ],
+  "legacy_families_checked": [
+    "gemma3",
+    "gemma4",
+    "qwen3.5",
+    "gpt-oss",
+    "qwen3-coder",
+    "nemotron-3-super",
+    "glm-5",
+    "minimax-m2.5",
+    "glm-5.1",
+    "gemini-3-flash-preview",
+    "minimax-m2.7",
+    "glm-4.7",
+    "deepseek-v3.2",
+    "minimax-m2.1",
+    "qwen3-coder-next",
+    "ministral-3",
+    "devstral-small-2",
+    "deepseek-v3.1",
+    "nemotron-3-nano",
+    "rnj-1",
+    "kimi-k2.5",
+    "kimi-k2.6",
+    "devstral-2",
+    "deepseek-v4-pro",
+    "deepseek-v4-flash",
+    "mistral-large-3",
+    "minimax-m3",
+    "glm-5.2",
+    "kimi-k2.7-code",
+    "kimi-k3",
+    "nemotron-3-ultra"
+  ],
+  "tags_api_models": [
+    {
+      "name": "minimax-m2.7",
+      "model": "minimax-m2.7",
+      "modified_at": "2026-03-18T00:00:00Z",
+      "size": 480836588544,
+      "digest": "d1008bea3761",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "mistral-large-3:675b",
+      "model": "mistral-large-3:675b",
+      "modified_at": "2025-12-02T00:00:00Z",
+      "size": 682000000000,
+      "digest": "f7e3b2a16d5c",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "gemma4:31b",
+      "model": "gemma4:31b",
+      "modified_at": "2026-04-02T09:00:00-08:00",
+      "size": 62546177752,
+      "digest": "221b330d11a8",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "kimi-k2.7-code",
+      "model": "kimi-k2.7-code",
+      "modified_at": "2026-06-12T00:00:00Z",
+      "size": 595148192736,
+      "digest": "1a7e88d8c572",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "nemotron-3-ultra",
+      "model": "nemotron-3-ultra",
+      "modified_at": "2026-06-04T00:00:00Z",
+      "size": 0,
+      "digest": "4eecabff7a75",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "deepseek-v4-pro",
+      "model": "deepseek-v4-pro",
+      "modified_at": "2026-04-24T00:00:00Z",
+      "size": 1600000000000,
+      "digest": "079ba36ea28c",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "qwen3.5:397b",
+      "model": "qwen3.5:397b",
+      "modified_at": "2026-02-16T00:00:00Z",
+      "size": 397000000000,
+      "digest": "b909ca2f1b7f",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "glm-5.1",
+      "model": "glm-5.1",
+      "modified_at": "2026-04-07T08:00:00-07:00",
+      "size": 1507728316928,
+      "digest": "882e35812821",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "deepseek-v4-flash:0731",
+      "model": "deepseek-v4-flash:0731",
+      "modified_at": "2026-07-31T08:00:00-07:00",
+      "size": 166878536440,
+      "digest": "4de9bf66c0eb",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "nemotron-3-nano:30b",
+      "model": "nemotron-3-nano:30b",
+      "modified_at": "2025-12-15T00:00:00Z",
+      "size": 32645090390,
+      "digest": "a4b4f1851393",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "glm-5.2",
+      "model": "glm-5.2",
+      "modified_at": "2026-06-16T08:00:00-07:00",
+      "size": 0,
+      "digest": "f553240f6dc4",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "gpt-oss:20b",
+      "model": "gpt-oss:20b",
+      "modified_at": "2025-08-05T00:00:00Z",
+      "size": 13780162412,
+      "digest": "05afbac4bad6",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "kimi-k2.6",
+      "model": "kimi-k2.6",
+      "modified_at": "2026-04-20T00:00:00Z",
+      "size": 595148192736,
+      "digest": "4764ecb21f85",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "kimi-k3",
+      "model": "kimi-k3",
+      "modified_at": "2026-07-27T08:00:00-07:00",
+      "size": 1560860324864,
+      "digest": "d189309738f0",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "gpt-oss:120b",
+      "model": "gpt-oss:120b",
+      "modified_at": "2025-08-05T00:00:00Z",
+      "size": 65290180781,
+      "digest": "d98fe6ba01e6",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "minimax-m3",
+      "model": "minimax-m3",
+      "modified_at": "2026-06-01T00:00:00Z",
+      "size": 0,
+      "digest": "9ce5291d9c0e",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "nemotron-3-super",
+      "model": "nemotron-3-super",
+      "modified_at": "2026-03-11T00:00:00Z",
+      "size": 230500000000,
+      "digest": "da11955bb451",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    },
+    {
+      "name": "deepseek-v4-flash:preview",
+      "model": "deepseek-v4-flash:preview",
+      "modified_at": "2026-04-24T00:00:00Z",
+      "size": 140000000000,
+      "digest": "ac252c581d64",
+      "details": {
+        "parent_model": "",
+        "format": "",
+        "family": "",
+        "families": null,
+        "parameter_size": "",
+        "quantization_level": ""
+      }
+    }
+  ],
+  "families": {
+    "deepseek-v3.1": {
+      "url": "https://ollama.com/library/deepseek-v3.1",
+      "in_cloud_search": false,
+      "has_cloud_tags": false,
+      "cloud_tags": [],
+      "description_excerpt": "DeepSeek-V3.1-Terminus is a hybrid model that supports both thinking mode and non-thinking mode.",
+      "capabilities": [
+        "tools",
+        "thinking"
+      ]
+    },
+    "deepseek-v3.2": {
+      "url": "https://ollama.com/library/deepseek-v3.2",
+      "in_cloud_search": false,
+      "has_cloud_tags": false,
+      "cloud_tags": [],
+      "description_excerpt": "DeepSeek-V3.2, a model that harmonizes high computational efficiency with superior reasoning and agent performance.",
+      "capabilities": [
+        "unknown"
+      ]
+    },
+    "deepseek-v4-flash": {
+      "url": "https://ollama.com/library/deepseek-v4-flash",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "deepseek-v4-flash:0731-cloud",
+        "deepseek-v4-flash:cloud",
+        "deepseek-v4-flash:preview-cloud"
+      ],
+      "description_excerpt": "DeepSeek-V4-Flash is a preview of the DeepSeek-V4 series, a Mixture-of-Experts model with 284B total parameters and 13B activated, built for efficient reasoning across a 1M-token context window.",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ]
+    },
+    "deepseek-v4-pro": {
+      "url": "https://ollama.com/library/deepseek-v4-pro",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "deepseek-v4-pro:cloud"
+      ],
+      "description_excerpt": "DeepSeek-V4-Pro is a frontier Mixture-of-Experts model with a large context window and three reasoning modes.",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ]
+    },
+    "devstral-2": {
+      "url": "https://ollama.com/library/devstral-2",
+      "in_cloud_search": false,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "devstral-2:123b-cloud"
+      ],
+      "description_excerpt": "123B model that excels at using tools to explore codebases, editing multiple files and power software engineering agents.",
+      "capabilities": [
+        "tools"
+      ]
+    },
+    "devstral-small-2": {
+      "url": "https://ollama.com/library/devstral-small-2",
+      "in_cloud_search": false,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "devstral-small-2:24b-cloud"
+      ],
+      "description_excerpt": "24B model that excels at using tools to explore codebases, editing multiple files and power software engineering agents.",
+      "capabilities": [
+        "vision",
+        "tools"
+      ]
+    },
+    "gemini-3-flash-preview": {
+      "url": "https://ollama.com/library/gemini-3-flash-preview",
+      "in_cloud_search": false,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "gemini-3-flash-preview:cloud"
+      ],
+      "description_excerpt": "Gemini 3 Flash offers frontier intelligence built for speed at a fraction of the cost.",
+      "capabilities": [
+        "cloud"
+      ]
+    },
+    "gemma3": {
+      "url": "https://ollama.com/library/gemma3",
+      "in_cloud_search": false,
+      "has_cloud_tags": false,
+      "cloud_tags": [],
+      "description_excerpt": "The current, most capable model that runs on a single GPU.",
+      "capabilities": [
+        "vision"
+      ]
+    },
+    "gemma4": {
+      "url": "https://ollama.com/library/gemma4",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "gemma4:31b-cloud",
+        "gemma4:cloud"
+      ],
+      "description_excerpt": "Gemma 4 models are designed to deliver frontier-level performance at each size. They are well-suited for reasoning, agentic workflows, coding, and multimodal understanding.",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ]
+    },
+    "glm-4.7": {
+      "url": "https://ollama.com/library/glm-4.7",
+      "in_cloud_search": false,
+      "has_cloud_tags": false,
+      "cloud_tags": [],
+      "description_excerpt": "Advancing the Coding Capability",
+      "capabilities": [
+        "unknown"
+      ]
+    },
+    "glm-5": {
+      "url": "https://ollama.com/library/glm-5",
+      "in_cloud_search": false,
+      "has_cloud_tags": false,
+      "cloud_tags": [],
+      "description_excerpt": "A strong reasoning and agentic model from Z.ai with 744B total parameters (40B active), built for complex systems engineering and long-horizon tasks.",
+      "capabilities": [
+        "unknown"
+      ]
+    },
+    "glm-5.1": {
+      "url": "https://ollama.com/library/glm-5.1",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "glm-5.1:cloud"
+      ],
+      "description_excerpt": "GLM-5.1 is our next-generation flagship model for agentic engineering, with significantly stronger coding capabilities than its predecessor. It achieves state-of-the-art performance on SWE-Bench Pro and leads GLM-5 by a wide margin.",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ]
+    },
+    "glm-5.2": {
+      "url": "https://ollama.com/library/glm-5.2",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "glm-5.2:cloud"
+      ],
+      "description_excerpt": "GLM-5.2 is Z.ai\u2019s flagship model for the era of long-horizon tasks.",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ]
+    },
+    "gpt-oss": {
+      "url": "https://ollama.com/library/gpt-oss",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "gpt-oss:120b-cloud",
+        "gpt-oss:20b-cloud"
+      ],
+      "description_excerpt": "OpenAI\u2019s open-weight models designed for powerful reasoning, agentic tasks, and versatile developer use cases.",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ]
+    },
+    "kimi-k2.5": {
+      "url": "https://ollama.com/library/kimi-k2.5",
+      "in_cloud_search": false,
+      "has_cloud_tags": false,
+      "cloud_tags": [],
+      "description_excerpt": "Kimi K2.5 is an open-source, native multimodal agentic model that seamlessly integrates vision and language understanding with advanced agentic capabilities, instant and thinking modes, as well as conversational and agentic paradigms.",
+      "capabilities": [
+        "vision"
+      ]
+    },
+    "kimi-k2.6": {
+      "url": "https://ollama.com/library/kimi-k2.6",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "kimi-k2.6:cloud"
+      ],
+      "description_excerpt": "Kimi K2.6 is an open-source, native multimodal agentic model that advances practical capabilities in long-horizon coding, coding-driven design, proactive autonomous execution, and swarm-based task orchestration.",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ]
+    },
+    "kimi-k2.7-code": {
+      "url": "https://ollama.com/library/kimi-k2.7-code",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "kimi-k2.7-code:cloud"
+      ],
+      "description_excerpt": "Kimi K2.7 Code is Moonshot AI's coding-focused agentic model built upon Kimi K2.6, with substantial improvements on real-world long-horizon coding tasks and roughly 30% lower thinking-token usage.",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ]
+    },
+    "kimi-k3": {
+      "url": "https://ollama.com/library/kimi-k3",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "kimi-k3:cloud"
+      ],
+      "description_excerpt": "Kimi K3 is an open-weight, native multimodal agentic model and our most capable model to date.",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ]
+    },
+    "minimax-m2.1": {
+      "url": "https://ollama.com/library/minimax-m2.1",
+      "in_cloud_search": false,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "minimax-m2.1:cloud"
+      ],
+      "description_excerpt": "Exceptional multilingual capabilities to elevate code engineering",
+      "capabilities": [
+        "cloud"
+      ]
+    },
+    "minimax-m2.5": {
+      "url": "https://ollama.com/library/minimax-m2.5",
+      "in_cloud_search": false,
+      "has_cloud_tags": false,
+      "cloud_tags": [],
+      "description_excerpt": "MiniMax-M2.5 is a state-of-the-art large language model designed for real-world productivity and coding tasks.",
+      "capabilities": [
+        "unknown"
+      ]
+    },
+    "minimax-m2.7": {
+      "url": "https://ollama.com/library/minimax-m2.7",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "minimax-m2.7:cloud"
+      ],
+      "description_excerpt": "MiniMax's M2-series model for coding, agentic workflows, and professional productivity.",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ]
+    },
+    "minimax-m3": {
+      "url": "https://ollama.com/library/minimax-m3",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "minimax-m3:cloud"
+      ],
+      "description_excerpt": "MiniMax M3: Coding & Agentic Frontier. 1M context window. Native Multimodality.",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ]
+    },
+    "ministral-3": {
+      "url": "https://ollama.com/library/ministral-3",
+      "in_cloud_search": false,
+      "has_cloud_tags": false,
+      "cloud_tags": [],
+      "description_excerpt": "The Ministral 3 family is designed for edge deployment, capable of running on a wide range of hardware.",
+      "capabilities": [
+        "vision",
+        "tools"
+      ]
+    },
+    "mistral-large-3": {
+      "url": "https://ollama.com/library/mistral-large-3",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "mistral-large-3:675b-cloud"
+      ],
+      "description_excerpt": "A general-purpose multimodal mixture-of-experts model for production-grade tasks and enterprise workloads.",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools"
+      ]
+    },
+    "nemotron-3-nano": {
+      "url": "https://ollama.com/library/nemotron-3-nano",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "nemotron-3-nano:30b-cloud"
+      ],
+      "description_excerpt": "Nemotron-3-Nano is a new Standard for Efficient, Open, and Intelligent Agentic Models, now updated with a 4B parameter count model.",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ]
+    },
+    "nemotron-3-super": {
+      "url": "https://ollama.com/library/nemotron-3-super",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "nemotron-3-super:cloud"
+      ],
+      "description_excerpt": "NVIDIA Nemotron 3 Super is a 120B open MoE model activating just 12B parameters to deliver maximum compute efficiency and accuracy for complex multi-agent applications.",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ]
+    },
+    "nemotron-3-ultra": {
+      "url": "https://ollama.com/library/nemotron-3-ultra",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "nemotron-3-ultra:cloud"
+      ],
+      "description_excerpt": "NVIDIA Nemotron 3 Ultra is built for high-throughput reasoning and long-running agent workflows.",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ]
+    },
+    "qwen3-coder": {
+      "url": "https://ollama.com/library/qwen3-coder",
+      "in_cloud_search": false,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "qwen3-coder:480b-cloud"
+      ],
+      "description_excerpt": "Alibaba's performant long context models for agentic and coding tasks.",
+      "capabilities": [
+        "cloud",
+        "tools"
+      ]
+    },
+    "qwen3-coder-next": {
+      "url": "https://ollama.com/library/qwen3-coder-next",
+      "in_cloud_search": false,
+      "has_cloud_tags": false,
+      "cloud_tags": [],
+      "description_excerpt": "Qwen3-Coder-Next is a coding-focused language model from Alibaba's Qwen team, optimized for agentic coding workflows and local development.",
+      "capabilities": [
+        "tools"
+      ]
+    },
+    "qwen3.5": {
+      "url": "https://ollama.com/library/qwen3.5",
+      "in_cloud_search": true,
+      "has_cloud_tags": true,
+      "cloud_tags": [
+        "qwen3.5:397b-cloud",
+        "qwen3.5:cloud"
+      ],
+      "description_excerpt": "Qwen 3.5 is a family of open-source multimodal models that delivers exceptional utility and performance.",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ]
+    },
+    "rnj-1": {
+      "url": "https://ollama.com/library/rnj-1",
+      "in_cloud_search": false,
+      "has_cloud_tags": false,
+      "cloud_tags": [],
+      "description_excerpt": "Rnj-1 is a family of 8B parameter open-weight, dense models trained from scratch by Essential AI, optimized for code and STEM with capabilities on par with SOTA open-weight models.",
+      "capabilities": [
+        "tools"
+      ]
+    }
+  }
+}
