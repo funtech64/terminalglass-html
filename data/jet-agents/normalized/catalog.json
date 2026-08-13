@@ -1,0 +1,1108 @@
+{
+  "scrape_date": "2026-08-13",
+  "source_url": "https://ollama.com/search?c=cloud",
+  "record_count": 26,
+  "agents": [
+    {
+      "ollama_family": "mistral-large-3",
+      "display_name": "Mistral Large 3",
+      "description": "A general-purpose multimodal mixture-of-experts model for production-grade tasks and enterprise workloads.",
+      "cloud_tags": [
+        "mistral-large-3:675b-cloud"
+      ],
+      "primary_cloud_tag": "mistral-large-3:675b-cloud",
+      "cloud_designation": true,
+      "vision_support": true,
+      "tool_support": true,
+      "thinking_support": false,
+      "context_length": "256K",
+      "parameter_size": "not stated",
+      "license": "allowing usage and modification for both commercial and non-commercial purposes.",
+      "publisher": "Mistral AI",
+      "official_url": "https://ollama.com/library/mistral-large-3",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools"
+      ],
+      "slug": "mistral-large-3-675b-cloud",
+      "ollama_tag": "mistral-large-3:675b-cloud",
+      "eight_ball_featured": true,
+      "classifications": [
+        "vision-multimodal",
+        "tool-use",
+        "long-context",
+        "enterprise-large"
+      ],
+      "recommended_work": [
+        "Documents, images, and multimodal inputs",
+        "Workflows that call external tools",
+        "Very long documents and conversation history",
+        "Demanding production workloads"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "qwen3-coder",
+      "display_name": "Qwen3 Coder",
+      "description": "Alibaba's performant long context models for agentic and coding tasks.",
+      "cloud_tags": [
+        "qwen3-coder:480b-cloud"
+      ],
+      "primary_cloud_tag": "qwen3-coder:480b-cloud",
+      "cloud_designation": true,
+      "vision_support": false,
+      "tool_support": true,
+      "thinking_support": false,
+      "context_length": "256K",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "Alibaba Cloud (Qwen team)",
+      "official_url": "https://ollama.com/library/qwen3-coder",
+      "capabilities": [
+        "cloud",
+        "tools"
+      ],
+      "slug": "qwen3-coder-480b-cloud",
+      "ollama_tag": "qwen3-coder:480b-cloud",
+      "eight_ball_featured": true,
+      "classifications": [
+        "coding",
+        "tool-use",
+        "agentic-work",
+        "long-context",
+        "enterprise-large"
+      ],
+      "recommended_work": [
+        "Software engineering and repository work",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history",
+        "Demanding production workloads"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "qwen3.5",
+      "display_name": "Qwen3.5",
+      "description": "Qwen 3.5 is a family of open-source multimodal models that delivers exceptional utility and performance.",
+      "cloud_tags": [
+        "qwen3.5:397b-cloud",
+        "qwen3.5:cloud"
+      ],
+      "primary_cloud_tag": "qwen3.5:cloud",
+      "cloud_designation": true,
+      "vision_support": true,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "256K",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "Alibaba Cloud (Qwen team)",
+      "official_url": "https://ollama.com/library/qwen3.5",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ],
+      "slug": "qwen3-5-cloud",
+      "ollama_tag": "qwen3.5:cloud",
+      "eight_ball_featured": true,
+      "classifications": [
+        "vision-multimodal",
+        "reasoning",
+        "tool-use",
+        "agentic-work",
+        "long-context"
+      ],
+      "recommended_work": [
+        "Documents, images, and multimodal inputs",
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "deepseek-v4-flash",
+      "display_name": "Deepseek V4 Flash",
+      "description": "DeepSeek-V4-Flash is a preview of the DeepSeek-V4 series, a Mixture-of-Experts model with 284B total parameters and 13B activated, built for efficient reasoning across a 1M-token context window.",
+      "cloud_tags": [
+        "deepseek-v4-flash:0731-cloud",
+        "deepseek-v4-flash:cloud",
+        "deepseek-v4-flash:preview-cloud"
+      ],
+      "primary_cloud_tag": "deepseek-v4-flash:0731-cloud",
+      "cloud_designation": true,
+      "vision_support": false,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "1M",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "DeepSeek",
+      "official_url": "https://ollama.com/library/deepseek-v4-flash",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ],
+      "slug": "deepseek-v4-flash-0731-cloud",
+      "ollama_tag": "deepseek-v4-flash:0731-cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "reasoning",
+        "tool-use",
+        "agentic-work",
+        "long-context",
+        "lightweight-fast"
+      ],
+      "recommended_work": [
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history",
+        "Responsive chat with lower cloud usage"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "deepseek-v4-flash",
+      "display_name": "Deepseek V4 Flash",
+      "description": "DeepSeek-V4-Flash is a preview of the DeepSeek-V4 series, a Mixture-of-Experts model with 284B total parameters and 13B activated, built for efficient reasoning across a 1M-token context window.",
+      "cloud_tags": [
+        "deepseek-v4-flash:0731-cloud",
+        "deepseek-v4-flash:cloud",
+        "deepseek-v4-flash:preview-cloud"
+      ],
+      "primary_cloud_tag": "deepseek-v4-flash:cloud",
+      "cloud_designation": true,
+      "vision_support": false,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "1M",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "DeepSeek",
+      "official_url": "https://ollama.com/library/deepseek-v4-flash",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ],
+      "slug": "deepseek-v4-flash-cloud",
+      "ollama_tag": "deepseek-v4-flash:cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "reasoning",
+        "tool-use",
+        "agentic-work",
+        "long-context",
+        "lightweight-fast"
+      ],
+      "recommended_work": [
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history",
+        "Responsive chat with lower cloud usage"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "deepseek-v4-flash",
+      "display_name": "Deepseek V4 Flash",
+      "description": "DeepSeek-V4-Flash is a preview of the DeepSeek-V4 series, a Mixture-of-Experts model with 284B total parameters and 13B activated, built for efficient reasoning across a 1M-token context window.",
+      "cloud_tags": [
+        "deepseek-v4-flash:0731-cloud",
+        "deepseek-v4-flash:cloud",
+        "deepseek-v4-flash:preview-cloud"
+      ],
+      "primary_cloud_tag": "deepseek-v4-flash:preview-cloud",
+      "cloud_designation": true,
+      "vision_support": false,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "1M",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "DeepSeek",
+      "official_url": "https://ollama.com/library/deepseek-v4-flash",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ],
+      "slug": "deepseek-v4-flash-preview-cloud",
+      "ollama_tag": "deepseek-v4-flash:preview-cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "reasoning",
+        "tool-use",
+        "agentic-work",
+        "long-context",
+        "lightweight-fast"
+      ],
+      "recommended_work": [
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history",
+        "Responsive chat with lower cloud usage"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "deepseek-v4-pro",
+      "display_name": "Deepseek V4 Pro",
+      "description": "DeepSeek-V4-Pro is a frontier Mixture-of-Experts model with a large context window and three reasoning modes.",
+      "cloud_tags": [
+        "deepseek-v4-pro:cloud"
+      ],
+      "primary_cloud_tag": "deepseek-v4-pro:cloud",
+      "cloud_designation": true,
+      "vision_support": false,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "1M",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "DeepSeek",
+      "official_url": "https://ollama.com/library/deepseek-v4-pro",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ],
+      "slug": "deepseek-v4-pro-cloud",
+      "ollama_tag": "deepseek-v4-pro:cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "reasoning",
+        "tool-use",
+        "agentic-work",
+        "long-context",
+        "enterprise-large"
+      ],
+      "recommended_work": [
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history",
+        "Demanding production workloads"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "devstral-2",
+      "display_name": "Devstral 2",
+      "description": "123B model that excels at using tools to explore codebases, editing multiple files and power software engineering agents.",
+      "cloud_tags": [
+        "devstral-2:123b-cloud"
+      ],
+      "primary_cloud_tag": "devstral-2:123b-cloud",
+      "cloud_designation": false,
+      "vision_support": false,
+      "tool_support": true,
+      "thinking_support": false,
+      "context_length": "256K",
+      "parameter_size": "not stated",
+      "license": "if the global consolidated monthly revenue of your company",
+      "publisher": "Mistral AI",
+      "official_url": "https://ollama.com/library/devstral-2",
+      "capabilities": [
+        "tools"
+      ],
+      "slug": "devstral-2-123b-cloud",
+      "ollama_tag": "devstral-2:123b-cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "coding",
+        "tool-use",
+        "agentic-work",
+        "long-context"
+      ],
+      "recommended_work": [
+        "Software engineering and repository work",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "devstral-small-2",
+      "display_name": "Devstral Small 2",
+      "description": "24B model that excels at using tools to explore codebases, editing multiple files and power software engineering agents.",
+      "cloud_tags": [
+        "devstral-small-2:24b-cloud"
+      ],
+      "primary_cloud_tag": "devstral-small-2:24b-cloud",
+      "cloud_designation": false,
+      "vision_support": true,
+      "tool_support": true,
+      "thinking_support": false,
+      "context_length": "384K",
+      "parameter_size": "not stated",
+      "license": "Apache 2.0",
+      "publisher": "Mistral AI",
+      "official_url": "https://ollama.com/library/devstral-small-2",
+      "capabilities": [
+        "vision",
+        "tools"
+      ],
+      "slug": "devstral-small-2-24b-cloud",
+      "ollama_tag": "devstral-small-2:24b-cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "vision-multimodal",
+        "coding",
+        "tool-use",
+        "agentic-work",
+        "long-context",
+        "lightweight-fast"
+      ],
+      "recommended_work": [
+        "Documents, images, and multimodal inputs",
+        "Software engineering and repository work",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history",
+        "Responsive chat with lower cloud usage"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "gemini-3-flash-preview",
+      "display_name": "Gemini 3 Flash Preview",
+      "description": "Gemini 3 Flash offers frontier intelligence built for speed at a fraction of the cost.",
+      "cloud_tags": [
+        "gemini-3-flash-preview:cloud"
+      ],
+      "primary_cloud_tag": "gemini-3-flash-preview:cloud",
+      "cloud_designation": true,
+      "vision_support": false,
+      "tool_support": false,
+      "thinking_support": false,
+      "context_length": "unknown",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "Google",
+      "official_url": "https://ollama.com/library/gemini-3-flash-preview",
+      "capabilities": [
+        "cloud"
+      ],
+      "slug": "gemini-3-flash-preview-cloud",
+      "ollama_tag": "gemini-3-flash-preview:cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "lightweight-fast"
+      ],
+      "recommended_work": [
+        "Responsive chat with lower cloud usage"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "gemma4",
+      "display_name": "Gemma4",
+      "description": "Gemma 4 models are designed to deliver frontier-level performance at each size. They are well-suited for reasoning, agentic workflows, coding, and multimodal understanding.",
+      "cloud_tags": [
+        "gemma4:31b-cloud",
+        "gemma4:cloud"
+      ],
+      "primary_cloud_tag": "gemma4:31b-cloud",
+      "cloud_designation": true,
+      "vision_support": true,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "128K",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "Google",
+      "official_url": "https://ollama.com/library/gemma4",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ],
+      "slug": "gemma4-31b-cloud",
+      "ollama_tag": "gemma4:31b-cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "vision-multimodal",
+        "reasoning",
+        "tool-use",
+        "agentic-work"
+      ],
+      "recommended_work": [
+        "Documents, images, and multimodal inputs",
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "gemma4",
+      "display_name": "Gemma4",
+      "description": "Gemma 4 models are designed to deliver frontier-level performance at each size. They are well-suited for reasoning, agentic workflows, coding, and multimodal understanding.",
+      "cloud_tags": [
+        "gemma4:31b-cloud",
+        "gemma4:cloud"
+      ],
+      "primary_cloud_tag": "gemma4:cloud",
+      "cloud_designation": true,
+      "vision_support": true,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "128K",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "Google",
+      "official_url": "https://ollama.com/library/gemma4",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ],
+      "slug": "gemma4-cloud",
+      "ollama_tag": "gemma4:cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "vision-multimodal",
+        "reasoning",
+        "tool-use",
+        "agentic-work"
+      ],
+      "recommended_work": [
+        "Documents, images, and multimodal inputs",
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "glm-5.1",
+      "display_name": "Glm 5.1",
+      "description": "GLM-5.1 is our next-generation flagship model for agentic engineering, with significantly stronger coding capabilities than its predecessor. It achieves state-of-the-art performance on SWE-Bench Pro and leads GLM-5 by a wide margin.",
+      "cloud_tags": [
+        "glm-5.1:cloud"
+      ],
+      "primary_cloud_tag": "glm-5.1:cloud",
+      "cloud_designation": true,
+      "vision_support": false,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "198K",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "Z.ai",
+      "official_url": "https://ollama.com/library/glm-5.1",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ],
+      "slug": "glm-5-1-cloud",
+      "ollama_tag": "glm-5.1:cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "coding",
+        "reasoning",
+        "tool-use",
+        "agentic-work"
+      ],
+      "recommended_work": [
+        "Software engineering and repository work",
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "glm-5.2",
+      "display_name": "Glm 5.2",
+      "description": "GLM-5.2 is Z.ai\u2019s flagship model for the era of long-horizon tasks.",
+      "cloud_tags": [
+        "glm-5.2:cloud"
+      ],
+      "primary_cloud_tag": "glm-5.2:cloud",
+      "cloud_designation": true,
+      "vision_support": false,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "976K",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "Z.ai",
+      "official_url": "https://ollama.com/library/glm-5.2",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ],
+      "slug": "glm-5-2-cloud",
+      "ollama_tag": "glm-5.2:cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "reasoning",
+        "tool-use",
+        "agentic-work",
+        "long-context"
+      ],
+      "recommended_work": [
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "gpt-oss",
+      "display_name": "Gpt Oss",
+      "description": "OpenAI\u2019s open-weight models designed for powerful reasoning, agentic tasks, and versatile developer use cases.",
+      "cloud_tags": [
+        "gpt-oss:120b-cloud",
+        "gpt-oss:20b-cloud"
+      ],
+      "primary_cloud_tag": "gpt-oss:120b-cloud",
+      "cloud_designation": true,
+      "vision_support": false,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "128K",
+      "parameter_size": "20B",
+      "license": "Apache 2.0",
+      "publisher": "OpenAI (open-weight)",
+      "official_url": "https://ollama.com/library/gpt-oss",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ],
+      "slug": "gpt-oss-120b-cloud",
+      "ollama_tag": "gpt-oss:120b-cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "reasoning",
+        "tool-use",
+        "agentic-work",
+        "enterprise-large"
+      ],
+      "recommended_work": [
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Demanding production workloads"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "gpt-oss",
+      "display_name": "Gpt Oss",
+      "description": "OpenAI\u2019s open-weight models designed for powerful reasoning, agentic tasks, and versatile developer use cases.",
+      "cloud_tags": [
+        "gpt-oss:120b-cloud",
+        "gpt-oss:20b-cloud"
+      ],
+      "primary_cloud_tag": "gpt-oss:20b-cloud",
+      "cloud_designation": true,
+      "vision_support": false,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "128K",
+      "parameter_size": "20B",
+      "license": "Apache 2.0",
+      "publisher": "OpenAI (open-weight)",
+      "official_url": "https://ollama.com/library/gpt-oss",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ],
+      "slug": "gpt-oss-20b-cloud",
+      "ollama_tag": "gpt-oss:20b-cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "reasoning",
+        "tool-use",
+        "agentic-work"
+      ],
+      "recommended_work": [
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "kimi-k2.6",
+      "display_name": "Kimi K2.6",
+      "description": "Kimi K2.6 is an open-source, native multimodal agentic model that advances practical capabilities in long-horizon coding, coding-driven design, proactive autonomous execution, and swarm-based task orchestration.",
+      "cloud_tags": [
+        "kimi-k2.6:cloud"
+      ],
+      "primary_cloud_tag": "kimi-k2.6:cloud",
+      "cloud_designation": true,
+      "vision_support": true,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "256K",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "Moonshot AI",
+      "official_url": "https://ollama.com/library/kimi-k2.6",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ],
+      "slug": "kimi-k2-6-cloud",
+      "ollama_tag": "kimi-k2.6:cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "vision-multimodal",
+        "reasoning",
+        "tool-use",
+        "agentic-work",
+        "long-context"
+      ],
+      "recommended_work": [
+        "Documents, images, and multimodal inputs",
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "kimi-k2.7-code",
+      "display_name": "Kimi K2.7 Code",
+      "description": "Kimi K2.7 Code is Moonshot AI's coding-focused agentic model built upon Kimi K2.6, with substantial improvements on real-world long-horizon coding tasks and roughly 30% lower thinking-token usage.",
+      "cloud_tags": [
+        "kimi-k2.7-code:cloud"
+      ],
+      "primary_cloud_tag": "kimi-k2.7-code:cloud",
+      "cloud_designation": true,
+      "vision_support": true,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "256K",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "Moonshot AI",
+      "official_url": "https://ollama.com/library/kimi-k2.7-code",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ],
+      "slug": "kimi-k2-7-code-cloud",
+      "ollama_tag": "kimi-k2.7-code:cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "vision-multimodal",
+        "coding",
+        "reasoning",
+        "tool-use",
+        "agentic-work",
+        "long-context"
+      ],
+      "recommended_work": [
+        "Documents, images, and multimodal inputs",
+        "Software engineering and repository work",
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "kimi-k3",
+      "display_name": "Kimi K3",
+      "description": "Kimi K3 is an open-weight, native multimodal agentic model and our most capable model to date.",
+      "cloud_tags": [
+        "kimi-k3:cloud"
+      ],
+      "primary_cloud_tag": "kimi-k3:cloud",
+      "cloud_designation": true,
+      "vision_support": true,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "1M",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "Moonshot AI",
+      "official_url": "https://ollama.com/library/kimi-k3",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ],
+      "slug": "kimi-k3-cloud",
+      "ollama_tag": "kimi-k3:cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "vision-multimodal",
+        "reasoning",
+        "tool-use",
+        "agentic-work",
+        "long-context"
+      ],
+      "recommended_work": [
+        "Documents, images, and multimodal inputs",
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "minimax-m2.1",
+      "display_name": "Minimax M2.1",
+      "description": "Exceptional multilingual capabilities to elevate code engineering",
+      "cloud_tags": [
+        "minimax-m2.1:cloud"
+      ],
+      "primary_cloud_tag": "minimax-m2.1:cloud",
+      "cloud_designation": true,
+      "vision_support": false,
+      "tool_support": false,
+      "thinking_support": false,
+      "context_length": "unknown",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "MiniMax",
+      "official_url": "https://ollama.com/library/minimax-m2.1",
+      "capabilities": [
+        "cloud"
+      ],
+      "slug": "minimax-m2-1-cloud",
+      "ollama_tag": "minimax-m2.1:cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "coding"
+      ],
+      "recommended_work": [
+        "Software engineering and repository work"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "minimax-m2.7",
+      "display_name": "Minimax M2.7",
+      "description": "MiniMax's M2-series model for coding, agentic workflows, and professional productivity.",
+      "cloud_tags": [
+        "minimax-m2.7:cloud"
+      ],
+      "primary_cloud_tag": "minimax-m2.7:cloud",
+      "cloud_designation": true,
+      "vision_support": true,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "200K",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "MiniMax",
+      "official_url": "https://ollama.com/library/minimax-m2.7",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ],
+      "slug": "minimax-m2-7-cloud",
+      "ollama_tag": "minimax-m2.7:cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "vision-multimodal",
+        "reasoning",
+        "tool-use",
+        "agentic-work"
+      ],
+      "recommended_work": [
+        "Documents, images, and multimodal inputs",
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "minimax-m3",
+      "display_name": "Minimax M3",
+      "description": "MiniMax M3: Coding & Agentic Frontier. 1M context window. Native Multimodality.",
+      "cloud_tags": [
+        "minimax-m3:cloud"
+      ],
+      "primary_cloud_tag": "minimax-m3:cloud",
+      "cloud_designation": true,
+      "vision_support": true,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "1M",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "MiniMax",
+      "official_url": "https://ollama.com/library/minimax-m3",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ],
+      "slug": "minimax-m3-cloud",
+      "ollama_tag": "minimax-m3:cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "vision-multimodal",
+        "reasoning",
+        "tool-use",
+        "agentic-work",
+        "long-context"
+      ],
+      "recommended_work": [
+        "Documents, images, and multimodal inputs",
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "nemotron-3-nano",
+      "display_name": "Nemotron 3 Nano",
+      "description": "Nemotron-3-Nano is a new Standard for Efficient, Open, and Intelligent Agentic Models, now updated with a 4B parameter count model.",
+      "cloud_tags": [
+        "nemotron-3-nano:30b-cloud"
+      ],
+      "primary_cloud_tag": "nemotron-3-nano:30b-cloud",
+      "cloud_designation": true,
+      "vision_support": false,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "1M",
+      "parameter_size": "4B",
+      "license": "Agreement",
+      "publisher": "NVIDIA",
+      "official_url": "https://ollama.com/library/nemotron-3-nano",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ],
+      "slug": "nemotron-3-nano-30b-cloud",
+      "ollama_tag": "nemotron-3-nano:30b-cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "reasoning",
+        "tool-use",
+        "agentic-work",
+        "long-context",
+        "lightweight-fast"
+      ],
+      "recommended_work": [
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history",
+        "Responsive chat with lower cloud usage"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "nemotron-3-super",
+      "display_name": "Nemotron 3 Super",
+      "description": "NVIDIA Nemotron 3 Super is a 120B open MoE model activating just 12B parameters to deliver maximum compute efficiency and accuracy for complex multi-agent applications.",
+      "cloud_tags": [
+        "nemotron-3-super:cloud"
+      ],
+      "primary_cloud_tag": "nemotron-3-super:cloud",
+      "cloud_designation": true,
+      "vision_support": false,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "256K",
+      "parameter_size": "12B",
+      "license": "not stated",
+      "publisher": "NVIDIA",
+      "official_url": "https://ollama.com/library/nemotron-3-super",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ],
+      "slug": "nemotron-3-super-cloud",
+      "ollama_tag": "nemotron-3-super:cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "reasoning",
+        "tool-use",
+        "agentic-work",
+        "long-context",
+        "enterprise-large"
+      ],
+      "recommended_work": [
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history",
+        "Demanding production workloads"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "nemotron-3-ultra",
+      "display_name": "Nemotron 3 Ultra",
+      "description": "NVIDIA Nemotron 3 Ultra is built for high-throughput reasoning and long-running agent workflows.",
+      "cloud_tags": [
+        "nemotron-3-ultra:cloud"
+      ],
+      "primary_cloud_tag": "nemotron-3-ultra:cloud",
+      "cloud_designation": true,
+      "vision_support": false,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "256K",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "NVIDIA",
+      "official_url": "https://ollama.com/library/nemotron-3-ultra",
+      "capabilities": [
+        "cloud",
+        "tools",
+        "thinking"
+      ],
+      "slug": "nemotron-3-ultra-cloud",
+      "ollama_tag": "nemotron-3-ultra:cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "reasoning",
+        "tool-use",
+        "agentic-work",
+        "long-context",
+        "enterprise-large"
+      ],
+      "recommended_work": [
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history",
+        "Demanding production workloads"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    },
+    {
+      "ollama_family": "qwen3.5",
+      "display_name": "Qwen3.5",
+      "description": "Qwen 3.5 is a family of open-source multimodal models that delivers exceptional utility and performance.",
+      "cloud_tags": [
+        "qwen3.5:397b-cloud",
+        "qwen3.5:cloud"
+      ],
+      "primary_cloud_tag": "qwen3.5:397b-cloud",
+      "cloud_designation": true,
+      "vision_support": true,
+      "tool_support": true,
+      "thinking_support": true,
+      "context_length": "256K",
+      "parameter_size": "not stated",
+      "license": "not stated",
+      "publisher": "Alibaba Cloud (Qwen team)",
+      "official_url": "https://ollama.com/library/qwen3.5",
+      "capabilities": [
+        "cloud",
+        "vision",
+        "tools",
+        "thinking"
+      ],
+      "slug": "qwen3-5-397b-cloud",
+      "ollama_tag": "qwen3.5:397b-cloud",
+      "eight_ball_featured": false,
+      "classifications": [
+        "vision-multimodal",
+        "reasoning",
+        "tool-use",
+        "agentic-work",
+        "long-context",
+        "enterprise-large"
+      ],
+      "recommended_work": [
+        "Documents, images, and multimodal inputs",
+        "Multi-step analysis and problem-solving",
+        "Workflows that call external tools",
+        "Autonomous and multi-step agent tasks",
+        "Very long documents and conversation history",
+        "Demanding production workloads"
+      ],
+      "catalog_status": "current",
+      "scrape_date": "2026-08-13",
+      "source_url": "https://ollama.com/search?c=cloud"
+    }
+  ]
+}

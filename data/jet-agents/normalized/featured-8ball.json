@@ -1,0 +1,14 @@
+{
+  "source": "8-BALL installer defaults",
+  "source_notes": "The funtech64/8-BALL repository was not available in this workspace. Featured tags are preserved from documented 8-BALL trial installer references in terminalglass-html model pages (qwen3.5-cloud, mistral-large-3-cloud, qwen3-coder-cloud). Do not change without explicit 8-BALL source material.",
+  "source_locations": [
+    "models/qwen3.5-cloud/index.html — ollama run qwen3.5:cloud",
+    "models/mistral-large-3-cloud/index.html — ollama run mistral-large-3:675b-cloud",
+    "models/qwen3-coder-cloud/index.html — ollama run qwen3-coder:480b-cloud"
+  ],
+  "featured_cloud_tags": [
+    "qwen3.5:cloud",
+    "mistral-large-3:675b-cloud",
+    "qwen3-coder:480b-cloud"
+  ]
+}
