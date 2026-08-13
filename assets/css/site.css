@@ -1253,3 +1253,80 @@ footer a:hover,
     grid-column: 1 / -1;
   }
 }
+
+/* ---------- Jet Agent catalog pages ---------- */
+
+.meta-dl {
+  display: grid;
+  grid-template-columns: minmax(120px, 38%) 1fr;
+  gap: 8px 16px;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.meta-dl dt {
+  color: var(--muted-dim);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.meta-dl dd {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.bullet-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 640px;
+}
+
+.bullet-list li {
+  padding: 8px 0 8px 18px;
+  position: relative;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.bullet-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-family: var(--mono);
+}
+
+.code-block {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  overflow-x: auto;
+  font-family: var(--mono);
+  font-size: 0.88rem;
+  color: var(--accent);
+  max-width: 480px;
+}
+
+.code-block code {
+  white-space: pre;
+}
+
+.tag-featured {
+  display: inline-block;
+  margin-bottom: 12px;
+  background: rgba(251, 191, 36, 0.12);
+  border-color: rgba(251, 191, 36, 0.35);
+  color: #fbbf24;
+}
+
+.fine-print {
+  color: var(--muted-dim);
+  font-size: 0.85rem;
+  line-height: 1.65;
+  max-width: 720px;
+}
