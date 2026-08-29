@@ -14,13 +14,12 @@ CORE_NAV = """      <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/pricing/">Pricing</a></li>
         <li><a href="/hosting/">Hosting</a></li>
-        <li><a href="/models/">Models</a></li>
         <li><a href="/jet-agents/">Agents</a></li>
         <li><a href="/contact/">Contact</a></li>
       </ul>"""
 
 MODEL_NAV = """        <div class="flex gap-6 text-slate-400">
-          <a href="/models/" class="hover:text-white">Model Briefs</a>
+          <a href="https://nocloudgpt.com/models/" rel="noopener noreferrer" class="hover:text-white">Model catalog</a>
           <a href="/jet-agents/" class="hover:text-white">Agents</a>
           <a href="/pricing/" class="hover:text-white">Pricing</a>
           <a href="/contact/" class="hover:text-white">Contact</a>
@@ -52,7 +51,7 @@ FOOTER = """<footer class="site-footer">
     <div class="footer-col">
       <h4>Explore</h4>
       <ul>
-        <li><a href="/models/">Models</a></li>
+        <li><a href="https://nocloudgpt.com/models/" rel="noopener noreferrer">Model catalog</a></li>
         <li><a href="/jet-agents/#glass-agents">Glass Agents</a></li>
         <li><a href="/jet-agents/#jet-agents">Jet Agents</a></li>
       </ul>
@@ -114,8 +113,6 @@ def replace_core_nav(content, current_page=None):
         content = content.replace('<li><a href="/contact/">Contact</a></li>', '<li><a href="/contact/" aria-current="page">Contact</a></li>', 1)
     elif current_page == 'hosting':
         content = content.replace('<li><a href="/hosting/">Hosting</a></li>', '<li><a href="/hosting/" aria-current="page">Hosting</a></li>', 1)
-    elif current_page == 'models':
-        content = content.replace('<li><a href="/models/">Models</a></li>', '<li><a href="/models/" aria-current="page">Models</a></li>', 1)
     elif current_page == 'jet-agents':
         content = content.replace('<li><a href="/jet-agents/">Agents</a></li>', '<li><a href="/jet-agents/" aria-current="page">Agents</a></li>', 1)
     # normalize CTA labels
@@ -158,7 +155,6 @@ CORE_PAGES = {
     'pricing/index.html': 'pricing',
     'contact/index.html': 'contact',
     'hosting/index.html': 'hosting',
-    'models/index.html': 'models',
 }
 
 for rel, page in CORE_PAGES.items():
@@ -176,40 +172,5 @@ for rel, page in CORE_PAGES.items():
         with open(path, 'w') as f:
             f.write(c)
         print('updated core', rel)
-
-# deepseek-v3.1 inline footer
-path = os.path.join(ROOT, 'models/deepseek-v3.1-cloud/index.html')
-if os.path.exists(path):
-    with open(path) as f:
-        c = f.read()
-    c = add_favicon(c)
-    c = replace_core_nav(c)
-    c = re.sub(r'<footer>.*?</footer>', FOOTER, c, count=1, flags=re.DOTALL)
-    c = c.replace('<main>', '<main id="main">', 1)
-    with open(path, 'w') as f:
-        f.write(c)
-    print('updated deepseek-v3.1')
-
-for root, dirs, files in os.walk(os.path.join(ROOT, 'models')):
-    for f in files:
-        if f != 'index.html':
-            continue
-        rel = os.path.relpath(os.path.join(root, f), ROOT)
-        if rel == 'models/index.html' or rel == 'models/deepseek-v3.1-cloud/index.html':
-            continue
-        path = os.path.join(ROOT, rel)
-        if os.path.getsize(path) == 0:
-            continue
-        with open(path) as fh:
-            c = fh.read()
-        orig = c
-        c = add_favicon(c)
-        if 'tailwindcss' in c:
-            c = replace_model_nav(c)
-            c = update_model_footer(c)
-        if c != orig:
-            with open(path, 'w') as fh:
-                fh.write(c)
-            print('updated model', rel)
 
 print('done')

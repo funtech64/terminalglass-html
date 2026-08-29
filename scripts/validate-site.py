@@ -25,6 +25,16 @@ INTERNAL_DOC_GLOBS = (
     "models/AGENTS.txt",
 )
 
+REDIRECT_PAGE_RELS = {"agents/index.html"}
+
+
+def is_model_redirect_page(rel):
+    return rel.startswith("models/") and rel.endswith("/index.html")
+
+
+def is_redirect_page(rel):
+    return rel in REDIRECT_PAGE_RELS or is_model_redirect_page(rel)
+
 
 class MetaParser(HTMLParser):
     def __init__(self):
@@ -123,7 +133,7 @@ def scan_public_text(pattern, label, exclude_redirect=True):
             rel = os.path.relpath(os.path.join(root, f), ROOT)
             if is_internal_doc(rel):
                 continue
-            if exclude_redirect and rel == "agents/index.html":
+            if exclude_redirect and is_redirect_page(rel):
                 continue
             content = open(os.path.join(root, f)).read()
             if rx.search(content):
@@ -149,13 +159,15 @@ def main():
 
         p = MetaParser()
         p.feed(content)
-        if info["rel"] != "agents/index.html" and not p.h1:
+        if not is_redirect_page(info["rel"]) and not p.h1:
             ERRORS.append(f"Missing H1: {path}")
-        if info["rel"] != "agents/index.html" and not p.canonical:
+        if not is_redirect_page(info["rel"]) and not p.canonical:
             WARNINGS.append(f"Missing canonical: {path}")
-        elif p.canonical and not p.canonical.startswith(BASE):
+        elif p.canonical and not p.canonical.startswith(BASE) and not is_redirect_page(info["rel"]):
             ERRORS.append(f"Wrong canonical domain on {path}: {p.canonical}")
-        if info["rel"] != "agents/index.html" and not p.has_og:
+        if is_model_redirect_page(info["rel"]) and p.canonical and not p.canonical.startswith("https://nocloudgpt.com/models/"):
+            ERRORS.append(f"Model redirect canonical should point to nocloudgpt.com: {path}")
+        if not is_redirect_page(info["rel"]) and not p.has_og:
             WARNINGS.append(f"Missing OG tags: {path}")
 
         for href in p.links:
@@ -164,7 +176,7 @@ def main():
                 continue
             if any(resolved.endswith(ext) for ext in (".css", ".js", ".webp", ".png", ".jpg", ".svg")):
                 continue
-            if resolved not in pages and resolved != "/agents/":
+            if resolved not in pages and resolved not in ("/agents/", "/models/") and not resolved.startswith("/models/"):
                 ERRORS.append(f"Broken link {href} -> {resolved} from {path}")
 
         if info["rel"] == "jet-agents/index.html":
@@ -182,22 +194,51 @@ def main():
                 ERRORS.append("Homepage missing 240 model families claim")
 
     # Redirect page checks
-    redirect_path = os.path.join(ROOT, "agents/index.html")
-    if os.path.exists(redirect_path):
-        redirect = open(redirect_path).read()
-        if "/jet-agents/" not in redirect:
-            ERRORS.append("agents/index.html redirect missing /jet-agents/ target")
+    for redirect_rel, target_fragment in (
+        ("agents/index.html", "/jet-agents/"),
+    ):
+        redirect_path = os.path.join(ROOT, redirect_rel)
+        if os.path.exists(redirect_path):
+            redirect = open(redirect_path).read()
+            if target_fragment not in redirect:
+                ERRORS.append(f"{redirect_rel} redirect missing {target_fragment} target")
+            if "location.replace" not in redirect and 'http-equiv="refresh"' not in redirect:
+                ERRORS.append(f"{redirect_rel} missing redirect mechanism")
+            if "canonical" not in redirect or target_fragment.strip("/") not in redirect:
+                ERRORS.append(f"{redirect_rel} missing canonical to redirect target")
+        else:
+            ERRORS.append(f"Missing {redirect_rel} redirect")
+
+    models_index = os.path.join(ROOT, "models/index.html")
+    if os.path.exists(models_index):
+        redirect = open(models_index).read()
+        if "https://nocloudgpt.com/models/" not in redirect:
+            ERRORS.append("models/index.html redirect missing nocloudgpt.com/models/ target")
         if "location.replace" not in redirect and 'http-equiv="refresh"' not in redirect:
-            ERRORS.append("agents/index.html missing redirect mechanism")
-        if "canonical" not in redirect or "jet-agents" not in redirect:
-            ERRORS.append("agents/index.html missing canonical to jet-agents")
+            ERRORS.append("models/index.html missing redirect mechanism")
     else:
-        ERRORS.append("Missing agents/index.html redirect")
+        ERRORS.append("Missing models/index.html redirect")
+
+    for root, dirs, files in os.walk(os.path.join(ROOT, "models")):
+        for f in files:
+            if f != "index.html":
+                continue
+            rel = os.path.relpath(os.path.join(root, f), ROOT)
+            if rel == "models/index.html":
+                continue
+            slug = os.path.basename(os.path.dirname(rel))
+            expected = f"https://nocloudgpt.com/models/{slug}/"
+            redirect = open(os.path.join(root, f)).read()
+            if expected not in redirect:
+                ERRORS.append(f"{rel} redirect missing {expected}")
+            if "location.replace" not in redirect and 'http-equiv="refresh"' not in redirect:
+                ERRORS.append(f"{rel} missing redirect mechanism")
 
     # B1 forbidden public terms
     scan_public_text(r"alchemist", "Alchemist reference")
     scan_public_text(r"yourcloudgpt", "YourCloudGPT public product reference")
     scan_public_text(r'href="/agents/"', "legacy /agents/ internal link", exclude_redirect=True)
+    scan_public_text(r'href="/models/"', "legacy /models/ internal catalog link", exclude_redirect=True)
 
     # config checks
     cfg = open(os.path.join(ROOT, "assets/js/contact-config.js")).read()
@@ -231,7 +272,7 @@ def main():
             path += "/"
         sitemap_urls.add(path)
 
-    page_urls = set(pages.keys()) - {"/agents/"}
+    page_urls = {p for p in pages.keys() if p not in ("/agents/", "/models/") and not p.startswith("/models/")}
     missing_from_sitemap = page_urls - sitemap_urls
     extra_in_sitemap = sitemap_urls - page_urls
     if missing_from_sitemap:
@@ -240,6 +281,8 @@ def main():
         ERRORS.append(f"Sitemap URLs without pages: {sorted(extra_in_sitemap)}")
     if "https://terminal.glass/agents/" in locs or "/agents/" in sitemap_urls:
         ERRORS.append("Sitemap still lists legacy /agents/ URL")
+    if "/models/" in sitemap_urls or any(url.startswith("/models/") for url in sitemap_urls):
+        ERRORS.append("Sitemap still lists model catalog URLs")
 
     robots = open(os.path.join(ROOT, "robots.txt")).read()
     if "Allow: /" not in robots or "terminal.glass/sitemap.xml" not in robots:
