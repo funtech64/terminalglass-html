@@ -239,6 +239,11 @@ def main():
     scan_public_text(r"yourcloudgpt", "YourCloudGPT public product reference")
     scan_public_text(r'href="/agents/"', "legacy /agents/ internal link", exclude_redirect=True)
     scan_public_text(r'href="/models/"', "legacy /models/ internal catalog link", exclude_redirect=True)
+    scan_public_text(r"\bhybrid\b", "hybrid deployment framing")
+    scan_public_text(r"group plan", "Group plan reference")
+    scan_public_text(r"group accounts?", "Group account reference")
+    scan_public_text(r"\$49/license", "unapproved Group plan expansion price")
+    scan_public_text(r"server licenses?", "legacy server license terminology", exclude_redirect=False)
 
     # config checks
     cfg = open(os.path.join(ROOT, "assets/js/contact-config.js")).read()

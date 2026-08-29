@@ -65,7 +65,7 @@ FOOTER = """<footer class="site-footer">
     <div class="footer-col">
       <h4>Technical education</h4>
       <ul>
-        <li><a href="https://nocloudgpt.com/models/" rel="noopener noreferrer">NoCloudGPT</a></li>
+        <li><a href="https://nocloudgpt.com/" rel="noopener noreferrer">NoCloudGPT</a></li>
       </ul>
     </div>
   </div>

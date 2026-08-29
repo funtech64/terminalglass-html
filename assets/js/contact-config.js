@@ -27,7 +27,7 @@ const contactDeploymentOptions = [
   { value: "", label: "Select an option (optional)" },
   { value: "My own server — NoCloudGPT", label: "My own server — NoCloudGPT" },
   { value: "My own cloud — AWS or DigitalOcean", label: "My own cloud — AWS or DigitalOcean" },
-  { value: "Hybrid local and cloud", label: "Hybrid local and cloud" },
+  { value: "Multiple deployment paths", label: "Multiple deployment paths" },
   { value: "Glass or Jet Agents", label: "Glass or Jet Agents" },
   { value: "Not sure yet", label: "Not sure yet" },
 ];
